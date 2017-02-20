@@ -2,22 +2,28 @@
 
 <GridLayout>:
     cols: 2
-    rows: 2
+    rows: 1
     spacing: 10
     padding: 10
 
     Button:
         text: '1st'
-        size_hint_x: None
-        width: 200
+        #size_hint: .2, .5
+        size_hint_y: None
+        height: 200
+        #width: 200
 
     Button:
         text: '2nd'
+        size_hint_y: None
+        height: 200
 
-    Button:
-        text: '3rd'
-        size_hint_x: None
-        width: 200
-
-    Button:
-        text: '4th'
+    # Button:
+# text: '3rd'
+# size_hint_x: .2
+# size_hint_y: .15
+# # width: 200
+#
+# Button:
+# text: '4th'
+# size_hint_y: 0.01

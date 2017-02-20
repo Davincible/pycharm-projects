@@ -2,17 +2,16 @@ import kivy
 kivy.require('1.9.1')
 
 from kivy.app import App
-from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import NumericProperty
 
+class CustomWidget(BoxLayout):
+    size_one = NumericProperty(50)
 
-class CustomWidget(Widget):
-    two = NumericProperty(200)
-
-
-class CustomWidgetApp(App):
+class BoxLayoutApp(App):
 
     def build(self):
         return CustomWidget()
 
-CustomWidgetApp().run()
+BoxLayoutApp().run()
+
