@@ -1,0 +1,29 @@
+#:kivy 1.9.1
+AddLocationForm: # a custom root widget, no indentations, so no properties or children
+
+<AddLocationForm>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: root.Height_One
+        spacing: 0
+        padding: 0
+
+        TextInput:
+            id: input_text
+            size_hint_x: root.TextBox_Width
+
+        Button:
+            text: "Search"
+            #size_hint_y: None
+            size_hint_x: root.Button_Width
+
+        Button:
+            text: "Current Location"
+            size_hint_x: root.Button_Width
+
+
+    ListView:
+        item_strings: ['Arnhem, Gelderland', 'Huissen, Gelderland']

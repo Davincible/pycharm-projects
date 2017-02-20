@@ -1,0 +1,37 @@
+#:kivy 1.9.1
+
+<CustomWidget>:
+    id: customwidget
+    orientation: "vertical" # If the orientation is vertical, size_hint[vertical] for one widget alone won't have any effect. Same for horizontal
+    spacing: 10
+    padding: 10
+
+    Button:
+        text: '1st \n still first'
+        font_size: 30
+        size_hint_y: None
+        size_hint_x: None
+        height: '100dp'        #customwidget.size_one * 2
+        width: '200dp'         #customwidget.size_one
+        #size: 10, 100
+        #size_hint: .2, .6
+
+    Button:
+        text: '2nd'
+        font_size: 30
+        # size_hint_y: None
+        # size_hint_x: None
+        # height: customwidget.size_one * 2.5
+        # width: 1.5 * customwidget.size_one
+        # size: 10, 100
+        size_hint: .2, 1
+
+    Button:
+        text: '3rd'
+        font_size: 30
+        # size_hint_y: None
+        # size_hint_x: None
+        # height: customwidget.size_one * 3
+        # width: 2 * customwidget.size_one
+        # size: 10, 100
+        size_hint: .2, .6
