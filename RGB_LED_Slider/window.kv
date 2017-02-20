@@ -1,0 +1,66 @@
+#:kivy 1.9.1
+
+CustomSliderWidget:
+
+<CustomSliderWidget>:
+    orientation: 'vertical'
+    #padding: 10
+    slider_one: slone
+    slider_two: sltwo
+    slider_three: slthree
+    textboxone: tb_1
+    textboxtwo: tb_2
+    textboxthree: tb_3
+
+    BoxLayout:
+        orientation: 'horizontal'
+        padding: 10
+        size_hint_y: None
+        height: '100dp'
+
+        TextInput:
+            id: tb_1
+            text: root.Value_Slider_One
+            font_size: root.fontsize
+
+        TextInput:
+            id: tb_2
+            text: root.Value_Slider_Two
+            font_size: root.fontsize
+
+        TextInput:
+            id: tb_3
+            text: root.Value_Slider_Three
+            font_size: root.fontsize
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: '120dp'
+
+        Slider:
+            id: slone
+            #size_hint_y: None
+            #height: root.sliderheight
+            min: 0
+            max: 100
+            value: 0
+            on_value: root.setvalue_one(*args)
+
+        Slider:
+            id: sltwo
+            #size_hint_y: None
+            #height: root.sliderheight
+            min: 0
+            max: 100
+            value: 0
+            on_value: root.setvalue_two(*args)
+
+        Slider:
+            id: slthree
+            #size_hint_y: None
+            #height: root.sliderheight
+            min: 0
+            max: 100
+            value: 0
+            on_value: root.setvalue_three(*args)
