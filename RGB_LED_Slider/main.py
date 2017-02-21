@@ -4,6 +4,7 @@ kivy.require('1.9.1')
 try:
     import gpiozero
     from gpiozero import PWMLED
+    print('Import of gpiozero succesfull')
 except ImportError:
     print('Not on Pi')
 
@@ -21,30 +22,37 @@ class CustomSliderWidget(BoxLayout):
     sliderheight = StringProperty('40dp')
 
     try:
-        led_red = PWMLED(12) #17
-        led_green = PWMLED(23) #22
-        led_blue = PWMLED(24) #27
+        led_red = PWMLED(17) #17
+        led_green = PWMLED(22) #22
+        led_blue = PWMLED(27) #27
+        print("successfully declared PWM LEDs")
+
     except NameError:
         pass
 
     def setvalue_one(self, *args):
         self.textboxone.text = str(float(format(args[1], '.5f')))
+        
+        value_output = float(args[1])
         try:
-            led_red.value = float(args[1])
+            self.led_red.value = value_output
+            print('Changed the value of the Red LED')
         except NameError:
-            pass
+            print('Value change not succesful ', value_output)
 
     def setvalue_two(self, *args):
         self.textboxtwo.text = str(float(format(args[1], '.5f')))
         try:
-            led_green.value = float(args[1])
+            self.led_green.value = float(args[1])
+            print('Changed the value of the Green LED')
         except NameError:
             pass
 
     def setvalue_three(self, *args):
         self.textboxthree.text = str(float(format(args[1],'.5f')))
         try:
-            led_green.value = float(args[1])
+            self.led_blue.value = float(args[1])
+            print('Changed the value of the Blue LED')
         except NameError:
             pass
 
