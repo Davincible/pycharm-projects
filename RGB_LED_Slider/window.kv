@@ -1,10 +1,8 @@
-#:kivy 1.9.1
-
-CustomSliderWidget:
+#CustomSliderWidget:
 
 <CustomSliderWidget>:
     orientation: 'vertical'
-    padding: [10,10,10,'400sp']
+    padding: [10,10,10,'460sp']
     slider_one: slone
     slider_two: sltwo
     slider_three: slthree
@@ -15,8 +13,8 @@ CustomSliderWidget:
     BoxLayout:
         orientation: 'horizontal'
         padding: 10
-        size_hint_y: None
-        height: '100dp'
+        #size_hint_y: None
+        #height: '100dp'
 
         TextInput:
             id: tb_1
@@ -64,3 +62,10 @@ CustomSliderWidget:
             max: root.slider_max
             value: 0
             on_value: root.setvalue_three(*args)
+    Button:
+	text: 'Quit'
+	size_hint_y: None
+	height: '40sp'
+	size_hint_x: None
+	width: '80sp'
+	on_press: app.get_running_app().stop()

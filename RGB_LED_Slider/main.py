@@ -1,16 +1,15 @@
 import kivy
+kivy.require('1.9.1')
+
 try:
     import gpiozero
     from gpiozero import PWMLED
 except ImportError:
     print('Not on Pi')
 
-kivy.require('1.9.1')
-
 from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.properties import *
-
 
 class CustomSliderWidget(BoxLayout):
     Value_Slider_One = '0'
@@ -22,9 +21,9 @@ class CustomSliderWidget(BoxLayout):
     sliderheight = StringProperty('40dp')
 
     try:
-        led_red = PWMLED(17)
-        led_green = PWMLED(22)
-        led_blue = PWMLED(27)
+        led_red = PWMLED(12) #17
+        led_green = PWMLED(23) #22
+        led_blue = PWMLED(24) #27
     except NameError:
         pass
 
@@ -53,6 +52,6 @@ class WindowApp(App):
     def build(self):
         return CustomSliderWidget()
 
-if __name__ == '__main__':
-    window = WindowApp()
-    window.run()
+#if __name__ == '__main__':
+window = WindowApp()
+window.run()
