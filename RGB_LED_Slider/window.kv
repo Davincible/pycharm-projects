@@ -42,8 +42,8 @@ CustomSliderWidget:
             id: slone
             #size_hint_y: None
             #height: root.sliderheight
-            min: 0
-            max: 100
+            min: root.slider_min
+            max: root.slider_max
             value: 0
             on_value: root.setvalue_one(*args)
 
@@ -51,8 +51,8 @@ CustomSliderWidget:
             id: sltwo
             #size_hint_y: None
             #height: root.sliderheight
-            min: 0
-            max: 100
+            min: root.slider_min
+            max: root.slider_max
             value: 0
             on_value: root.setvalue_two(*args)
 
@@ -60,7 +60,7 @@ CustomSliderWidget:
             id: slthree
             #size_hint_y: None
             #height: root.sliderheight
-            min: 0
-            max: 100
+            min: root.slider_min
+            max: root.slider_max
             value: 0
             on_value: root.setvalue_three(*args)
