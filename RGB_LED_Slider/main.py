@@ -52,6 +52,6 @@ class WindowApp(App):
     def build(self):
         return CustomSliderWidget()
 
-#if __name__ == '__main__':
-window = WindowApp()
-window.run()
+if __name__ == '__main__':
+    window = WindowApp()
+    window.run()
