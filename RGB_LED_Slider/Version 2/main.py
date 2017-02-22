@@ -22,9 +22,8 @@ except NameError:
     pass
 
 class WindowLayout(BoxLayout):
-    def __init__(self):
-        self.app = App.get_running_app()
-        self.my = self.app.my
+    #def __init__(self, **kwargs):
+     #   self.my = App.get_running_app().my
 
     # Declare LEDs
     try:
@@ -83,7 +82,7 @@ class WindowLayout(BoxLayout):
 
 class UserInterfaceApp(App):
 
-    my = WindowLayout()
+  #  my = WindowLayout()
 
     def build(self):
         return WindowLayout()
