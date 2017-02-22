@@ -20,14 +20,14 @@
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value: root.set_value_two(*args)
+        on_value: root.set_value_two(args[1])
 
     Slider:
         orientation: 'vertical'
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value: root.set_value_three(*args)
+        on_value: root.set_value_three(args[1])
 
     ButtonBoxTwo:
 
