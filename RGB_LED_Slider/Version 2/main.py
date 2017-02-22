@@ -51,7 +51,7 @@ class WindowLayout(BoxLayout):
     def set_value_one(self, args):
         try:
             self.RED.set_value(args)
-            self.sliderone.value = args
+            self.sliderone.value_pos = args
         except AttributeError:
             pass
 
@@ -69,9 +69,9 @@ class WindowLayout(BoxLayout):
 
     def reset_all(self):
         try:
-            self.RED.value = 0
-            self.GREEN.value = 0
-            self.BLUE.value = 0
+            self.RED.set_value = 0
+            self.GREEN.set_value = 0
+            self.BLUE.set_value = 0
         except AttributeError:
             pass
 
