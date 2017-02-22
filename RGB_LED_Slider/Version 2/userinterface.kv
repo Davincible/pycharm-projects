@@ -1,6 +1,7 @@
 #:kivy 1.9.1
 <WindowLayout>:
     orientation: 'horizontal'
+    id: windowlayout
 
     ButtonBoxOne:
 
@@ -43,24 +44,24 @@
         text: 'Red \n ON'
         font_size: '30sp'
         background_color: (1, 0, 0, 1)
-        on_press: root.set_value_one(1)
+        on_press: windowlayout.set_value_one(1)
 
     Button:
         text: 'Green \n  ON'
         font_size: '30sp'
         background_color: (0, 1, 0, 1)
-        on_press: root.set_value_two(1)
+        on_press: windowlayout.set_value_two(1)
 
     Button:
         text: 'Blue \n ON'
         font_size: '30sp'
         background_color: (0, 0, 1, 1)
-        on_press: root.set_value_three(1)
+        on_press: windowlayout.set_value_three(1)
 
     Button:
         text: 'Reset'
         background_color: (0.69, 0.77, 0.87, 1)
-        on_press: root.reset_all()
+        on_press: windowlayout.reset_all()
         size_hint_y: .5
 
 <ButtonBoxTwo@BoxLayout>:
