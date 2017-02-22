@@ -82,7 +82,7 @@ class WindowLayout(BoxLayout):
             self.BLUE.set_value(values[2])
         except AttributeError:
             pass
-        
+
     def set_the_natural(self):
         self.set_colour(self.the_natural)
     def set_light_blue(self):
