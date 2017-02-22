@@ -22,6 +22,9 @@ except NameError:
     pass
 
 class WindowLayout(BoxLayout):
+    def __init__(self):
+        self.app = App.get_running_app()
+        self.my = self.app.my
 
     # Declare LEDs
     try:
@@ -78,7 +81,7 @@ class WindowLayout(BoxLayout):
         except AttributeError:
             pass
 
-class UserInterfaceApp(App, WindowLayout()):
+class UserInterfaceApp(App):
 
     my = WindowLayout()
 
