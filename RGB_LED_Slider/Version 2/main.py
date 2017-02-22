@@ -4,6 +4,7 @@ kivy.require('1.9.1')
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import *
+from kivy.uix.widget import Widget
 
 try:
     import gpiozero
@@ -23,7 +24,8 @@ except NameError:
 
 class WindowLayout(BoxLayout):
     #def __init__(self, **kwargs):
-     #   self.my = App.get_running_app().my
+       # self.my = App.get_running_app()#.my
+    #a = App.get_running_app().windowlayout
 
     # Declare LEDs
     try:
@@ -80,9 +82,12 @@ class WindowLayout(BoxLayout):
         except AttributeError:
             pass
 
+
+
 class UserInterfaceApp(App):
 
-  #  my = WindowLayout()
+    windowlayout = WindowLayout()
+   # my = WindowLayout()
 
     def build(self):
         return WindowLayout()
