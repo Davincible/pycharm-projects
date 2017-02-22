@@ -4,11 +4,13 @@
 
 <WindowLayout>:
     orientation: 'horizontal'
-    id: windowlayout
+    slider_one: entry_one
+    slider_two: entry_two
 
     ButtonBoxOne:
 
     Slider:
+        id: entry_one
         orientation: 'vertical'
         min: root.slidermin
         max: root.slidermax
@@ -16,6 +18,7 @@
         on_value: root.set_value_one(args[1])
 
     Slider:
+        id: entry_two
         orientation: 'vertical'
         min: root.slidermin
         max: root.slidermax
