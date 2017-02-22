@@ -1,0 +1,114 @@
+#:kivy 1.9.1
+<WindowLayout>:
+    orientation: 'horizontal'
+
+    ButtonBoxOne:
+
+    Slider:
+        orientation: 'vertical'
+        min: root.slidermin
+        max: root.slidermax
+        value: root.sliderstart
+        on_value:
+
+    Slider:
+        orientation: 'vertical'
+        min: root.slidermin
+        max: root.slidermax
+        value: root.sliderstart
+        on_value:
+
+    Slider:
+        orientation: 'vertical'
+        min: root.slidermin
+        max: root.slidermax
+        value: root.sliderstart
+        on_value:
+
+
+<ButtonBoxOne@BoxLayout>:
+    orientation: 'vertical'
+
+    Button:
+        text: 'Exit'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press: app.get_running_app().stop()
+
+    Button:
+        text: 'Red \n ON'
+        background_color: (1, 0, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Green \n  ON'
+        background_color: (0, 1, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Blue \n ON'
+        background_color: (0, 0, 1, 1)
+        on_press:
+
+    Button:
+        text: 'Reset'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press:
+        size_hint_y: .5
+
+<ButtonBoxTWo@BoxLayout>:
+    orientation: 'vertical'
+
+    Button:
+        text: 'Exit'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press:
+
+    Button:
+        text: 'Red \n ON'
+        background_color: (1, 0, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Green \n  ON'
+        background_color: (0, 1, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Blue \n ON'
+        background_color: (0, 0, 1, 1)
+        on_press:
+
+    Button:
+        text: 'Reset'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press:
+        size_hint_y: .5
+
+<ButtonBoxThree@BoxLayout>:
+    orientation: 'vertical'
+
+    Button:
+        text: 'Exit'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press:
+
+    Button:
+        text: 'Red \n ON'
+        background_color: (1, 0, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Green \n  ON'
+        background_color: (0, 1, 0, 1)
+        on_press:
+
+    Button:
+        text: 'Blue \n ON'
+        background_color: (0, 0, 1, 1)
+        on_press:
+
+    Button:
+        text: 'Reset'
+        background_color: (0.69, 0.77, 0.87, 1)
+        on_press:
+        size_hint_y: .5
