@@ -48,9 +48,9 @@ class WindowLayout(BoxLayout):
     slidermax = NumericProperty(1)
     sliderstart = NumericProperty(0)
 
-    def set_value_one(self, *args):
+    def set_value_one(self, args):
         try:
-            self.RED.set_value(args[1])
+            self.RED.set_value(args)
         except AttributeError:
             pass
 

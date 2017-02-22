@@ -13,7 +13,7 @@
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value: root.set_value_one(*args)
+        on_value: root.set_value_one(args[1])
 
     Slider:
         orientation: 'vertical'
@@ -47,7 +47,7 @@
         text: 'Red \n ON'
         font_size: '30sp'
         background_color: (1, 0, 0, 1)
-        on_press: app.windowlayout.set_value_one((1, 1))
+        on_press: app.windowlayout.set_value_one(1)
 
     Button:
         text: 'Green \n  ON'
