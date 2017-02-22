@@ -78,7 +78,9 @@ class WindowLayout(BoxLayout):
         except AttributeError:
             pass
 
-class UserInterfaceApp(App):
+class UserInterfaceApp(App, WindowLayout()):
+
+    my = WindowLayout()
 
     def build(self):
         return WindowLayout()
