@@ -62,6 +62,22 @@ class WindowLayout(BoxLayout):
         except AttributeError:
             pass
 
+    def reset_all(self):
+        try:
+            self.RED.value = 0
+            self.GREEN.value = 0
+            self.BLUE.value = 0
+        except AttributeError:
+            pass
+
+    def set_colour(self, values):
+        try:
+            self.RED.value = values[0]
+            self.GREEN.value = values[1]
+            self.BLUE.value = values[2]
+        except AttributeError:
+            pass
+
 class UserInterfaceApp(App):
 
     def build(self):
