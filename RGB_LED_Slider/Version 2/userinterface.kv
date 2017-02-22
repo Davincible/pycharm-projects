@@ -9,21 +9,25 @@
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value:
+        on_value: root.set_value_one(*args)
 
     Slider:
         orientation: 'vertical'
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value:
+        on_value: root.set_value_two(*args)
 
     Slider:
         orientation: 'vertical'
         min: root.slidermin
         max: root.slidermax
         value: root.sliderstart
-        on_value:
+        on_value: root.set_value_three(*args)
+
+    ButtonBoxTwo:
+
+    ButtonBoxThree:
 
 
 <ButtonBoxOne@BoxLayout>:
@@ -31,21 +35,25 @@
 
     Button:
         text: 'Exit'
+        font_size: '30sp'
         background_color: (0.69, 0.77, 0.87, 1)
         on_press: app.get_running_app().stop()
 
     Button:
         text: 'Red \n ON'
+        font_size: '30sp'
         background_color: (1, 0, 0, 1)
         on_press:
 
     Button:
         text: 'Green \n  ON'
+        font_size: '30sp'
         background_color: (0, 1, 0, 1)
         on_press:
 
     Button:
         text: 'Blue \n ON'
+        font_size: '30sp'
         background_color: (0, 0, 1, 1)
         on_press:
 
@@ -55,31 +63,35 @@
         on_press:
         size_hint_y: .5
 
-<ButtonBoxTWo@BoxLayout>:
+<ButtonBoxTwo@BoxLayout>:
     orientation: 'vertical'
 
     Button:
-        text: 'Exit'
-        background_color: (0.69, 0.77, 0.87, 1)
+        text: '    The \n Natural'
+        font_size: '30sp'
+        background_color: (0, 0.50196, 0.50196, 1)
         on_press:
 
     Button:
-        text: 'Red \n ON'
-        background_color: (1, 0, 0, 1)
+        text: 'Light Blue'
+        font_size: '30sp'
+        background_color: (0.2, 1, 1, 1)
         on_press:
 
     Button:
-        text: 'Green \n  ON'
-        background_color: (0, 1, 0, 1)
+        text: 'Dark Blue'
+        font_size: '30sp'
+        background_color: (0.2, 0.2, 1, 1)
         on_press:
 
     Button:
-        text: 'Blue \n ON'
-        background_color: (0, 0, 1, 1)
+        text: 'Custom \n  One'
+        font_size: '30sp'
+        background_color: (0.1, 0.1, 0.1, 1)
         on_press:
 
     Button:
-        text: 'Reset'
+        text: '       Reset \n Custom One'
         background_color: (0.69, 0.77, 0.87, 1)
         on_press:
         size_hint_y: .5
@@ -88,27 +100,31 @@
     orientation: 'vertical'
 
     Button:
-        text: 'Exit'
-        background_color: (0.69, 0.77, 0.87, 1)
+        text: 'Orange'
+        font_size: '30sp'
+        background_color: (1, 0.270588235, 0.3, 1)
         on_press:
 
     Button:
-        text: 'Red \n ON'
-        background_color: (1, 0, 0, 1)
+        text: 'Purple'
+        font_size: '30sp'
+        background_color: (0.498, 0, 1, 1)
         on_press:
 
     Button:
-        text: 'Green \n  ON'
-        background_color: (0, 1, 0, 1)
+        text: 'Bordeaux'
+        font_size: '30sp'
+        background_color: (0.4, 0, 0.2, 1)
         on_press:
 
     Button:
-        text: 'Blue \n ON'
-        background_color: (0, 0, 1, 1)
+        text: 'Custom \n  Two'
+        font_size: '30sp'
+        background_color: (0.1, 0.1, 0.1, 1)
         on_press:
 
     Button:
-        text: 'Reset'
+        text: '       Reset \n Custom Two'
         background_color: (0.69, 0.77, 0.87, 1)
         on_press:
         size_hint_y: .5

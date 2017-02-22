@@ -13,14 +13,54 @@ except ImportError:
 
 try:
     class led_functionality(PWMLED):
-        pass
+        def __init__(self, pin):
+            self.led = PWMLED(pin)
+
+        def set_value(self, value):
+            self.led.value = value
 except NameError:
     pass
 
 class WindowLayout(BoxLayout):
+
+    # Declare LEDs
+    try:
+        RED = led_functionality(17)
+        BLUE = led_functionality(22)
+        GREEN = led_functionality(27)
+    except NameError:
+        pass
+
+    # Colour Properties
+    the_natural = (0.0, 0.50196, 0.50196)
+    light_blue = (0.2, 1, 1)
+    dark_blue = (0.2, 0.2, 1.0)
+    orange = (1.0, 0.270588235, 0)
+    purple = (0.498, 0, 1)
+    bordeaux = (0.4, 0, 0.2)
+
+    # Slider properties
     slidermin = NumericProperty(0)
     slidermax = NumericProperty(1)
     sliderstart = NumericProperty(0)
+
+    def set_value_one(self, *args):
+        try:
+            self.RED.set_value(args[1])
+        except NameError:
+            pass
+
+    def set_value_two(self, *args):
+        try:
+            self.GREEN.set_value(args[1])
+        except NameError:
+            pass
+
+    def set_value_three(self, *args):
+        try:
+            self.BLUE.set_value(args[1])
+        except NameError:
+            pass
 
 class UserInterfaceApp(App):
 

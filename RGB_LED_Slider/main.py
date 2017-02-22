@@ -37,7 +37,7 @@ class CustomSliderWidget(BoxLayout):
         try:
             self.led_red.value = value_output
             print('Changed the value of the Red LED')
-        except NameError:
+        except AttributeError:
             print('Value change not succesful ', value_output)
 
     def setvalue_two(self, *args):
@@ -45,7 +45,7 @@ class CustomSliderWidget(BoxLayout):
         try:
             self.led_green.value = float(args[1])
             print('Changed the value of the Green LED')
-        except NameError:
+        except AttributeError:
             pass
 
     def setvalue_three(self, *args):
@@ -53,7 +53,7 @@ class CustomSliderWidget(BoxLayout):
         try:
             self.led_blue.value = float(args[1])
             print('Changed the value of the Blue LED')
-        except NameError:
+        except AttributeError:
             pass
 
 class WindowApp(App):
