@@ -30,8 +30,8 @@ class WindowLayout(BoxLayout):
     # Declare LEDs
     try:
         RED = led_functionality(17)
-        BLUE = led_functionality(22)
-        GREEN = led_functionality(27)
+        GREEN = led_functionality(22)
+        BLUE = led_functionality(27)
     except NameError:
         pass
 
@@ -69,17 +69,17 @@ class WindowLayout(BoxLayout):
 
     def reset_all(self):
         try:
-            self.RED.set_value = 0
-            self.GREEN.set_value = 0
-            self.BLUE.set_value = 0
+            self.RED.set_value(0)
+            self.GREEN.set_value(0)
+            self.BLUE.set_value(0)
         except AttributeError:
             pass
 
     def set_colour(self, values):
         try:
-            self.RED.set_value = values[0]
-            self.GREEN.set_value = values[1]
-            self.BLUE.set_value = values[2]
+            self.RED.set_value(values[0])
+            self.GREEN.set_value(values[1])
+            self.BLUE.set_value(values[2])
         except AttributeError:
             pass
 
