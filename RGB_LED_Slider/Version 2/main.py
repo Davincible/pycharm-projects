@@ -77,9 +77,9 @@ class WindowLayout(BoxLayout):
 
     def set_colour(self, values):
         try:
-            self.RED.value = values[0]
-            self.GREEN.value = values[1]
-            self.BLUE.value = values[2]
+            self.RED.set_value = values[0]
+            self.GREEN.set_value = values[1]
+            self.BLUE.set_value = values[2]
         except AttributeError:
             pass
 
