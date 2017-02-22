@@ -51,18 +51,19 @@ class WindowLayout(BoxLayout):
     def set_value_one(self, args):
         try:
             self.RED.set_value(args)
+            self.sliderstart = args
         except AttributeError:
             pass
 
-    def set_value_two(self, *args):
+    def set_value_two(self, args):
         try:
-            self.GREEN.set_value(args[1])
+            self.GREEN.set_value(args)
         except AttributeError:
             pass
 
-    def set_value_three(self, *args):
+    def set_value_three(self, args):
         try:
-            self.BLUE.set_value(args[1])
+            self.BLUE.set_value(args)
         except AttributeError:
             pass
 
