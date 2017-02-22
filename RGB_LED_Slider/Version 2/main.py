@@ -82,6 +82,19 @@ class WindowLayout(BoxLayout):
             self.BLUE.set_value(values[2])
         except AttributeError:
             pass
+        
+    def set_the_natural(self):
+        self.set_colour(self.the_natural)
+    def set_light_blue(self):
+        self.set_colour(self.light_blue)
+    def set_dark_blue(self):
+        self.set_colour(self.dark_blue)
+    def set_orange(self):
+        self.set_colour(self.orange)
+    def set_purple(self):
+        self.set_colour(self.purple)
+    def set_bordeaux(self):
+        self.set_colour(self.bordeaux)
 
 
 
