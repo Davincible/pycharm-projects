@@ -5,7 +5,7 @@
 # Convert a user input to morse code
 #####################################################
 
-from codetable import code_table
+from code_table import code_table
 
 class morse():
     def __init__(self):
@@ -20,16 +20,24 @@ class morse():
     def convert(self):
         wordcount = 0
         char_count = 0
+        space_flag = False # a flag to prevent multiple spaces from adding more than one word
+
         for char in self.Input:
             if char != ' ':
+                space_flag = False
                 try:
                     self.output[wordcount] += self.codetable.return_morse(self.Input[char_count])
                 except IndexError:
                     self.output.append(self.codetable.return_morse(self.Input[char_count]))
                 char_count += 1
             else:
-                wordcount += 1
-                char_count += 1
+                if space_flag == 0:
+                    wordcount += 1
+                    char_count += 1
+                    space_flag = True
+                else:
+                    char_count += 1
+                    continue
 
     def returncode(self):
         for i in range(len(self.output)):
