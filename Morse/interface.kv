@@ -1,0 +1,36 @@
+#:kivy 1.9.1
+gui_layout:
+
+<gui_layout>:
+    orientation: 'vertical'
+    padding: [15,10,15,'50sp']
+    display: output_text
+
+    Label:
+        text: 'Morse code encoder'
+        font_size: '30sp'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: root.Height_One
+        padding: [0,'25sp',0,'25sp']
+
+        TextInput:
+            id: input_box
+            size_hint_x: None
+            width: '650sp'
+            size_hint_y: None
+            height: root.Height_One
+
+        Button:
+            size_hint_y: None
+            size_hint_y: None
+            height: root.Height_One
+            text: 'Enter'
+
+    TextInput:
+        id: output_text
+        size_hint_y: None
+        height: '385dp'
+        #padding: [30,30,30,'75sp']

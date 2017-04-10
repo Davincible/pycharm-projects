@@ -17,6 +17,10 @@ class morse():
         self.Input = input('What do you want to convert to morse?: ')
         self.Input = self.Input.upper()
 
+    def external_input(self, input):
+        self.Input = input
+        self.Input = self.Input.upper()
+
     def convert(self):
         wordcount = 0
         char_count = 0
@@ -49,14 +53,19 @@ class morse():
                     char_count += 1
                     continue
 
+    def output_code(self):
+        for i in range(len(self.output)):
+             return self.output[i] # kan je return wel in een for loop zetten?
+
     def returncode(self):
         for i in range(len(self.output)):
             print(self.output[i])
 
-convertcode = morse()
-convertcode.setinput()
-convertcode.convert()
-convertcode.returncode()
+if __name__ == '__main__':
+    convertcode = morse()
+    convertcode.setinput()
+    convertcode.convert()
+    convertcode.returncode()
 
 
 
