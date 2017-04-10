@@ -18,8 +18,11 @@ class code_table():
 
         self.CODE_REVERSED = {value: key for key, value in self.CODE.items()}
 
-    def return_morse(self, letter):
-        return self.CODE[letter] + '  '
+    def return_morse(self, letter, extra_space = bool):
+        if extra_space == True:
+            return self.CODE[letter] + '  '
+        else:
+            return self.CODE[letter]
 
     def return_letter(self, morse):
         return self.CODE_REVERSED[morse]
