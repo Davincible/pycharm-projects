@@ -12,6 +12,7 @@ class morse():
         self.Input = ''
         self.output = []
         self.codetable = code_table()
+        self.error_index = []
 
     def setinput(self):
         self.Input = input('What do you want to convert to morse?: ')
@@ -21,11 +22,15 @@ class morse():
         self.Input = input
         self.Input = self.Input.upper()
 
+    def return_input(self):
+        return self.Input
+
     def convert(self):
         wordcount = 0
         char_count = 0
         space_flag = False # a flag to prevent multiple spaces from adding more than one word
         first_flag = True # prevents adding new words if one or more spaces are the first characters in a string
+        self.output = []
 
         for char in self.Input:
 
@@ -40,8 +45,12 @@ class morse():
                     char_count += 1
 
                 except KeyError:
-                    space_flag = True
-                    print('Cannot convert this character to morse: ', self.Input[char_count])
+                    #space_flag = True #why is this flag here?
+
+                    if __name__ == '__main__':
+                        print('Cannot convert this character to morse: ', self.Input[char_count])
+                    else:
+                            self.error_index.append(self.Input[char_count])
                     char_count += 1
 
             else:
@@ -54,8 +63,9 @@ class morse():
                     continue
 
     def output_code(self):
-        for i in range(len(self.output)):
-             return self.output[i] # kan je return wel in een for loop zetten?
+        return self.output
+        #for i in range(len(self.output)):
+         #    return self.output[i] # kan je return wel in een for loop zetten?
 
     def returncode(self):
         for i in range(len(self.output)):

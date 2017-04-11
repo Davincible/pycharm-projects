@@ -2,9 +2,11 @@
 gui_layout:
 
 <gui_layout>:
+    id: interface
     orientation: 'vertical'
     padding: [15,10,15,'50sp']
     display: output_text
+    input_box: input_box
 
     Label:
         text: 'Morse code encoder'
@@ -19,15 +21,16 @@ gui_layout:
         TextInput:
             id: input_box
             size_hint_x: None
-            width: '650sp'
+            width: '600sp'
             size_hint_y: None
             height: root.Height_One
+            text: 'What is your message?'
 
         Button:
             size_hint_y: None
-            size_hint_y: None
             height: root.Height_One
             text: 'Enter'
+            on_press: interface.convert_text(input_box.text)
 
     TextInput:
         id: output_text
