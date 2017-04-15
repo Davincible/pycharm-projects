@@ -18,14 +18,20 @@ class gui_layout(BoxLayout):
         self.morse_object.external_input(input)
         #self.display.text = self.morse_object.return_input()
         self.morse_object.convert()
-        output_list = self.morse_object.output_code()
-        print(output_list)
-        self.morse_object.returncode()
+
+        output_list, error_list = self.morse_object.output_code()
+
+        if error_list:
+            self.display.text += 'Could not convert these characters:  '
+            for e in range(len(error_list)):
+                self.display.text += "'" + error_list[e] + "'  "
+            self.display.text += '\n'
 
         for i in range(len(output_list)):
             self.display.text += output_list[i] + '\n'
 
         self.input_box.text = ''
+
 class interfaceApp(App):
 
     def build(self):

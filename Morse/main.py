@@ -30,7 +30,7 @@ class morse():
         char_count = 0
         space_flag = False # a flag to prevent multiple spaces from adding more than one word
         first_flag = True # prevents adding new words if one or more spaces are the first characters in a string
-        self.output = []
+        self.output = [] # reset the output, else the new output will be build upon the old. 
 
         for char in self.Input:
 
@@ -39,13 +39,13 @@ class morse():
                     first_flag = False
                     space_flag = False
                     try:
-                        self.output[wordcount] += self.codetable.return_morse(self.Input[char_count], True)
+                        self.output[wordcount] += self.codetable.return_morse(self.Input[char_count], False)
                     except IndexError:
-                        self.output.append(self.codetable.return_morse(self.Input[char_count], True))
+                        self.output.append(self.codetable.return_morse(self.Input[char_count], False))
                     char_count += 1
 
                 except KeyError:
-                    #space_flag = True #why is this flag here?
+                    space_flag = True #why is this flag here?
 
                     if __name__ == '__main__':
                         print('Cannot convert this character to morse: ', self.Input[char_count])
@@ -63,7 +63,7 @@ class morse():
                     continue
 
     def output_code(self):
-        return self.output
+        return self.output, self.error_index
         #for i in range(len(self.output)):
          #    return self.output[i] # kan je return wel in een for loop zetten?
 
