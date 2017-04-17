@@ -6,13 +6,21 @@
 #####################################################
 
 from code_table import code_table
+import pygame
+import time
 
 class morse():
     def __init__(self):
+        pygame.mixer.pre_init(frequency=22050, size=-16, channels=2, buffer=4096)
+        pygame.mixer.init()
+        pygame.init()
         self.Input = ''
         self.output = []
         self.codetable = code_table()
         self.error_index = []
+        self.sounds = [(pygame.mixer.Sound('dit.wav')), (pygame.mixer.Sound('dah.wav'))]
+
+
 
     def setinput(self):
         self.Input = input('What do you want to convert to morse?: ')
@@ -62,6 +70,32 @@ class morse():
                     char_count += 1
                     continue
 
+    def morse_sound(self):
+        last_z = 0
+        last_i = 0
+
+        for z in range(len(self.output)):
+
+            if z > last_z:
+                time.sleep(0.8)
+
+            for i in range(len(self.output[z])):
+
+                if self.output[z][i] == ' ':
+                    time.sleep(0.2)
+                if self.output[z][i] == '.':
+                    self.sounds[0].play()
+                    while pygame.mixer.get_busy() == True:
+                        continue
+                    time.sleep(0.1)
+
+                elif self.output[z][i] == '-':
+                    self.sounds[1].play()
+                    while pygame.mixer.get_busy() == True:
+                        continue
+                    time.sleep(0.1)
+                last_i = i
+            last_z = z
     def output_code(self):
         return self.output, self.error_index
         #for i in range(len(self.output)):
@@ -76,6 +110,6 @@ if __name__ == '__main__':
     convertcode.setinput()
     convertcode.convert()
     convertcode.returncode()
-
+    convertcode.morse_sound()
 
 

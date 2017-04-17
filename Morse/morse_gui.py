@@ -5,10 +5,12 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
 from main import morse
+import time
 
 class gui_layout(BoxLayout):
     Height_One = StringProperty('40dp')
     morse_object = morse()
+    done_converting = False
 
     def when_pressed(self, input):
         pass
@@ -31,6 +33,11 @@ class gui_layout(BoxLayout):
             self.display.text += output_list[i] + '\n'
 
         self.input_box.text = ''
+        self.done_converting = True
+
+    def sound(self):
+        time.sleep(1)
+        self.morse_object.morse_sound()
 
 class interfaceApp(App):
 
