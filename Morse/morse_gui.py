@@ -6,14 +6,23 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
 from main import morse
 import time
+import threading
 
 class gui_layout(BoxLayout):
     Height_One = StringProperty('40dp')
     morse_object = morse()
     done_converting = False
 
-    def when_pressed(self, input):
-        pass
+
+    def when_pressed(self, input_1):
+        T_main = threading.Thread(target=self.defthreads(input_1))
+        T_main.start()
+
+    def defthreads(self, input_1):
+        T_convert = threading.Thread(target=self.convert_text(input_1))
+        T_convert.start()
+        T_sound = threading.Thread(target=self.sounds())
+        T_sound.start()
 
     def convert_text(self, input):
         self.display.text = ''
@@ -35,8 +44,9 @@ class gui_layout(BoxLayout):
         self.input_box.text = ''
         self.done_converting = True
 
-    def sound(self):
-        time.sleep(1)
+    def sounds(self):
+        while self.done_converting == False:
+            continue
         self.morse_object.morse_sound()
 
 class interfaceApp(App):

@@ -14,12 +14,12 @@ class morse():
         pygame.mixer.pre_init(frequency=22050, size=-16, channels=2, buffer=4096)
         pygame.mixer.init()
         pygame.init()
+
         self.Input = ''
         self.output = []
         self.codetable = code_table()
         self.error_index = []
         self.sounds = [(pygame.mixer.Sound('dit.wav')), (pygame.mixer.Sound('dah.wav'))]
-
 
 
     def setinput(self):
@@ -39,6 +39,7 @@ class morse():
         space_flag = False # a flag to prevent multiple spaces from adding more than one word
         first_flag = True # prevents adding new words if one or more spaces are the first characters in a string
         self.output = [] # reset the output, else the new output will be build upon the old. 
+        self.error_index = [] # reset the error list at the beginning of every conversion
 
         for char in self.Input:
 
@@ -47,9 +48,9 @@ class morse():
                     first_flag = False
                     space_flag = False
                     try:
-                        self.output[wordcount] += self.codetable.return_morse(self.Input[char_count], False)
+                        self.output[wordcount] += self.codetable.return_morse(self.Input[char_count], True)
                     except IndexError:
-                        self.output.append(self.codetable.return_morse(self.Input[char_count], False))
+                        self.output.append(self.codetable.return_morse(self.Input[char_count], True))
                     char_count += 1
 
                 except KeyError:
@@ -96,20 +97,25 @@ class morse():
                     time.sleep(0.1)
                 last_i = i
             last_z = z
+
     def output_code(self):
         return self.output, self.error_index
         #for i in range(len(self.output)):
          #    return self.output[i] # kan je return wel in een for loop zetten?
 
-    def returncode(self):
+    def printcode(self):
         for i in range(len(self.output)):
             print(self.output[i])
+
+    def printlist(self):
+        print(self.output)
 
 if __name__ == '__main__':
     convertcode = morse()
     convertcode.setinput()
     convertcode.convert()
-    convertcode.returncode()
+    convertcode.printcode()
+    convertcode.printlist()
     convertcode.morse_sound()
 
 
