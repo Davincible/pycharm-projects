@@ -1,3 +1,15 @@
+#
+# April, 2017
+#
+# David Brouwer
+# david.brouwer.99@gmail.com
+#
+# Convert a user input to morse code. This file contains the graphical side of this program.
+#
+# Run main.py to use a text-based interface
+#
+######################################################
+
 import kivy
 kivy.require('1.9.1')
 

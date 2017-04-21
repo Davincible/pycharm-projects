@@ -1,9 +1,14 @@
 #
+# April, 2017
+#
 # David Brouwer
 # david.brouwer.99@gmail.com
 #
 # Convert a user input to morse code
-#####################################################
+#
+# Run morse_gui.py for a graphical user interface.
+#
+######################################################
 
 from code_table import code_table
 import pygame
