@@ -10,6 +10,8 @@
 #
 ######################################################
 
+# TODO: start conversion on enter, settings page to edit sound settings, save settings in external file
+
 import kivy
 kivy.require('1.9.1')
 
@@ -20,11 +22,12 @@ from main import morse
 import time
 import threading
 
+
 class gui_layout(BoxLayout):
     Height_One = StringProperty('40dp')
     morse_object = morse()
     done_converting = False
-
+    conversion_started = False
 
     def when_pressed(self, input_1):
         T_main = threading.Thread(target=self.defthreads(input_1))
@@ -37,9 +40,10 @@ class gui_layout(BoxLayout):
         T_sound.start()
 
     def convert_text(self, input):
+        self.conversion_started = 1
         self.display.text = ''
         self.morse_object.external_input(input)
-        #self.display.text = self.morse_object.return_input()
+        # self.display.text = self.morse_object.return_input()
         self.morse_object.convert()
 
         output_list, error_list = self.morse_object.output_code()
@@ -57,9 +61,12 @@ class gui_layout(BoxLayout):
         self.done_converting = True
 
     def sounds(self):
-        while self.done_converting == False:
-            continue
-        self.morse_object.morse_sound()
+        while not self.done_converting:
+            if not self.conversion_started:
+                self.display.text = 'Please enter a message first'
+        if self.conversion_started:
+            self.morse_object.morse_sound()
+
 
 class interfaceApp(App):
 

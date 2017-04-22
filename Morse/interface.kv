@@ -16,7 +16,7 @@ gui_layout:
         orientation: 'horizontal'
         size_hint_y: None
         height: root.Height_One
-        padding: [0,'25sp',0,'25sp']
+        padding: ['25sp','25sp','25sp',0]
 
         TextInput:
             id: input_box
@@ -33,8 +33,21 @@ gui_layout:
             on_press: interface.when_pressed(input_box.text)
             #on_press: interface.T_sound.start()
 
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: root.Height_One
+        padding: ['25sp','25sp','25sp',0]
+
+        Button:
+            size_hint_y: None
+            height: root.Height_One
+            text: 'Replay Morse'
+            on_press: interface.sounds()
+
+
     Label:
         id: output_text
         size_hint_y: None
-        height: '385dp'
+        height: '300dp'
         #padding: [30,30,30,'75sp']

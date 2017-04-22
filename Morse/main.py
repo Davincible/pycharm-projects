@@ -120,7 +120,6 @@ if __name__ == '__main__':
     convertcode.setinput()
     convertcode.convert()
     convertcode.printcode()
-    convertcode.printlist()
     convertcode.morse_sound()
 
 
