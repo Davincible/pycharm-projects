@@ -7,6 +7,7 @@ gui_layout:
     padding: [15,10,15,'50sp']
     display: output_text
     input_box: input_box
+    sound_switch: sound_switch
 
     Label:
         text: 'Morse code encoder'
@@ -24,26 +25,40 @@ gui_layout:
             width: '600sp'
             size_hint_y: None
             height: root.Height_One
-            text: 'What is your message?'
+            hint_text: 'What is your message?'
+            multiline: False
+            on_text_validate: interface.when_pressed(input_box.text)
 
         Button:
             size_hint_y: None
             height: root.Height_One
             text: 'Enter'
             on_press: interface.when_pressed(input_box.text)
-            #on_press: interface.T_sound.start()
+
 
     BoxLayout:
         orientation: 'horizontal'
         size_hint_y: None
         height: root.Height_One
-        padding: ['25sp','25sp','25sp',0]
+        padding: ['25sp','25sp','475sp',0]
 
         Button:
             size_hint_y: None
             height: root.Height_One
             text: 'Replay Morse'
             on_press: interface.sounds()
+            size_hint_x:0.3
+
+        Label:
+            text: 'Sound: '
+            size_hint: (0.3,2.5)
+        Switch:
+            id: sound_switch
+            #orientation: 'vertical'
+            #padding: [0,0,0,'15dp']
+            size_hint: (0.1,2.5)
+            active_norm_pos: 1
+
 
 
     Label:

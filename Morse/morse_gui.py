@@ -10,7 +10,7 @@
 #
 ######################################################
 
-# TODO: start conversion on enter, settings page to edit sound settings, save settings in external file
+# TODO: settings page to edit sound settings, save settings in external file
 
 import kivy
 kivy.require('1.9.1')
@@ -28,6 +28,10 @@ class gui_layout(BoxLayout):
     morse_object = morse()
     done_converting = False
     conversion_started = False
+    # interface.input_box.focus = True
+
+    def on_startup(self):
+        self.input_box.focus = True
 
     def when_pressed(self, input_1):
         T_main = threading.Thread(target=self.defthreads(input_1))
@@ -36,8 +40,10 @@ class gui_layout(BoxLayout):
     def defthreads(self, input_1):
         T_convert = threading.Thread(target=self.convert_text(input_1))
         T_convert.start()
-        T_sound = threading.Thread(target=self.sounds())
-        T_sound.start()
+
+        if self.sound_switch.active:
+            T_sound = threading.Thread(target=self.sounds())
+            T_sound.start()
 
     def convert_text(self, input):
         self.conversion_started = 1
