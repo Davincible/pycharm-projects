@@ -52,14 +52,14 @@ gui_layout:
         Label:
             text: 'Sound: '
             size_hint: (0.3,2.5)
+
         Switch:
             id: sound_switch
             #orientation: 'vertical'
             #padding: [0,0,0,'15dp']
             size_hint: (0.1,2.5)
             active_norm_pos: 1
-
-
+            on_active: interface.changevalue()
 
     Label:
         id: output_text

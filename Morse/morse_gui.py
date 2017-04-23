@@ -10,7 +10,7 @@
 #
 ######################################################
 
-# TODO: settings page to edit sound settings, save settings in external file
+# TODO: use other sound library, settings page to edit sound settings, save settings in external file
 
 import kivy
 kivy.require('1.9.1')
@@ -19,7 +19,6 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
 from main import morse
-import time
 import threading
 
 
@@ -28,20 +27,25 @@ class gui_layout(BoxLayout):
     morse_object = morse()
     done_converting = False
     conversion_started = False
-    # interface.input_box.focus = True
-
-    def on_startup(self):
-        self.input_box.focus = True
+    switch_value = True
 
     def when_pressed(self, input_1):
+        print("switch state: ", self.sound_switch.active)
         T_main = threading.Thread(target=self.defthreads(input_1))
         T_main.start()
+
+    def changevalue(self):
+        if not self.sound_switch.active:
+            self.switch_value = False
+
+        else:
+            self.switch_value = True
 
     def defthreads(self, input_1):
         T_convert = threading.Thread(target=self.convert_text(input_1))
         T_convert.start()
 
-        if self.sound_switch.active:
+        if self.switch_value:
             T_sound = threading.Thread(target=self.sounds())
             T_sound.start()
 
