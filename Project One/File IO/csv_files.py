@@ -45,19 +45,24 @@ countries_string = countries_string.replace(']', '')
 #print(countries_string)
 
 countries_tuple = tuple(countries_string.split('\n'))
-countries_dictionary = dict.fromkeys(countries_tuple, 0.00)
+countries_dictionary = dict.fromkeys(countries_tuple, [0, 1, 2, 3])
+print(countries_dictionary)
 
 for number_of_countries in range(len(countries)):
     for data in file_contents:
         if data['Nation'] == countries[number_of_countries]:
             try:
-                countries_dictionary[data['Nation']] += int(data['Total CO2 emissions from fossil-fuels and cement production (thousand metric tons of C)'])
-            except:
+                print(data['Nation'])
+                temp = int(data['Total CO2 emissions from fossil-fuels and cement production (thousand metric tons of C)'])
+                print(data['Nation'] + ' : ' + str(temp))
+                countries_dictionary[str(data['Nation'])][1] = temp
+                print(countries_dictionary[data['Nation']][1])
+            except KeyError:
                 print('This %s country is not in the dictionary' % data['Nation'])
 
 print(countries_dictionary)
 var = max(countries_dictionary, key=countries_dictionary.get)
-print(var + ' with: %d' % countries_dictionary[var])
+print(var + ' with: %d' % countries_dictionary[var][0])
 
 # print the output and write it to an output file
 with open('C:/Users/David.MIDDENAARDE/Downloads/Data_Output_01.txt', 'r+') as output_file:
