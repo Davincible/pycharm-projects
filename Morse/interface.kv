@@ -12,6 +12,8 @@ gui_layout:
     Label:
         text: 'Morse code encoder'
         font_size: '30sp'
+        size_hint_y: None
+        height: '75dp'
 
     BoxLayout:
         orientation: 'horizontal'
@@ -21,16 +23,15 @@ gui_layout:
 
         TextInput:
             id: input_box
-            size_hint_x: None
-            width: '600sp'
-            size_hint_y: None
+            size_hint: (0.8, None)
+            #width: '600sp'
             height: root.Height_One
             hint_text: 'What is your message?'
             multiline: False
             on_text_validate: interface.when_pressed(input_box.text)
 
         Button:
-            size_hint_y: None
+            size_hint: (0.2, None)
             height: root.Height_One
             text: 'Enter'
             on_press: interface.when_pressed(input_box.text)
@@ -40,7 +41,7 @@ gui_layout:
         orientation: 'horizontal'
         size_hint_y: None
         height: root.Height_One
-        padding: ['25sp','25sp','475sp',0]
+        padding: ['25sp','25sp','25sp',0]
 
         Button:
             size_hint_y: None
@@ -51,18 +52,43 @@ gui_layout:
 
         Label:
             text: 'Sound: '
-            size_hint: (0.3,2.5)
+            size_hint: (None,2.5)
+            width: '80dp'
+
         Switch:
             id: sound_switch
             #orientation: 'vertical'
             #padding: [0,0,0,'15dp']
             size_hint: (0.1,2.5)
             active_norm_pos: 1
+            on_active: interface.changevalue()
 
+        Label:
+            text: ''
+            size_hint: (0.5, None)
+            height: root.Height_One
 
+        Button:
+            text: 'Settings'
+            size_hint: (0.2,None)
+            height: root.Height_One
+
+        Button:
+            text: 'Help'
+            size_hint: (0.3, None)
+            height: root.Height_One
+            on_press: popup_help.open()
 
     Label:
         id: output_text
         size_hint_y: None
         height: '300dp'
         #padding: [30,30,30,'75sp']
+
+#<Popup1@Popup>:
+#    # id: popup_help
+#    title: 'Help'
+#    size_hint: (None, None)
+#    size: ('300dp', '200dp')
+#    Label:
+#        text: root.popupcontent
