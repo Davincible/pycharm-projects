@@ -1,26 +1,13 @@
 from urllib.request import urlopen as op
-import urllib
+import bs4 as bs
 
 url = 'http://www.nu.nl'
-url2 = 'http://pythonprogramming.net'
 
-values =    {'s': 'basic',
-             'submit': 'search'}
+with op(url) as connection:
+    raw_data = connection.read()
 
-connection = op(url)
-raw_data = connection.read()
-connection.close()
-
-data = urllib.parse.urlencode(values)
-print('before utf-8 encoding: ', data)
-data = data.encode('utf-8')
-print('data after utf-8 encoding: ', data)
-request = urllib.request.Request(url2, data)
-
-resp = urllib.request.urlopen(request)
-print(resp.read())
-resp.close()
-
-print('------------')
-another = op(url2, data)
-print(another.read())
+soup = bs.BeautifulSoup(raw_data, 'lxml')
+for paragraph in soup.find_all('span'):
+    pass
+    # print(paragraph.text)
+print(soup.get_text())
