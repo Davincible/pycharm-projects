@@ -1,6 +1,11 @@
+##  follow interests
+##  get the accurate time stamps from the article pages
+##  Search the whole data base for interests
+## nu.nl/tag/<interest>
 from urllib.request import urlopen as op
 import bs4 as bs
 from unidecode import unidecode
+import re
 
 url = 'http://www.nu.nl'
 
@@ -13,6 +18,8 @@ articles = []
 ## data is wrapped in li tags, and then packed in a ul tag
 div = soup.find('div', class_='column first')
 article_list = div.ul
+interests = ['trump', "assassin's creed", 'cia', 'eu', 'Plasterk']
+
 
 index = 0
 for article in div.find_all('li'):
@@ -27,5 +34,17 @@ for article in div.find_all('li'):
         pass
     index +=1
 
+for element in articles:
+    # try:
+    #     print(element['title'])
+    # except KeyError:
+    #     pass
+    for interest in interests:
+        try:
+            if re.fullmatch(interest, element['title']):
+                print(element)
+                print(interest)
+        except KeyError:
+            pass
 print(articles)
 print(len(articles))
