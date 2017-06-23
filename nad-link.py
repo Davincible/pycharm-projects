@@ -29,10 +29,7 @@ Config = {  # This configuration is for my C350
 
   # Personal source aliases :D
   #
-  'radio':    ('once', 0xe13ebb44),
-  'sofa':     ('once', 0xe13ed926),
-  'pi':       ('once', 0xe13e43bc),
-  'mac':      ('once', 0xe13ea15e)
+  'pi':       ('once', 0xe13e41be)
 }
 
 
