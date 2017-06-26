@@ -18,33 +18,39 @@ articles = []
 ## data is wrapped in li tags, and then packed in a ul tag
 div = soup.find('div', class_='column first')
 article_list = div.ul
-interests = ['trump', "assassin's creed", 'cia', 'eu', 'Plasterk']
+interests = ['trump', "assassin's creed", 'cia', 'eu', 'cameraman', 'amsterdam', 'italië']
 
 
 index = 0
 for article in div.find_all('li'):
     articles.append({})
     try:
-        articles[index]['href'] = "http://www.nl{}".format(article.a.get('href'))
+        articles[index]['href'] = "http://www.nu.nl{}".format(article.a.get('href'))
         articles[index]['timestamp'] = article.find('span', class_='timestamp').text
         articles[index]['timestamp'] = unidecode(articles[index]['timestamp'])
         articles[index]['section'] = article.find('span', class_='section').text
         articles[index]['title'] = article.find('span', class_='title').text
     except AttributeError:
         pass
+
     index +=1
 
-for element in articles:
+
     # try:
     #     print(element['title'])
     # except KeyError:
     #     pass
-    for interest in interests:
+for interest in interests:
+    regex = r'(?i)(\b{}\b)'.format(interest)
+    regex_compiled = re.compile(regex)
+
+    for element in articles:
         try:
-            if re.fullmatch(interest, element['title']):
-                print(element)
-                print(interest)
+            if regex_compiled.findall(element['title']):
+                print("Dit artikel is van interesse:", element)
+                print("Door de interesse:", interest, "\n")
         except KeyError:
             pass
-print(articles)
-print(len(articles))
+
+print("De hele lijst:", articles)
+print("Heeft een lengte van:", len(articles))
