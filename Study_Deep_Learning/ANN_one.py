@@ -126,6 +126,8 @@ class Neuron:
         self.predicament = self.A
         self.predicament = self.predicament * 100
 
+        print('The predicament is:', self.predicament)
+        print('the shape is:', self.predicament.shape)
         print("dw = " + str(self.dw))
         print("db = " + str(self.db))
         print("cost = " + str(self.cost))
@@ -142,13 +144,23 @@ if __name__ == '__main__':
     """(self, data, mode='test', trainings_output=None, copy=False, learning_rate=None, bb=None)"""
 
     N_One = Neuron()
+    N_Two = Neuron()
+    N_Three = Neuron()
     X = np.array([[1.,2.,-1.], [3.,4.,-3.2]])
     Y = np.array([[1,0,1]])
     b = 2.
-    N_One.initialize(data=X, mode='train', trainings_output=Y, bb=b, w_zeros=False)
+    N_One.initialize(data=X, mode='train', trainings_output=Y, bb=b, w_zeros=True)
+    N_Two.initialize(data=X, mode='train', trainings_output=Y, bb=b, w_zeros=True)
     N_One.fire()
-    print('------')
+    N_Two.fire()
+    N_Three.initialize(data=np.array([np.squeeze(N_One.A), np.squeeze(N_Two.A)]), mode='train', trainings_output=Y, bb=b, w_zeros=True)
+    N_Three.fire()
+    print('Neuron One: ------')
     N_One.return_prediction()
+    print('Neuron Two: ------')
+    N_Two.return_prediction()
+    print('Neuron Three: ------')
+    N_Three.return_prediction()
 
 
 """
