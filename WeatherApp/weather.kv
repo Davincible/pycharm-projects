@@ -20,6 +20,7 @@ AddLocationForm: # a custom root widget, no indentations, so no properties or ch
             text: "Search"
             #size_hint_y: None
             size_hint_x: root.Button_Width
+            on_press: text_label.text = input_text.text
 
         Button:
             text: "Current Location"
@@ -27,6 +28,7 @@ AddLocationForm: # a custom root widget, no indentations, so no properties or ch
 
 
     Label:
+        id: text_label
         text: 'Random Text'
         size_hint_y: None
         height: '50dp'
