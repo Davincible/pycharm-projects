@@ -1,0 +1,23 @@
+<MyGame>:
+    FloatLayout:
+        size: self.parent.width, self.parent.height
+        MyWidget:
+            id: widget
+            pos_hint: {'x': 0, 'y': 0.5 }
+
+<MyWidget>:
+    canvas.before:
+        PushMatrix
+        Rotate:
+            angle: self.angle
+            axis: 0, 0, 1
+            origin: self.x, self.y
+    canvas:
+        Ellipse:
+            pos: self.x + (self.width_ball / 2), self.y - (self.height_ball / (self.width_ball*2/self.height_ellipse))
+            size: self.ellipse_size
+    canvas.after:
+        PopMatrix
+        Ellipse:
+            pos: self.x - (self.width_ball / 2), self.y - (self.height_ball / 2)
+            size: self.ball_size

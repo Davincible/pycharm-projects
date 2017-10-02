@@ -70,6 +70,10 @@ class PongGame(Widget):
 
 
 class PongApp(App):
+
+    def on_start(self):
+        print("THE PROGRAM HAS STARTED FUCKERS!!! --------------------")
+
     def build(self):
         game = PongGame() # create a ponggame instance to reference.
         game.serve_ball()
