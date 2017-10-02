@@ -1,8 +1,10 @@
 <MyGame>:
+    widget_1: widget_1
+
     FloatLayout:
         size: self.parent.width, self.parent.height
         MyWidget:
-            id: widget
+            id: widget_1
             pos_hint: {'x': 0, 'y': 0.5 }
 
 <MyWidget>:
@@ -14,10 +16,13 @@
             origin: self.x, self.y
     canvas:
         Ellipse:
-            pos: self.x + (self.width_ball / 2), self.y - (self.height_ball / (self.width_ball*2/self.height_ellipse))
+            pos: self.x + (self.width_ball / 2), self.y - (self.height_ellipse / 2)
             size: self.ellipse_size
+            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+
     canvas.after:
         PopMatrix
         Ellipse:
             pos: self.x - (self.width_ball / 2), self.y - (self.height_ball / 2)
             size: self.ball_size
+            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/red-blocks.png'
