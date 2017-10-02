@@ -49,8 +49,7 @@ class MyGame(Widget):
     widget_var = MyWidget()
 
 
-
-class Rotating_ElipseApp(App):
+class Rotating_EllipseApp(App):
     # window = MyGame()
 
 
@@ -62,6 +61,7 @@ class Rotating_ElipseApp(App):
 
         return window
 
+
 if __name__ == '__main__':
-    application = Rotating_ElipseApp()
+    application = Rotating_EllipseApp()
     application.run()
