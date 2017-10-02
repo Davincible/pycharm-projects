@@ -17,6 +17,7 @@ class MyWidget(Widget):
     height_ellipse = NumericProperty(50)
     ellipse_size = ReferenceListProperty(width_ellipse, height_ellipse)
     direction = True
+    speed = 10
 
 
     def on_touch_down(self, touch):
@@ -28,21 +29,17 @@ class MyWidget(Widget):
         self.angle = math.degrees(radians)
 
     def move_ellipse(self, *args):
-        print("move called", self.angle)
-
-        # ins = App.get_running_app().window.widget_var
-
         if self.angle < -90:
             self.direction = False
 
         elif self.angle > 90:
             self.direction = True
 
-        if self.direction == True:
-            self.angle -= 4
+        if self.direction:
+            self.angle -= self.speed
 
-        elif self.direction == False:
-            self.angle += 4
+        elif not self.direction:
+            self.angle += self.speed
 
 
 class MyGame(Widget):
@@ -50,14 +47,12 @@ class MyGame(Widget):
 
 
 class Rotating_EllipseApp(App):
-    # window = MyGame()
-
 
     def build(self):
         window = MyGame()
         # widget_var = MyWidget()
         trigger = lambda *args: Clock.schedule_interval(App.get_running_app().root.ids['widget_1'].move_ellipse, 0.0001)
-        Clock.schedule_once(trigger, 1)
+        Clock.schedule_once(trigger, 0.01)
 
         return window
 
