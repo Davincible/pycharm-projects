@@ -1,13 +1,20 @@
 <MyGame>:
     widget_1: widget_1
+    text_label: text_label
 
     FloatLayout:
         size: self.parent.width, self.parent.height
         MyWidget:
             id: widget_1
             pos_hint: {'x': 0, 'y': 0.5 }
+        Label:
+            id: text_label
+            pos_hint: {'x': 0, 'y':0}
+            text: app.textforlabel
+
 
 <MyWidget>:
+    round_ball: round_ball
     canvas.before:
         PushMatrix
         Rotate:
@@ -23,6 +30,7 @@
     canvas.after:
         PopMatrix
         Ellipse:
+            id: round_ball
             pos: self.x - (self.width_ball / 2), self.y - (self.height_ball / 2)
             size: self.ball_size
             source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/red-blocks.png'

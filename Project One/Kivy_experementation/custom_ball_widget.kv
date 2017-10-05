@@ -1,0 +1,21 @@
+<MyLayout>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        Button:
+        Button:
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        Button:
+
+        CustomButton:
+            on_press: print("something was pressed!")
+
+<CustomButton@ButtonBehavior+Image>:
+    source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+    size_hint: None, None
+    size: min(self.width, self.height),min(self.width, self.height)
