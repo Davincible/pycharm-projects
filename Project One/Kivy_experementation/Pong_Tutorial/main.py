@@ -77,7 +77,7 @@ class PongApp(App):
     def build(self):
         game = PongGame() # create a ponggame instance to reference.
         game.serve_ball()
-        Clock.schedule_interval(game.update, 1.0 / 60.0) # schedule the update function
+        Clock.schedule_interval(game.update, 1.0 / 60.0)  # schedule the update function
         return game
 
 if __name__ == '__main__':
