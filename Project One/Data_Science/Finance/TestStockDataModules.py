@@ -3,7 +3,7 @@ from rtstock.stock import Stock
 from googlefinance import getQuotes
 import json
 
-Stock_One = 'SNAP'
+Stock_One = 'asml.as'
 
 # Get the Data from rtstock
 rtstock_stock = Stock(Stock_One)
@@ -18,4 +18,4 @@ yahooofinance_anotherfunction = yahooofinance_stock.get_last_trade_with_time()
 print('Yahoo finance retuns:', yahooofinance_latestprice, 'on the time:', yahooofinance_tradetime, 'AND IT RETURNS:',yahooofinance_anotherfunction)
 
 # Get the stock Data from GoogleFinance WORKS REAL TIME, THE OTHERS DONT
-print('The Google Finance module returns:', json.dumps(getQuotes(Stock_One), indent=2))
+#print('The Google Finance module returns:', json.dumps(getQuotes(Stock_One), indent=2))

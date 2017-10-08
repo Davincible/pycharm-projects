@@ -1,0 +1,80 @@
+<MyLayout>:
+    CircularButton:
+#    button_one: button_one
+#    orientation: 'vertical'
+#    current_size: button_one.size
+#    BoxLayout:
+#        orientation: 'horizontal'
+#        CircularButton:
+#            id: button_one
+#
+#            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+#            # size: (min(root.width,root.height),min(root.width,root.height))
+#            # height: self.size[0]
+##            size_hint: 0, 1
+##            size_hint: root.ball_hint
+##            width: root.ball_size_x
+##            height: root.ball_size_y
+##            on_size: print("current_size:", root.current_size); root.calculate_size()
+#
+#        CircularButton:
+#            # size: (min(root.width,root.height),min(root.width,root.height))
+#            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+#            # height: self.size[0]
+##            size_hint: 0, 1
+##            size_hint: root.ball_hint
+##            width: root.ball_size_x
+##            height: root.ball_size_y
+#
+#    BoxLayout:
+#        orientation: 'horizontal'
+#        CircularButton:
+#
+#            # size: (min(root.width,root.height),min(root.width,root.height))
+#            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+#            # height: self.size[0]
+##            size_hint: 0, 1
+##            size_hint: root.ball_hint
+##            width: root.ball_size_x
+##            height: root.ball_size_y
+#
+#        CircularButton:
+#
+#            # size: (min(root.width,root.height),min(root.width,root.height))
+#            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+#            # height: self.size[0]
+##            size_hint: 0, 1
+##            size_hint: root.ball_hint
+##            width: root.ball_size_x
+##            height: root.ball_size_y
+
+
+<CircularButton>:
+    id: f1
+    size_hint: self.hint_x, self.hint_y
+    size: self.layout_width, self.layout_height
+    on_size: self.update_size()
+#    size: self.layout_width, self.layout_height
+#    on_size: size_hint = (1, 0) if self.width < self.height else (0, 1); size = (self.width, self.width) if self.width < self.height else (self.height, self.height) # self.update_size()
+
+
+    fucker: self.source
+    source: self.source
+
+    canvas.before:
+        Color:
+            rgb: 1, 0, 0
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    canvas:
+        Color:
+            rgba: ((1,1,1,1) if self.state == "normal" else (.5,.5,.5,1))
+        Ellipse:
+            pos: root.pos # self.center_x / 2, self.center_y / 2
+            size: root.size
+            source: self.fucker
+#            pos_hint =
+            # on_size: print(self.size)

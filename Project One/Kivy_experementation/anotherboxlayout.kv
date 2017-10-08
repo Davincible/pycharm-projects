@@ -1,0 +1,36 @@
+<Box_widget>:
+    orientation: 'horizontal'
+    padding: '10dp'
+    text_one: text_one
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            id: button_one
+            text: 'button one'
+            size_hint: (1, 1)
+
+            Button:
+                id: weird_button
+                text: 'will this work?'
+
+        Button:
+            id: button_two
+            text: "button two"
+            size_hint: (1, 1)
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            id: button_three
+            text: 'button one'
+            size_hint: (1, 1)
+
+        TextInput:
+            id: text_one
+            text: "This is a text input"
+            size_hint: (1, 1)
+            on_focus: print('the user has clicked! get him!!!')
+            # on_text: print('THE TEXT HAS CHANGED!'); print('\n')

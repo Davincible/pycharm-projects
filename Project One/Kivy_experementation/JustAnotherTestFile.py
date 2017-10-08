@@ -7,7 +7,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.lang import Builder
 from kivy.properties import NumericProperty
 
-Builder.load_file("JustAnotherTestFile.kv")
+build_file = Builder.load_file("JustAnotherTestFile.kv")
 
 class RootWidget(Widget):
     two = NumericProperty(200)
@@ -15,6 +15,7 @@ class RootWidget(Widget):
 
 class MyApp(App):
     def build(self):
+        #return build_file
         return RootWidget()
 
 if __name__ == '__main__':

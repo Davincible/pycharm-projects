@@ -15,9 +15,9 @@ class AddLocationForm(BoxLayout):
 
 class WeatherApp(App):
     #
-    pass
-    # def build(self):
-    #     return AddLocationForm()
+    # pass
+    def build(self):
+        return AddLocationForm()
 
 if __name__ == '__main__':
     WeatherApp().run()

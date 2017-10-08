@@ -1,0 +1,46 @@
+<CustomButton>:
+    size_hint: 1, 1
+    on_size: self.update_size()
+    source: self.source
+    id: parentt
+
+    canvas.before:
+        Color:
+            rgba: ((1,1,1,1) if self.state == "normal" else (.5,.5,.5,1))
+        Ellipse:
+            source: self.source
+            pos: self.button_pos_x, self.button_pos_y
+            size: self.button_width, self.button_height
+
+    Label:
+        text: root.text
+        color: root.color
+        font_size: root.font_size
+        pos: root.center_x - (self.width / 2), root.center_y - (self.height / 2)
+
+<WindowLayout>:
+    orientation: 'vertical'
+
+    spacing: 10
+    padding: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        #spacing: 10
+
+        CustomButton:
+            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+            text: 'hey there'
+
+        CustomButton:
+            text: 'hey there'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        # spacing: 10
+
+        CustomButton:
+            text: 'hey there'
+
+        CustomButton:
+            text: 'hey there'
