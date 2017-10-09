@@ -1,29 +1,31 @@
+
+
 <RootWidget>:
+    orientation: 'horizontal'
+    padding: '10dp'
+    size_hint: 1, 1
+
     BoxLayout:
-        orientation: 'horizontal'
-        padding: '10dp'
+        orientation: 'vertical'
+        CustomButton:
 
-        BoxLayout:
-            orientation: 'vertical'
+        CustomButton:
 
-            Button:
-                text: 'button one'
-                size_hint: (1, 1)
+    BoxLayout:
+        orientation: 'vertical'
 
-            Button:
-                text: "button two"
-                size_hint: (1, 1)
+        CustomButton:
 
-        BoxLayout:
-            orientation: 'vertical'
+        CustomButton:
 
-            Button:
-                text: 'button one'
-                size_hint: (1, 1)
+<CustomButton@Button>:
+    FloatLayout:
+        size: (min(self.width,self.height),min(self.width,self.height))
 
-            Button:
-                text: "button two"
-                size_hint: (1, 1)
+        Button:
+            size_hint: 0, 0
+            size: self.size
+
 #        FloatLayout:
 #            Label:
 #                id: thislabel
