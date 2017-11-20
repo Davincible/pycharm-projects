@@ -1,10 +1,10 @@
 import urllib3
 import bs4 as bs
 import pandas as pd
-from unidecode import unidecode
-
-#  soup.find_all().get('value')
-#  soup.table
+import sqlite3
+from fake_useragent import UserAgent
+from random import randint
+import certifi
 
 
 class FDA_CalendarClass():
@@ -13,26 +13,27 @@ class FDA_CalendarClass():
         self.url = 'https://www.biopharmcatalyst.com/calendars/fda-calendar'
         self.raw_data = None
         self.soup = None
-        self.Headers = {}
-        self.Headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+        self.header_list = ['firefox', 'internetexplorer', 'safari', 'chrome', 'opera']
+        self.Headers = {'User-Agent': None}
         self.TickerSymbols = pd.DataFrame(columns=['ticker', 'company'])
         self.FDA_Calendar = pd.DataFrame(columns=['ticker', 'drug', 'indication', 'news-date', 'news-note', 'news-url'])
         self.start_date = None
         self.end_date = None
         self.events_this_week = None
         self.events_next_week = None
+        self.useragent = UserAgent()
+        self.Headers['User-Agent'] = self.useragent.data_browsers[self.header_list[randint(0, 4)]][randint(0, 49)]
 
     def pull_data(self):
         """ pull the html of the url """
 
         #  read the webpage
-        pm = urllib3.PoolManager()
+        pm = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
         try:
             connection = pm.request('GET', self.url, headers=self.Headers)
+            self.raw_data = connection.data
         except:
             print("Failed to connect.")
-
-        self.raw_data = connection.data
 
         #  parse the html
         self.soup = bs.BeautifulSoup(self.raw_data, 'lxml')
@@ -99,12 +100,13 @@ class FDA_CalendarClass():
         self.FDA_Calendar.to_excel('Ticker List.xlsx')
         print("Message: successfully saved ticker list as xlsx")
 
+
 if __name__ == '__main__':
     FDA_Calendar = FDA_CalendarClass()
     FDA_Calendar.pull_data()
     FDA_Calendar.read_table()
-    FDA_Calendar.next_weeks_calendar()
     FDA_Calendar.read_tickerlist()
+    FDA_Calendar.next_weeks_calendar()
     FDA_Calendar.export_calander_to_xlsx()
     FDA_Calendar.export_tickerlist_to_xlsx()
     FDA_Calendar.export_events_next_week()

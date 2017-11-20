@@ -4,10 +4,31 @@ gui_layout:
 <gui_layout>:
     id: interface
     orientation: 'vertical'
-    padding: [15,10,15,'50sp']
+    #padding: [0,0,0,'50sp']
     display: output_text
     input_box: input_box
     sound_switch: sound_switch
+
+    ActionBar:
+        size_hint_y: None
+        pos: ('center', 'top')
+
+        ActionView:
+            ActionPrevious:
+                title: ''
+                with_previous: False
+            ActionOverflow:
+                ActionButton:
+                    text: "Settings"
+                    on_press: app.open_settings()
+
+                ActionButton:
+                    text: 'help'
+                    on_press:
+
+                ActionButton:
+                    text: 'Exit'
+                    on_press: app.get_running_app().stop()
 
     Label:
         text: 'Morse code encoder'
@@ -19,7 +40,7 @@ gui_layout:
         orientation: 'horizontal'
         size_hint_y: None
         height: root.Height_One
-        padding: ['25sp','25sp','25sp',0]
+        padding: ['25sp',0,'25sp',0]
 
         TextInput:
             id: input_box
