@@ -1,0 +1,55 @@
+<ScreenManagerClass>:
+    Screen_MainClass:
+    Screen_OneClass:
+    Screen_TwoClass:
+    Manager_Screen:
+        id: SomeManager
+
+
+<Screen_OneClass>:
+    name: 'Screen_One'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen one'
+        on_release: app.root.current = 'Screen_Two'
+
+<Screen_TwoClass>:
+    name: 'Screen_Two'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen two'
+        on_release: app.root.current = 'Another_Manager'; app.root.ids.SomeManager.current = 'Screen_A'
+
+<Screen_MainClass>:
+    name: 'Screen_Main'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen main'
+        on_release: app.root.current = 'Screen_One'
+
+<Manager_Screen@ScreenManager+Screen>:
+    name: 'Another_Manager'
+    Screen_AClass:
+    Screen_BClass:
+    Screen_CClass:
+
+<Screen_AClass>:
+    name: 'Screen_A'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen A'
+        on_release: app.root.ids.SomeManager.current = 'Screen_B'
+
+<Screen_BClass>:
+    name: 'Screen_B'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen B'
+        on_release: app.root.ids.SomeManager.current = 'Screen_C'
+
+<Screen_CClass>:
+    name: 'Screen_C'
+    Button:
+    # how to go to the next screen
+        text: 'next screen - screen C'
+        on_release: app.root.current = 'Screen_Main'

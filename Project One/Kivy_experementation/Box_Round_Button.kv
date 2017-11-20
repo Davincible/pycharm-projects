@@ -2,7 +2,6 @@
     size_hint: 1, 1
     on_size: self.update_size()
     source: self.source
-    id: parentt
 
     canvas.before:
         Color:
@@ -13,7 +12,7 @@
             size: self.button_width, self.button_height
 
     Label:
-        text: "Hello \n ========="             #  root.text
+        text: root.text
         markup: True
         color: root.color
         font_size: root.font_size
@@ -30,7 +29,8 @@
         #spacing: 10
 
         CustomButton:
-            source: 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+            id: image_button
+            source: root.source_ # 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
             text: 'hey there'
 
         CustomButton:

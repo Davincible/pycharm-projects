@@ -7,6 +7,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.vector import Vector
 from kivy.properties import NumericProperty, StringProperty, ListProperty
+from kivy.graphics.vertex_instructions import Rectangle
+from kivy.graphics import Color
+from kivy.clock import Clock
 
 class CustomButton(ButtonBehavior, FloatLayout):
 
@@ -27,6 +30,13 @@ class CustomButton(ButtonBehavior, FloatLayout):
         super(CustomButton, self).__init__(**kwargs)
         self.bind(on_press=self.callback)
 
+        with self.canvas:
+            Color(1, 0, 0, 1)
+            Rectangle(pos=map(lambda x: x+ 50, self.pos), size=(100, 100))
+            print('red created')
+
+
+
     def collide_point(self, x, y):
         return Vector(x, y).distance(self.center) <= self.button_width / 2
 
@@ -40,7 +50,18 @@ class CustomButton(ButtonBehavior, FloatLayout):
         self.button_pos_y = self.center_y - 0.5 * self.button_height
 
 class WindowLayout(BoxLayout):
-    pass
+    source_ = ''
+
+    def _update_source(self, x):
+        # self.source_ = 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+        self.ids.image_button.source = 'C:/Users/David.MIDDENAARDE/Pictures/Textures/football.png'
+        print('updated source')
+
+    def __init__(self, **kwargs):
+        super(WindowLayout, self).__init__(**kwargs)
+
+        Clock.schedule_once(self._update_source, 5)
+        # self.bind(self.source_=self.ids.image_button.source.setter())
 
 class Box_Round_ButtonApp(App):
     def build(self):
