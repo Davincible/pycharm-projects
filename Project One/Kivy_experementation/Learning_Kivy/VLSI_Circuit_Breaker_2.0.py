@@ -106,6 +106,8 @@ class CircuitBreakerBaseClass(Image):
                 self.current_level = self.current_level + 1 if self.current_level + 1 in self.level_properties.keys() else self.current_level
             Clock.schedule_once(self.start_game, .5)
             return False
+        else:
+            self.wirehead.grow_wire()
 
     def serve_wirehead(self, vel=(2, 0)):
         """Initiate the wire"""
@@ -153,10 +155,25 @@ class CircuitBreakerBaseClass(Image):
         """Collision detection"""
         collided_with_wire = False  # flag to check if the wire collided with itself
         line_points = self.wirehead.line_points
+        accuracy = 0
 
         #  check if the wire collided with itself, not working as of now
-        if x in line_points and y == line_points[line_points.index(x) + 1]:
-            collided_with_wire = True
+        accuracy_y = 5
+
+        try:
+            if round(x, accuracy) in line_points and \
+                                    round(line_points[line_points.index(round(x, accuracy)) + 1], accuracy_y) % round(y, accuracy_y) < .35 and line_points.index(round(x, accuracy) < len(line_points) - 5):
+                collided_with_wire = True
+                print("Collided with wire")
+                print(len(line_points), line_points.index(round(x, accuracy)))
+
+            if round(x, accuracy) in line_points and round(line_points[line_points.index(round(x, accuracy)) + 1], accuracy_y) % round(y, accuracy_y) < 1:
+                print(round(line_points[line_points.index(round(x, accuracy)) + 1], 1) % round(y, 1))
+
+        except:
+            #print("ERROR")
+            pass
+        # print("Wire collisionK", self.wirehead.collide_widget(self.wirehead))
             # print(self.wirehead.)
 
         #  get the pixel value for the passed coordinate in the parameters
@@ -204,21 +221,24 @@ class WireHead(Widget):
         super(WireHead, self).__init__(**kwargs)
 
     def move(self):
-        """Move the wirehead with the set velocity, and grow the wire"""
+        """Move the wirehead with the set velocity"""
         start = time()
         #  move the wirehead
         self.pos = Vector(*self.velocity) + self.pos
 
+        end = time()
+        self.dt_move.append(end - start)  # time tracking for debug purposes
+
+    def grow_wire(self):
+        """Grow wire"""
         #  add the current position of the wirehead to the wire
         if self.pos != (0, 0) and self.index % 3 == 0:
             try:
-                self.line_points += [self.x + self.width/2, self.y + self.height/2 + 0.01]
+                self.line_points += [round(self.x + self.width / 2, 0), round(self.y + self.height / 2 + 0.01, 5)]
             except TypeError:
                 pass
 
         self.index += 1
-        end = time()
-        self.dt_move.append(end - start)  # time tracking for debug purposes
 
 
 Builder.load_file('VLSI_Circuit_Breaker_2.0.kv')
@@ -242,13 +262,13 @@ class VLSI_Circuit_Breaker_2App(App):
     def on_keyboard(self, window, key, *args):
         """Keyboard handler, capture arrow keys"""
         standard_vel = self.root.ids.CircuitBreakerBase.standard_vel
-        if key == 273:
+        if key in (273, 119):
             self.wirehead.velocity = 0, standard_vel
-        elif key == 274:
+        elif key in (274, 115):
             self.wirehead.velocity = 0, -standard_vel
-        elif key == 275:
+        elif key in (275, 100):
             self.wirehead.velocity = standard_vel, 0
-        elif key == 276:
+        elif key in (276, 97):
             self.wirehead.velocity = -standard_vel, 0
         else:
             #  print key if not captured
