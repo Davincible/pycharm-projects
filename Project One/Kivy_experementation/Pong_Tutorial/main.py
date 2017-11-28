@@ -8,7 +8,7 @@ from kivy.properties import NumericProperty, ReferenceListProperty,\
 from kivy.vector import Vector
 from kivy.clock import Clock
 from random import randint
-
+from time import time
 
 class PongPaddle(Widget):
     score = NumericProperty(0)
@@ -28,7 +28,10 @@ class PongBall(Widget):
     velocity = ReferenceListProperty(velocity_x, velocity_y)
 
     def move(self):
+        start = time()
         self.pos = Vector(*self.velocity) + self.pos
+        end = time()
+        print("Move time for pong:", end - start)
 
 class PongGame(Widget):
     ball = ObjectProperty(None)
