@@ -1,0 +1,64 @@
+
+<BaseLayoutClass>:
+    id: BaseLayout
+    orientation: 'vertical'
+    wirehead: WireHead_
+    #    Widget:
+#        on_size: print("upper border", self.size)
+
+#    Widget:
+#        size_hint: None, None
+#        width: 394
+#        height: self.children[0].height
+#        FloatLayout:
+#            size_hint: None, None
+#            width: 394
+#            CircuitBreakerBaseClass:
+#                wirehead: WireHead
+#                pos: root.pos
+#                size: root.size
+#
+#            WireHead:
+#                id: WireHead
+
+
+    CircuitBreakerBaseClass:
+        id: CircuitBreakerBase
+        wirehead: WireHead_
+#        pos: root.pos
+        size: root.size
+        size_hint: None, None
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+    WireHead:
+        id: WireHead_
+
+#    Widget:
+#        on_size: print("lower border", self.size)
+
+<CircuitBreakerBaseClass>:
+    keep_data: True
+    size_hint: None, None
+    size: self.game_size
+    source: self.current_level_source
+
+<WireHead>:
+    size: dp(10), dp(10)
+    size_hint: None, None
+
+    canvas.after:
+        Color:
+            rgba: app.wire_color if app.wire_visible else (0, 0, 0, 0)
+        Ellipse:
+            size: self.size
+            pos: self.pos
+
+    canvas:
+        Color:
+            rgba: app.wire_color if app.wire_visible else (0, 0, 0, 0)
+        Line:
+            points: self.line_points
+            width: self.width / 6
+            cap: 'round'
+            joint: 'bevel'
+            joint_precision: 1
