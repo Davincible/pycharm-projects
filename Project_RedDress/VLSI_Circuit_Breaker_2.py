@@ -24,31 +24,86 @@ from kivy.metrics import dp
 from kivy.clock import Clock
 from kivy.app import App
 from kivy.base import Builder
+from kivy.event import EventDispatcher
 
 from colorsys import rgb_to_hsv
 from time import time
 
+#  Load the .kv file
+Builder.load_file('VLSI_Circuit_Breaker_2.kv')
 
-class BaseLayoutClass(FloatLayout):
-    pass
+
+class VLSI_Circuit_BreakerClass(FloatLayout, EventDispatcher):
+    wirehead = ObjectProperty(None)
+    circuitbreakerbase = ObjectProperty(None)
+    wire_color = get_color_from_hex('47f597')[:-1] + [.8]
+    wire_visible = BooleanProperty(False)
+
+    def __init__(self, **kwargs):
+        super(VLSI_Circuit_BreakerClass, self).__init__(**kwargs)
+        Window.bind(on_keyboard=self.on_keyboard)
+        self.register_event_type('on_hacked')
+
+    def on_enter(self, *args):
+        self.circuitbreakerbase.on_enter()
+
+    def on_hacked(self):
+        pass
+
+    def on_keyboard(self, window, key, *args):
+        """Keyboard handler, capture arrow keys"""
+        try:
+            standard_vel = self.circuitbreakerbase.standard_vel
+            if key in (273, 119):
+                self.wirehead.velocity = 0, standard_vel
+            elif key in (274, 115):
+                self.wirehead.velocity = 0, -standard_vel
+            elif key in (275, 100):
+                self.wirehead.velocity = standard_vel, 0
+            elif key in (276, 97):
+                self.wirehead.velocity = -standard_vel, 0
+            else:
+                #  print key if not captured
+                # print(key)
+                return False
+            return True
+        except AttributeError:
+            pass
+
+    def go_up(self, *args):
+        standard_vel = self.circuitbreakerbase.standard_vel
+        self.wirehead.velocity = 0, standard_vel
+
+    def go_down(self, *args):
+        standard_vel = self.circuitbreakerbase.standard_vel
+        self.wirehead.velocity = 0, -standard_vel
+
+    def go_right(self, *args):
+        standard_vel = self.circuitbreakerbase.standard_vel
+        self.wirehead.velocity = standard_vel, 0
+
+    def go_left(self, *args):
+        standard_vel = self.circuitbreakerbase.standard_vel
+        self.wirehead.velocity = -standard_vel, 0
 
 
 class CircuitBreakerBaseClass(Image):
     standard_vel = 2  # the standard velocity
-    collided = BooleanProperty(False)  # another way to check if collision has occured besides the return value of the collision function
+    collided = BooleanProperty(False)  # another way to check if collision has occurred besides the return value of the collision function
     wirehead = ObjectProperty(None)
+    base = ObjectProperty(None)  # reference to :class: VLSI_Circuit_BreakerClass
     levels = 6  # the number of levels the game has
     current_level = 1
     current_level_source = StringProperty('')
     game_size = ListProperty([0, 0])
 
     #  background source for each level
-    base_levels = ['VLSI-Circuit-Breaker-2.0-Level_{}.png'.format(level) for level in range(1, levels + 1)]
+    base_levels = ['resources/VLSI-Circuit-Breaker-2.0-Level_{}.png'.format(level) for level in range(1, levels + 1)]
 
     #  properties for each game level
     level_properties = {1: {'x_start': 70, 'y_start': 168, 'direction': 'right', 'speed_divider': 570},
-                        2: {'x_start': 65, 'y_start': 120, 'direction': 'right', 'speed_divider': 535},
-                        3: {'x_start': 65, 'y_start': 75, 'direction': 'right', 'speed_divider': 500},
+                        2: {'x_start': 65, 'y_start': 132, 'direction': 'right', 'speed_divider': 535},
+                        3: {'x_start': 65, 'y_start': 86, 'direction': 'right', 'speed_divider': 500},
                         4: {'x_start': 120, 'y_start': 70, 'direction': 'up', 'speed_divider': 450},
                         5: {'x_start': 95, 'y_start': 765, 'direction': 'down', 'speed_divider': 400},
                         6: {'x_start': 75, 'y_start': 765, 'direction': 'down', 'speed_divider': 380}}
@@ -60,10 +115,18 @@ class CircuitBreakerBaseClass(Image):
     def __init__(self, **kwargs):
         super(CircuitBreakerBaseClass, self).__init__(**kwargs)
         self.current_level_source = self.base_levels[self.current_level - 1]
+        self.register_event_type('on_hacked')
         Clock.schedule_once(lambda dt: self.parent.bind(size=self.update_game_size))
         Clock.schedule_once(self.update_game_size)
-        Clock.schedule_once(self.start_game, 5)
 
+        if __name__ == '__main__':
+            self.on_enter()
+
+    def on_enter(self, *args):
+        Clock.schedule_once(self.start_game, 2)
+
+    def on_hacked(self, *args):
+        self.base.dispatch('on_hacked')
 
     def start_game(self, dt, level=None):
         """Start the Game"""
@@ -102,8 +165,16 @@ class CircuitBreakerBaseClass(Image):
 
         #  check if the new position of the wire collides with the circuit board boundaries.
         if self.hit_border(*self.wirehead.center):
-            if self.hit_border(*self.wirehead.center) == 2:
+            if self.hit_border(*self.wirehead.center) == 2 and self.current_level == self.levels:
+                self.on_hacked()
+                if __name__ == '__main__':
+                    self.current_level = 1
+                    Clock.schedule_once(self.start_game, .5)
+                return False
+
+            elif self.hit_border(*self.wirehead.center) == 2:
                 self.current_level = self.current_level + 1 if self.current_level + 1 in self.level_properties.keys() else self.current_level
+
             Clock.schedule_once(self.start_game, .5)
             return False
         else:
@@ -118,7 +189,10 @@ class CircuitBreakerBaseClass(Image):
         self.wirehead.velocity = vel
 
         #  make the wire visible, this triggers the bound color attribute of the wire - as seen in the kv file
-        App.get_running_app().wire_visible = True
+        try:
+            self.parent.wire_visible = True
+        except AttributeError:
+            pass
 
     def update_game_size(self, *args):
         """Update the size of the circuit board according to the size of the parent widget"""
@@ -160,6 +234,8 @@ class CircuitBreakerBaseClass(Image):
         #  check if the wire collided with itself, not working as of now
         accuracy_y = 5
 
+        """
+        TRIAL CODE FOR LINE WIRE COLLISION 
         try:
             if round(x, accuracy) in line_points and \
                                     round(line_points[line_points.index(round(x, accuracy)) + 1], accuracy_y) % round(y, accuracy_y) < .35 and line_points.index(round(x, accuracy) < len(line_points) - 5):
@@ -174,7 +250,8 @@ class CircuitBreakerBaseClass(Image):
             #print("ERROR")
             pass
         # print("Wire collisionK", self.wirehead.collide_widget(self.wirehead))
-            # print(self.wirehead.)
+            # print(self.wirehead.) 
+        """
 
         #  get the pixel value for the passed coordinate in the parameters
         try:
@@ -192,7 +269,7 @@ class CircuitBreakerBaseClass(Image):
         if pixel_hsv[-1] > self.border_threshold or collided_with_wire or pixel_hsv == (0, 0, 0):
             self.collided = True
             #  check for collision with gray finish block
-            if pixel_hsv[1] < .2 and pixel_hsv[1] > 0:
+            if pixel_hsv[1] < .24 and pixel_hsv[1] > 0:
                 return 2  # return 2 if collided with finish block, return 1 if collided with border
             return 1
         else:
@@ -241,53 +318,24 @@ class WireHead(Widget):
         self.index += 1
 
 
-Builder.load_file('VLSI_Circuit_Breaker_2.0.kv')
-
-
-class VLSI_Circuit_Breaker_2App(App):
-    title = 'VLSI_Circuit_Breaker_2.0'
-    wirehead = ObjectProperty(None)
-    wire_color = get_color_from_hex('47f597')[:-1] + [.8]
-    wire_visible = BooleanProperty(False)
-
-    def __init__(self, **kwargs):
-        super(VLSI_Circuit_Breaker_2App, self).__init__(**kwargs)
-        Window.bind(on_keyboard=self.on_keyboard)
-        Clock.schedule_once(self.get_wirehead)
-
-    def get_wirehead(self, *args):
-        """Create reference to the wirehead object"""
-        self.wirehead = self.root.ids.WireHead_
-
-    def on_keyboard(self, window, key, *args):
-        """Keyboard handler, capture arrow keys"""
-        standard_vel = self.root.ids.CircuitBreakerBase.standard_vel
-        if key in (273, 119):
-            self.wirehead.velocity = 0, standard_vel
-        elif key in (274, 115):
-            self.wirehead.velocity = 0, -standard_vel
-        elif key in (275, 100):
-            self.wirehead.velocity = standard_vel, 0
-        elif key in (276, 97):
-            self.wirehead.velocity = -standard_vel, 0
-        else:
-            #  print key if not captured
-            print(key)
-
-    def on_stop(self):
-        """print out debug information on closure of program"""
-        dt_move = self.root.ids.WireHead_.dt_move
-        dt_update = self.root.ids.CircuitBreakerBase.dt_update
-
-        print("dt_update:", min(dt_update), max(dt_update))
-        print("dt_move:", min(dt_move), max(dt_move))
-
-    def build(self):
-        if platform != 'android':
-            Window.size = (394, 700)
-
-        return BaseLayoutClass()
-
-
 if __name__ == '__main__':
+
+    class VLSI_Circuit_Breaker_2App(App):
+        title = 'VLSI_Circuit_Breaker_2.0'
+
+        def on_stop(self):
+            """print out debug information on closure of program"""
+            dt_move = self.root.ids.WireHead_.dt_move
+            dt_update = self.root.ids.CircuitBreakerBase.dt_update
+
+            print("dt_update:", min(dt_update), max(dt_update))
+            print("dt_move:", min(dt_move), max(dt_move))
+
+        def build(self):
+            Window.softinput_mode = 'below_target'
+            if platform != 'android':
+                Window.size = (394, 700)
+
+            return VLSI_Circuit_BreakerClass()
+
     VLSI_Circuit_Breaker_2App().run()

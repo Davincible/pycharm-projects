@@ -1,0 +1,134 @@
+#:import Toolbar kivymd.toolbar
+#:import uiximage kivy.uix.image
+#:import MDLabel kivymd.label
+#:import MDSeperator kivymd.card.MDSeparator
+#:import MDTextField kivymd.textfields.MDTextField
+#:import MDCheckbox kivymd.selectioncontrols.MDCheckbox
+#:import MDCard kivymd.card.MDCard
+#:import MDSlider kivymd.slider.MDSlider
+#:import Window kivy.core.window.Window
+
+#:import VLSI_Circuit_BreakerClass VLSI_Circuit_Breaker_2
+
+
+<MainScreenManagerClass>:
+    id: MainScreenManager
+
+    LoginScreenClass:
+        id: LoginScreen
+        name: 'LoginScreen'
+
+    VLSI_CircuitBreakerClass:
+        id: VLSI_CircuitBreaker
+        name: 'VLSI_CircuitBreaker'
+        loginscreen: LoginScreen
+
+<LoginScreenClass>:
+    textfield_username: textfield_username
+    textfield_password: textfield_password
+
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: self.texture_
+            tex_coords: (0, 0, self.nx, 0, self.nx, self.ny, 0, self.ny)
+
+    MDCard:
+        size_hint: (.75, .31)
+        pos_hint: {'center_x': .5, 'center_y': .6}
+        # opacity: .85
+        padding: dp(12)
+
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel:
+                text: "Login"
+                font_style: 'Title'
+                size_hint_y: None
+                height: self.texture_size[1] + dp(12)
+
+            MDSeparator:
+                color_mode: 'primary'
+                height: dp(1.5)
+
+            Widget:
+                size_hint_y: None
+                height: dp(7)
+
+            MDTextField:
+                id: textfield_username
+                hint_text: "username"
+                size_hint_y: None
+                height: root.textfield_height
+                helper_text: "Please enter a valid username"
+                helper_text_mode: 'on_error'
+
+            MDTextField:
+                id: textfield_password
+                hint_text: "password"
+                password: True
+                size_hint_y: None
+                height: root.textfield_height
+
+            AnchorLayout:
+                size_hint_x: 1
+                anchor_x: 'right'
+                anchor_y: 'bottom'
+
+                MDRaisedButton:
+                    text: "enter"
+                    on_release: root._enter_button()
+
+#  without underscore is the class in RedDress main, with is the Circuit Breaker Widget
+<VLSI_CircuitBreakerClass>:
+    base_widget: VLSI_Circuit_BreakerWidget
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                # source: 'resources/green_code_texture_02.jpg'
+                texture: root.texture_
+                tex_coords: (0, 0, root.nx, 0, root.nx, root.ny, 0, root.ny)
+                # tex_coords: (0, root.ny, root.nx, 0, root.nx, root.ny, 0, 0)
+
+        VLSI_Circuit_BreakerClass:
+            id: VLSI_Circuit_BreakerWidget
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(12)
+            padding: dp(16)
+
+            FloatLayout:
+                Button:
+                    on_release: VLSI_Circuit_BreakerWidget.go_left()
+                    opacity: root.button_opacity
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_y: root.side_button_height
+
+            BoxLayout:
+                spacing: dp(12)
+                size_hint_x: 1.5
+                orientation: 'vertical'
+
+                Button:
+                    on_release: VLSI_Circuit_BreakerWidget.go_up()
+                    opacity: root.button_opacity
+
+                Button:
+                    on_release: VLSI_Circuit_BreakerWidget.go_down()
+                    opacity: root.button_opacity
+
+            FloatLayout:
+                Button:
+                    on_release: VLSI_Circuit_BreakerWidget.go_right()
+                    opacity: root.button_opacity
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_y: root.side_button_height
+
+
