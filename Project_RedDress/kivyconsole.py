@@ -227,7 +227,7 @@ class ConsoleInput(TextInput):
         self.register_event_type('on_replace')
         # self.bind(text=self.scroll)
         sound_file = 'resources/morse.wav'
-        sound_path = join(App.get_running_app().user_data_dir, sound_file)
+        sound_path = join(os.getcwd(), sound_file)
         self.morse_code = SoundSDL2(source=sound_path)
 
         # pygame.mixer.pre_init(frequency=11000, size=-8, channels=1, buffer=4096)
