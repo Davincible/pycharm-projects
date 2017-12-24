@@ -26,12 +26,6 @@ from os import makedirs
 
 import time
 
-"""
-    - Backbutton handling
-    - side panel navigator
-
-"""
-
 
 Builder.load_file('reddress_visuals.kv')
 if platform == 'win':
