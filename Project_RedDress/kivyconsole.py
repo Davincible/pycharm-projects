@@ -16,7 +16,9 @@ from time import sleep
 from datetime import datetime
 from kivy.utils import get_color_from_hex
 from kivy.core.window import Window
-import pygame
+#import pygame
+from kivy.core.audio import SoundLoader
+from kivy.core.audio.audio_sdl2 import SoundSDL2
 
 Builder.load_string('''
 <KivyConsole>:
@@ -116,9 +118,9 @@ class Shell(EventDispatcher):
         elif command == consoleinput.game_commands[4]:
             consoleinput.morse_code.play()
             self.dispatch('on_output', "Playing morse code")
-            while pygame.mixer.get_busy():
-                continue
-            self.dispatch('on_output', "Morse code finished")
+            # while pygame.mixer.get_busy():
+            #     continue
+            # self.dispatch('on_output', "Morse code finished")
 
         else:
             print("Unknown command has been called")
@@ -223,10 +225,12 @@ class ConsoleInput(TextInput):
         self.register_event_type('on_replace')
         # self.bind(text=self.scroll)
 
-        pygame.mixer.pre_init(frequency=11000, size=-8, channels=1, buffer=4096)
-        pygame.mixer.init()
-        pygame.init()
-        self.morse_code = pygame.mixer.Sound('resources/morse.wav')
+        self.morse_code = SoundSDL2(source='resources/morse.wav')
+
+        # pygame.mixer.pre_init(frequency=11000, size=-8, channels=1, buffer=4096)
+        # pygame.mixer.init()
+        # pygame.init()
+        # self.morse_code = pygame.mixer.Sound('resources/morse.wav')
 
     def scroll(self, *args):
         try:

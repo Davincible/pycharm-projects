@@ -32,11 +32,11 @@ class PongBall(Widget):
         self.pos = Vector(*self.velocity) + self.pos
         end = time()
         print("Move time for pong:", end - start)
+    player1 = ObjectProperty(None)
+    player2 = ObjectProperty(None)
 
 class PongGame(Widget):
     ball = ObjectProperty(None)
-    player1 = ObjectProperty(None)
-    player2 = ObjectProperty(None)
 
     def serve_ball(self, vel=(4, 0)):
         self.ball.center = self.center

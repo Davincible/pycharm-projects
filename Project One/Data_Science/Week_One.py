@@ -1,5 +1,7 @@
 import time
 import datetime
+import numpy as np
+import pandas as pd
 
 def calctime(a = float):
     time_a = time.time()
@@ -30,14 +32,27 @@ for item in cheapest:
 
 def printend(a):
     print("We're done here", a)
+
 print('----------------------------\n')
 
-list_one = [None for element in range(100)]
-print(list_one)
-print(len(list_one))
-list_one = ['One' for i in range(len(list_one))]
-print(list_one)
-print(len(list_one))
+# list_one = [None for element in range(100)]
+# print(list_one)
+# print(len(list_one))
+# list_one = ['One' for i in range(len(list_one))]
+# print(list_one)
+# print(len(list_one))
 
 end = printend("I'm outta here")
 end
+
+a = np.eye(6)
+b = pd.DataFrame(a)
+print("a id:", b)
+
+column_list = ['one', 'two', 'three', 'four', 'five', 'six']
+
+print(b.rename(columns=dict(zip([i for i in range(6)], column_list))))
+
+for i in range(2):
+    b = b.reset_index()
+    print(b)
