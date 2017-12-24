@@ -32,7 +32,7 @@ if platform == 'win':
     print("DEV mode turned on")
     DEBUG = True
 else:
-    DEBUG = False
+    DEBUG = True
 
 
 class MainScreenManagerClass(ScreenManager):
