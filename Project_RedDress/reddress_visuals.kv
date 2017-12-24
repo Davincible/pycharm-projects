@@ -18,10 +18,129 @@
         id: LoginScreen
         name: 'LoginScreen'
 
+    MainScreenClass:
+        id: MainScreen
+        name: 'MainScreen'
+
     VLSI_CircuitBreakerClass:
         id: VLSI_CircuitBreaker
         name: 'VLSI_CircuitBreaker'
         loginscreen: LoginScreen
+
+<MainScreenClass>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: self.texture_
+            tex_coords: (0, 0, self.nx, 0, self.nx, self.ny, 0, self.ny)
+
+
+    MDCard:
+        size_hint: (.8, .8)
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Toolbar:
+                title: "Dashboard"
+                md_bg_color: app.theme_cls.primary_color
+                left_action_items: [['arrow-left', lambda *args: None]]
+                right_action_items: [['dots-vertical', lambda *args: None]]
+
+            GridLayout:
+                cols: 1
+                padding: dp(20)
+#                left_top: left_top
+#                right_top: right_top
+#                left_bottom: left_bottom
+#                right_bottom: right_bottom
+
+
+                canvas:
+                    Color:
+                        rgba: .5, .5, .5, .5
+                    Line:
+                        width: dp(2)
+                        points: root.line_points_one
+                    Line:
+                        width: dp(2)
+                        points: root.line_points_two
+
+
+
+                MDLabel:
+                    text: "Welcome back hoofdpiet!"
+                    font_style: 'Title'
+                    size_hint_y: None
+                    height: dp(60)
+
+                MDSeparator:
+                    size_hint_y: None
+                    height: dp(1)
+
+                Widget:
+                    size_hint_y: None
+                    height: dp(20)
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: root.table_value_height
+
+                    MDLabel:
+                        text: "Cadeautjes uitgedeeld:"
+                        id: left_top
+                        font_style: "Title Bold"
+                        on_size: root.set_line_points()
+                        size_hint_y: None
+                        height: root.table_value_height
+
+                    MDLabel:
+                        text: "873420"
+                        id: right_top
+                        fond_style: "Title Bold"
+                        on_size: root.set_line_points()
+                        size_hint_y: None
+                        height: root.table_value_height
+                        padding: (dp(10), dp(10))
+
+                Widget:
+                    size_hint_y: None
+                    height: dp(3)
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: root.table_value_height
+
+                    MDLabel:
+                        text: "Kinderen blijgemaakt:"
+                        id: left_bottom
+                        font_style: "Title Bold"
+                        size_hint_y: None
+                        height: root.table_value_height
+                        on_size: root.set_line_points()
+
+                    MDLabel:
+                        text: "342379"
+                        id: right_bottom
+                        fond_style: "Title Bold"
+                        size_hint_y: None
+                        height: root.table_value_height
+                        on_size: root.set_line_points()
+                        padding: (dp(10), dp(10))
+
+                Widget:
+
+                MDRaisedButton:
+                    size_hint: .7, .3
+                    text: "Reveal Package"
+                    on_release: root.reveal_package()
+
+                Widget:
+
 
 <LoginScreenClass>:
     textfield_username: textfield_username
@@ -39,6 +158,8 @@
         pos_hint: {'center_x': .5, 'center_y': .6}
         # opacity: .85
         padding: dp(12)
+        size_hint_y: None
+        height: dp(235)
 
         BoxLayout:
             orientation: 'vertical'
@@ -79,6 +200,7 @@
                 MDRaisedButton:
                     text: "enter"
                     on_release: root._enter_button()
+
 
 #  without underscore is the class in RedDress main, with is the Circuit Breaker Widget
 <VLSI_CircuitBreakerClass>:

@@ -18,9 +18,24 @@ from kivy.utils import platform
 from kivy.properties import StringProperty, ListProperty, ReferenceListProperty, NumericProperty, ObjectProperty, BooleanProperty
 from kivy.base import Builder
 from kivy.app import App
+from kivy.config import Config
+
+import urllib3
+from os.path import join, exists
+from os import makedirs
+
+import time
+
+"""
+    - Backbutton handling
+    - side panel navigator
+
+"""
+
 
 Builder.load_file('reddress_visuals.kv')
 if platform == 'win':
+    print("DEV mode turned on")
     DEBUG = True
 else:
     DEBUG = False
@@ -28,6 +43,58 @@ else:
 
 class MainScreenManagerClass(ScreenManager):
     pass
+
+
+class MainScreenClass(Screen):
+    #  properties for the background texture
+    texture_ = Image(source="resources/RedDress_Texture.jpg").texture
+    texture_.wrap = 'repeat'
+    nx = NumericProperty(0)
+    ny = NumericProperty(0)
+
+    line_points_one = ListProperty()
+    line_points_two = ListProperty()
+
+    table_value_height = NumericProperty(dp(60))
+
+    unschedule = False
+    scheduled = False
+
+    def __init__(self, **kwargs):
+        super(MainScreenClass, self).__init__(**kwargs)
+        self.bind(size=self.update_texture_size)
+
+    def update_texture_size(self, *args):
+        self.nx = float(self.width) / self.texture_.width
+        self.ny = float(self.height) / self.texture_.height
+
+    #  get the points for the seperator lines of the table on the dashboard
+    def set_line_points(self, *args):
+        left_top = self.ids.left_top
+        right_top = self.ids.right_top
+        left_bottom = self.ids.left_bottom
+        right_bottom = self.ids.right_bottom
+
+        self.line_points_one = [left_top.x, left_top.y, right_top.right, right_top.y]
+        self.line_points_two = [left_top.right, left_bottom.y, left_top.right, left_top.top]
+
+    def reveal_package(self):
+        if not self.scheduled:
+            Clock.schedule_interval(self.ping_leds, 2)
+            self.scheduled = True
+        else:
+            self.unschedule = True
+
+    def ping_leds(self, *args):
+        if self.unschedule:
+            self.unschedule = False
+            self.scheduled = False
+            return False
+
+        print("request made")
+        url = "http://blynk-cloud.com/bb330cc06dc1446e9c38395fb070b229/update/V1?value=1"
+        browser = urllib3.PoolManager()
+        request = browser.request('GET', url)
 
 
 class LoginScreenClass(Screen):
@@ -56,6 +123,7 @@ class LoginScreenClass(Screen):
         self.nx = float(self.width) / self.texture_.width
         self.ny = float(self.height) / self.texture_.height
 
+    #  an event handler for when the enter button on the login screen has been pressed
     def _enter_button(self):
         username = self.textfield_username.text.strip().lower()
         password = self.textfield_password.text.strip().lower()
@@ -65,13 +133,18 @@ class LoginScreenClass(Screen):
         elif username == 'root_':
             self.force_refresh = True
             self.create_terminal_dialog()
-        elif (username == self.terminal.game_username and password == self.terminal.game_password) \
+        elif ((username == self.terminal.game_username and password == self.terminal.game_password) or (username == 'enter')) \
                 and (DEBUG or self.terminal.hacked_account):
+            time.sleep(.1)
+            App.get_running_app().root.current = 'MainScreen'
             print("Successfully logged in")
+        elif username:
+            self.textfield_password.show_error(msg="Please enter a valid password")
         else:
             self.textfield_username.show_error()
+            print("Username:", self.terminal.game_username, "Password:", self.terminal.game_password)
 
-
+    #  creates a dialog with a terminal emulator in it, and opens it
     def create_terminal_dialog(self):
         self.textfield_username.reset_textbox()
         if not self.terminal or self.force_refresh:
@@ -85,6 +158,7 @@ class LoginScreenClass(Screen):
         self.terminal_dialog.open()
         self.terminal.focus = True
 
+    #  dismiss the terminal dialog, and go to the CircuitBreaker game screen
     def start_circuitbreaker(self, *args):
         self.terminal_dialog.dismiss()
         # App.get_running_app().root.transition = RiseInTransition()
@@ -143,6 +217,10 @@ class RedDressApp(App):
     def __init__(self, **kwargs):
         super(RedDressApp, self).__init__(**kwargs)
         Window.bind(on_keyboard=self.on_keyboard)
+        log_path = join(App.get_running_app().user_data_dir, 'logs')
+        if not exists(log_path):
+            makedirs(log_path)
+        Config.set('kivy', 'log_dir', log_path)
 
     def on_keyboard(self, window, key, *args):
         #  enter = 13
@@ -154,10 +232,20 @@ class RedDressApp(App):
 
     def build(self):
         Window.softinput_mode = 'below_target'
+        Window.bind(on_keyboard=self.on_keyboard)
 
         if platform != 'android':
             Window.size = (394 * 1.7, 700 * 1.7)
         return MainScreenManagerClass()
+
+    def on_keyboard(self, window, key, *args):
+        home_screens = ['BottomLayout_landscape', 'BottomLayout_portrait']
+        #  enter = 13
+        #  tab = 9
+
+        # esc on pc, back on android
+        if key == 27:
+            return True
 
 
 if __name__ == '__main__':

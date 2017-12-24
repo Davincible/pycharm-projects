@@ -80,26 +80,29 @@ class morse():
         last_z = 0
         last_i = 0
 
+        between_letters = .4
+        between_morse = .16
+
         for z in range(len(self.output)):
 
             if z > last_z:
-                time.sleep(0.8)
+                time.sleep(.8)
 
             for i in range(len(self.output[z])):
 
                 if self.output[z][i] == ' ':
-                    time.sleep(0.2)
+                    time.sleep(between_letters)
                 if self.output[z][i] == '.':
                     self.sounds[0].play()
                     while pygame.mixer.get_busy() == True:
                         continue
-                    time.sleep(0.1)
+                    time.sleep(between_morse)
 
                 elif self.output[z][i] == '-':
                     self.sounds[1].play()
                     while pygame.mixer.get_busy() == True:
                         continue
-                    time.sleep(0.1)
+                    time.sleep(between_morse)
                 last_i = i
             last_z = z
 

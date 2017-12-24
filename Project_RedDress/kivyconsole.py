@@ -16,6 +16,7 @@ from time import sleep
 from datetime import datetime
 from kivy.utils import get_color_from_hex
 from kivy.core.window import Window
+import pygame
 
 Builder.load_string('''
 <KivyConsole>:
@@ -111,6 +112,14 @@ class Shell(EventDispatcher):
             self.dispatch('on_exit')
             skip_newline = True
 
+        #  play morse code
+        elif command == consoleinput.game_commands[4]:
+            consoleinput.morse_code.play()
+            self.dispatch('on_output', "Playing morse code")
+            while pygame.mixer.get_busy():
+                continue
+            self.dispatch('on_output', "Morse code finished")
+
         else:
             print("Unknown command has been called")
             error_msg = "Error, unknown command: " + command
@@ -140,7 +149,8 @@ class ConsoleInput(TextInput):
     game_commands = ["sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --dbs",
                      "sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --user-agent --level=3 -GET hoofd_piet",
                      'VLSI_Circuit_Circuit_Breaker_2.0',
-                     'exit']
+                     'exit',
+                     'morse']
 
     sqlmap_output_01_markup = ["[color=4F860E][time] [INFO] testing connection to the target URL[/color]",
                      "[color=4F860E][time] [INFO] testing if the target URL is stable. This can take a couple of seconds[/color]",
@@ -212,6 +222,11 @@ class ConsoleInput(TextInput):
         self.register_event_type('on_complete')
         self.register_event_type('on_replace')
         # self.bind(text=self.scroll)
+
+        pygame.mixer.pre_init(frequency=11000, size=-8, channels=1, buffer=4096)
+        pygame.mixer.init()
+        pygame.init()
+        self.morse_code = pygame.mixer.Sound('resources/morse.wav')
 
     def scroll(self, *args):
         try:
