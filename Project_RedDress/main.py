@@ -90,6 +90,9 @@ class MainScreenClass(Screen):
         browser = urllib3.PoolManager()
         request = browser.request('GET', url)
 
+    def goto_login(self):
+        App.get_running_app().root.current = 'LoginScreen'
+
 
 class LoginScreenClass(Screen):
     #  properties for the background texture

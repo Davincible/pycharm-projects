@@ -5,6 +5,7 @@ from kivy.properties import ObjectProperty, ListProperty, StringProperty, \
     NumericProperty, Clock, partial, BooleanProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
+from kivy.metrics import sp
 import os
 import subprocess
 import threading
@@ -460,7 +461,7 @@ class KivyConsole(BoxLayout, Shell):
     Default to 'DroidSansMono'
     '''
 
-    font_size = NumericProperty(12)
+    font_size = NumericProperty(sp(12))
     '''Indicates the size of the font used for the console
 
     :data:`font_size` is a :class:`~kivy.properties.NumericProperty`,
