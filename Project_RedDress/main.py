@@ -185,7 +185,7 @@ class VLSI_CircuitBreakerClass(Screen, FocusBehavior):
     def complete(self, *args):
         source = 'resources/circuit_complete.png'
         texture = Image(source=source)
-        height = dp((texture.texture_size[1] / self.width) * texture.texture_size[0] - 40)
+        height = dp((texture.texture_size[1] * self.width) / texture.texture_size[0])
         complete_popup = ModalView(size_hint=(1, None), height=height, background=source,
                                    background_color=[0, 0, 0, .35], auto_dismiss=False, pos_hint={'center_y': .65})
         complete_popup.open()
