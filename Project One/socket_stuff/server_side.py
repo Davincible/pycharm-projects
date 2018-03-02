@@ -31,6 +31,6 @@ def client(conn):
 if __name__ == '__main__':
     while True:
         conn, addr = s.accept()
-        print("Connected to: "+addr[0]+':'+str(addr[1]) + '\n    full address:' + addr)
+        print("Connected to: "+addr[0]+':'+str(addr[1]) + '\n    full address:' + str(addr))
 
         start_new_thread(client, (conn,))
