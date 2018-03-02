@@ -20,7 +20,7 @@ def client(conn):
 
     while True:
         data = conn.recv(buffer_size)
-        reply = "Message recieved: " + data.decode('utf-8')
+        reply = "Message recieved: " + data.decode('utf-8') + '\n'
 
         if not data:
             break
