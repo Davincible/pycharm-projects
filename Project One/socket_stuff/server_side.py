@@ -19,6 +19,7 @@ def client(conn):
     conn.send(str.encode("Connection to server established, u want sum ?\n"))
 
     while True:
+        print("beginning of the while loop")
         data = conn.recv(buffer_size)
         reply = "Message recieved: " + data.decode('utf-8') + '\n'
 
