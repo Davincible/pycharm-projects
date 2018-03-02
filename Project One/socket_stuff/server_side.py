@@ -23,9 +23,11 @@ def client(conn):
         reply = "Message recieved: " + data.decode('utf-8') + '\n'
 
         if not data:
+            print("calling break")
             break
 
         conn.sendall(str.encode(reply))
+    print("closing connection")
     conn.close()
 
 if __name__ == '__main__':
