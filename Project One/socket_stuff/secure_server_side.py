@@ -9,7 +9,8 @@ def handle(conn):
 
 def main():
     #  again look into sockstream
-    sock = socket.socket(socket.AF_INET)
+    # sock = socket.socket(socket.AF_INET)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((HOST, PORT))
     sock.listen(5)
     context = ssl.create_default_context()
@@ -17,6 +18,7 @@ def main():
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     context.set_ciphers('EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH')
     print("socket created")
+
     while True:
         print("waiting for connection")
         conn = None
