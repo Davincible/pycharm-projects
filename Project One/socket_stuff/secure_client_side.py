@@ -3,6 +3,7 @@ import socket, ssl
 HOST, PORT = "10.244.85.206", 502
 
 def handle(conn):
+    print("sucessfully connected")
     conn.write(b'a message from a client\n')
     print("received:", conn.recv().decode())
 
@@ -13,6 +14,7 @@ def main():
     context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='cert.pem')
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     conn = context.wrap_socket(sock, server_hostname=HOST)
+    print("trying to connect to host:", HOST)
     try:
         conn.connect((HOST, PORT))
         handle(conn)

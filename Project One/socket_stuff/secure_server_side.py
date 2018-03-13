@@ -3,6 +3,7 @@ import socket, ssl
 HOST, PORT, CERT = '10.244.85.206', 502, 'cert.pem'
 
 def handle(conn):
+    print("connection established")
     print(conn.recv())
     conn.write(b'this is a response from the server', str(conn.getpeername()), str(conn.getpeercert()))
 
@@ -15,7 +16,9 @@ def main():
     context.load_cert_chain(certfile=CERT)
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     context.set_ciphers('EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH')
+    print("socket created")
     while True:
+        print("waiting for connection")
         conn = None
         ssock, addr = sock.accept()
         try:
@@ -28,4 +31,5 @@ def main():
                 conn.close()
 
 if __name__ == '__main__':
+    print("started the server")
     main()
