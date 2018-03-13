@@ -1,6 +1,6 @@
 import socket, ssl
 
-HOST, PORT, CERT = '10.244.85.206', 502, 'cert.pem'
+HOST, PORT, CERT = 'localhost', 502, 'cert.pem'
 
 def handle(conn):
     print("connection established")
