@@ -1,7 +1,8 @@
 import socket
 from _thread import *
 
-host = ''
+# host = ''
+host = 'gandalf.whalebayco.com'
 port = 501
 buffer_size = 2048
 

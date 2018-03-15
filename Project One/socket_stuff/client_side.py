@@ -3,7 +3,8 @@ import time
 from bitstring import BitStream, BitArray
 
 
-host = '10.244.85.206'
+# host = '10.244.85.206'
+host = 'gandalf.whalebayco.com'
 port = 501
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
