@@ -1,6 +1,6 @@
 import socket, ssl
 
-HOST, PORT = "10.244.85.206", 502
+HOST, PORT = "gandalf.whalebayco.com", 502
 
 def handle(conn):
     print("sucessfully connected")
