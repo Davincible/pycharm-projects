@@ -23,7 +23,7 @@ def main():
         conn.connect((HOST, PORT))
         handle(conn)
     finally:
-        print("closing connection")
+        print("closing connection\n")
         conn.close()
 
 if __name__ == '__main__':

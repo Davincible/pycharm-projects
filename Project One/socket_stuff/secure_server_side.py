@@ -1,13 +1,15 @@
 import socket, ssl
+from _thread import *
 
 HOST, PORT, CERT = 'gandalf.whalebayco.com', 503, 'second_full.pem'
 # HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
 
 def handle(conn):
     print("connection established")
-    print(conn.recv().decode())
-    conn.write(b'this is a response from the server')
-    print(str(conn.getpeername()), str(conn.getpeercert()))
+    print("host name:", str(conn.getpeername()), "peer cert:", str(conn.getpeercert()))
+    while True:
+        print(conn.recv().decode())
+        conn.write(b'this is a response from the server')
 
 def main():
     #  again look into sockstream
@@ -27,12 +29,12 @@ def main():
         try:
             ssock, addr = sock.accept()
             conn = context.wrap_socket(ssock, server_side=True)
-            handle(conn)
+            start_new_thread(handle, conn)
         except ssl.SSLError as e:
             print(e)
         finally:
             if conn:
-                print("closing connection")
+                print("closing connection\n")
                 conn.close()
 
 if __name__ == '__main__':
