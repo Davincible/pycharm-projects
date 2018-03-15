@@ -32,10 +32,10 @@ def main():
             start_new_thread(handle, (conn,))
         except ssl.SSLError as e:
             print(e)
-        finally:
-            if conn:
-                print("closing connection\n")
-                conn.close()
+        # finally:
+        #     if conn:
+        #         print("closing connection\n")
+        #         conn.close()
 
 if __name__ == '__main__':
     print("started the server")
