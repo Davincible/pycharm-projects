@@ -15,7 +15,7 @@ def main():
     context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='second_full.pem')
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     # context.check_hostname = False
-    conn = context.wrap_socket(sock)
+    conn = context.wrap_socket(sock, server_hostname=HOST)
     print("trying to connect to host:", HOST)
     try:
         conn.connect((HOST, PORT))

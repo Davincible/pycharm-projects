@@ -11,7 +11,7 @@ def handle(conn):
 def main():
     #  again look into sockstream
     # sock = socket.socket(socket.AF_INET)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock = socket.socket(socket.AF_INET)
     sock.bind((HOST, PORT))
     sock.listen(5)
     context = ssl.create_default_context()
