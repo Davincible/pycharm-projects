@@ -1,6 +1,6 @@
 import socket, ssl
 
-HOST, PORT, CERT = '127.0.0.1', 502, 'first_full.pem'
+HOST, PORT, CERT = 'raspberrypi', 502, 'first_full.pem'
 
 def handle(conn):
     print("connection established")
