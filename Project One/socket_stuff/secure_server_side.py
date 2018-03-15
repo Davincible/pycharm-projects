@@ -1,6 +1,6 @@
 import socket, ssl
 
-HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
+HOST, PORT, CERT = 'gandalf.whalebayco.com', 503, 'second_full.pem'
 # HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
 
 def handle(conn):
@@ -24,8 +24,8 @@ def main():
     while True:
         print("waiting for connection")
         conn = None
-        ssock, addr = sock.accept()
         try:
+            ssock, addr = sock.accept()
             conn = context.wrap_socket(ssock, server_side=True)
             handle(conn)
         except ssl.SSLError as e:
