@@ -6,7 +6,8 @@ HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
 def handle(conn):
     print("connection established")
     print(conn.recv())
-    conn.write(b'this is a response from the server', str(conn.getpeername()), str(conn.getpeercert()))
+    conn.write(b'this is a response from the server')
+    print(str(conn.getpeername()), str(conn.getpeercert()))
 
 def main():
     #  again look into sockstream
