@@ -24,7 +24,7 @@ def main():
         conn = None
         ssock, addr = sock.accept()
         try:
-            conn = context.wrap_socket(ssock, server_side=True)
+            conn = context.wrap_socket(ssock, server_side=True, server_hostname=HOST)
             handle(conn)
         except ssl.SSLError as e:
             print(e)
