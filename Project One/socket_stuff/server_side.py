@@ -9,6 +9,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
     s.bind((host, port))
+    print("socket name:", s.getsockname())
 except socket.error as e:
     print("some error occured:", str(e))
 
