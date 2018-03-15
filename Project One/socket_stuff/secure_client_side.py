@@ -11,7 +11,7 @@ def main():
     #  look into the sock stream thing
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # sock = socket.socket(socket.AF_INET)
-    context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='cert.pem')
+    context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='second_full.pem')
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     conn = context.wrap_socket(sock, server_hostname=HOST)
     print("trying to connect to host:", HOST)
