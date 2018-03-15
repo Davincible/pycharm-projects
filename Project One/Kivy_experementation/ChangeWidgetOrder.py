@@ -2,8 +2,11 @@ from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.behaviors import FocusBehavior
+from kivy.uix.modalview import ModalView
 from kivy.core.window import Window
-
+from kivymd.dialog import MDDialog
+from kivymd.theming import ThemeManager
+from kivy.properties import ObjectProperty, ListProperty
 from kivy.base import Builder
 
 kv_file = """
@@ -21,7 +24,7 @@ ScrollView:
                 size: self.size
                 pos: self.pos
         
-        Label:
+        Button:
             size_hint_y: None
             height: dp(125)
             text: "A"
@@ -33,6 +36,8 @@ ScrollView:
                 Rectangle:
                     size: self.size
                     pos: self.pos
+                    
+            on_release: app.dialogg.open()
         
         Label:
             size_hint_y: None
@@ -55,9 +60,16 @@ ScrollView:
             text: "D"
 
 """
-
+class dialogthing(MDDialog):
+    placeholder = ObjectProperty(None)
+    size_hint = ListProperty([None, None])
+    size = ListProperty([100, 100])
+    background_color = ListProperty([1, 0, 0, .5])
 
 class MainApp(App):
+    dialogg = dialogthing()
+    theme_cls = ThemeManager()
+
     def build(self):
         window = Builder.load_string(kv_file)
         Window.bind(on_keyboard=self.on_keyboard)
