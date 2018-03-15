@@ -1,6 +1,7 @@
 import socket, ssl
 
 HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
+# HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
 
 def handle(conn):
     print("connection established")
@@ -17,7 +18,7 @@ def main():
     context.load_cert_chain(certfile=CERT)
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     context.set_ciphers('EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH')
-    print("socket created")
+    print("socket created:", sock.getsockname())
 
     while True:
         print("waiting for connection")

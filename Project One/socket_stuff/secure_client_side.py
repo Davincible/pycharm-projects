@@ -4,6 +4,7 @@ HOST, PORT = "gandalf.whalebayco.com", 502
 
 def handle(conn):
     print("sucessfully connected")
+    print("match host name:", ssl.match_hostname(conn.getpeercert(), HOST))
     conn.write(b'a message from a client\n')
     print("received:", conn.recv().decode())
 
@@ -13,7 +14,8 @@ def main():
     # sock = socket.socket(socket.AF_INET)
     context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='second_full.pem')
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
-    conn = context.wrap_socket(sock, server_hostname=HOST)
+    # context.check_hostname = False
+    conn = context.wrap_socket(sock)
     print("trying to connect to host:", HOST)
     try:
         conn.connect((HOST, PORT))
