@@ -1,7 +1,7 @@
 import socket
 from _thread import *
 
-host = ''
+host = 'localhost'
 port = 501
 buffer_size = 2048
 
