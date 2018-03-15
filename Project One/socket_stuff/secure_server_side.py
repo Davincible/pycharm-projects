@@ -5,7 +5,7 @@ HOST, PORT, CERT = 'gandalf.whalebayco.com', 503, 'second_full.pem'
 
 def handle(conn):
     print("connection established")
-    print(conn.recv())
+    print(conn.recv().decode())
     conn.write(b'this is a response from the server')
     print(str(conn.getpeername()), str(conn.getpeercert()))
 
