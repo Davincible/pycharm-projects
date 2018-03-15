@@ -14,7 +14,7 @@ def main():
     sock = socket.socket(socket.AF_INET)
     sock.bind((HOST, PORT))
     sock.listen(5)
-    context = ssl.create_default_context()
+    context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     context.load_cert_chain(certfile=CERT)
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
     context.set_ciphers('EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH')
