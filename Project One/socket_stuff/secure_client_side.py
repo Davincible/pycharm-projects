@@ -5,8 +5,10 @@ HOST, PORT = "gandalf.whalebayco.com", 503
 def handle(conn):
     print("sucessfully connected")
     print("match host name:", ssl.match_hostname(conn.getpeercert(), HOST))
-    conn.write(b'a message from a client\n')
-    print("received:", conn.recv().decode())
+    print("cert:", str(conn.getpeercert()))
+    while True:
+        conn.write(b'{}\n'.format(input("enter a message to send to the server: ")))
+        print("received:", conn.recv().decode())
 
 def main():
     #  look into the sock stream thing
