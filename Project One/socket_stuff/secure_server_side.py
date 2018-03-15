@@ -29,7 +29,7 @@ def main():
         try:
             ssock, addr = sock.accept()
             conn = context.wrap_socket(ssock, server_side=True)
-            start_new_thread(handle, conn)
+            start_new_thread(handle, (conn,))
         except ssl.SSLError as e:
             print(e)
         finally:
