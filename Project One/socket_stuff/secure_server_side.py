@@ -32,6 +32,7 @@ def main():
             print(e)
         finally:
             if conn:
+                print("closing connection")
                 conn.close()
 
 if __name__ == '__main__':

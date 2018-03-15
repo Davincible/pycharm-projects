@@ -7,7 +7,7 @@ def handle(conn):
     print("match host name:", ssl.match_hostname(conn.getpeercert(), HOST))
     print("cert:", str(conn.getpeercert()))
     while True:
-        conn.write(b'{}\n'.format(input("enter a message to send to the server: ")))
+        conn.write(input("enter a message to send to the server: ").encode())
         print("received:", conn.recv().decode())
 
 def main():
@@ -23,6 +23,7 @@ def main():
         conn.connect((HOST, PORT))
         handle(conn)
     finally:
+        print("closing connection")
         conn.close()
 
 if __name__ == '__main__':
