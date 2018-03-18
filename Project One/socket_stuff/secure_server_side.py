@@ -1,8 +1,8 @@
 import socket, ssl
 from _thread import *
 
-HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
-# HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'second_full.pem'
+# HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
+HOST, PORT, CERT = 'gandalf.whalebayco.com', 502, 'ip_full.pem'
 
 def handle(conn):
     print("connection established")
