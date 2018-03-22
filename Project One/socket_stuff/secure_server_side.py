@@ -42,6 +42,7 @@ def process_request(request, conn):
         print("the function call is:", function_call)
         if function_call is 'request_token':
             credentials = {request['body']['Data']['username']: request['body']['Data']['password']}
+            print("calling token method")
             token = create_token(credentials)
             response = {'header': {'Code': 200, 'GoodResponse': True, 'FunctionCall': function_call}, 'body': {'Data': token}}
             send_response(response, conn)
