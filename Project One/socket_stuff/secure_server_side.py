@@ -23,12 +23,14 @@ def handle(conn):
 def send_response(response, conn):
     if isinstance(response, type(dict())):
         request = json.dumps(response)
+    else:
+        request = response
 
     # make sure the request is a string, no need for handling of there objects types than dicts, because it would be
     # an invalid request anyway
     assert(isinstance(request, type(str())))
 
-    conn.send(response.encode())
+    conn.send(request.encode())
 
 def process_request(request, conn):
     print("calling the processing method")
