@@ -68,6 +68,7 @@ def create_token(credentials):
     username = credentials.keys()[0]
     password = credentials[username]
     if username in users and password == users[username]:
+        print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
         token = jwt.encode(payload, private_key, algorithm="ES384")
