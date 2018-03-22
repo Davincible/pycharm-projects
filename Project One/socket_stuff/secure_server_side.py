@@ -65,7 +65,7 @@ def create_token(credentials):
     print("generating token")
     public_key, private_key = load_rsa_keys()
 
-    username = credentials.keys()[0]
+    username = list(credentials.keys())[0]
     password = credentials[username]
     if username in users and password == users[username]:
         print("username correct")
