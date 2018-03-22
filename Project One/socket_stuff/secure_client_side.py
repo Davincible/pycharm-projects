@@ -1,15 +1,80 @@
 import socket, ssl
+import json
 
-HOST, PORT = "legolas.whalebayco.com", 503
+HOST, PORT = "10.244.85.206", 503
+
+responses = {"invalid_json_string": {"header": {"Code": 401}, "body": {"Error_Description": "Error while loading string as json"}},
+             "invalid_json_format": {"header": {"Code": 402}, "body": {"Error_Description": "invalid json format"}}}
 
 def handle(conn):
-    print("sucessfully connected")
+    print("successfully connected")
+    try:
+        # listen for confirmation message from the server
+        resp = conn.recv().decode()
 
-    while True:
-        print("match host name:", ssl.match_hostname(conn.getpeercert(), HOST))
-        print("cert:", str(conn.getpeercert()))
-        conn.write(input("enter a message to send to the server: ").encode())
-        print("received:", conn.recv().decode())
+        # convert response to json and check if valid
+        resp = validate(resp, conn)
+        process(resp, conn)
+
+    except ValueError:
+        conn.write(json.dumps(responses['invalid_json_string']).encode())
+
+def validate(response, conn):
+    valid_response = False
+    counter = 0
+
+    while not valid_response:
+        response = json.loads(response)
+
+        if counter > 5:
+            print("error code 402 was encountered 5 times in a row")
+            exit(402)
+
+        # check if the received json is valid according to the protocol,
+        # meaning the root keywords are 'header' and 'body'
+        if response.keys() != {"header": None, "body": None}.keys():
+            print("invalid response, error code 402")
+            response = make_request(responses['invalid_json_format'], conn)
+            counter += 1
+        else:
+            valid_response = True
+
+    return response
+
+def process(response, conn):
+    response_code = response['header']['Code']
+
+    if response_code is 200:
+        # request has been processed correctly, return data
+        return True, response
+    elif response_code is 210:
+        # connection with server established, respond with login credentials and ask for JWT
+        authenticate(conn)
+
+def make_request(request, conn):
+    if isinstance(request, type(dict())):
+        request = json.dumps(request)
+
+    # make sure the request is a string, no need for handling of there objects types than dicts, because it would be
+    # an invalid request anyway
+    assert(isinstance(request, type(str())))
+
+    conn.send(request.encode())
+    response = conn.recv().decode()
+    validate(response, conn)
+    return response
+
+def authenticate(conn, username="hank", password="thetank"):
+    data = {"username": username, "password": password}
+    request = {"header": {"FunctionCall": "request_token"}, "body": {"Data": data}}
+    resp = make_request(request, conn)
+
+    if not resp['header']['Code'] is 200:
+        print("didn't receive code 200 while authenticating, exiting")
+        exit(resp['header']['Code'])
+
+    auth_token = resp['body']['Data']
+    print("Collected auth token:", auth_token)
 
 def main():
     #  look into the sock stream thing

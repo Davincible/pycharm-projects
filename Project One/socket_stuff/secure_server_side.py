@@ -1,15 +1,76 @@
 import socket, ssl
 from _thread import *
+import json
+from jose import jwt
+import time
 
-# HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
-HOST, PORT, CERT = 'legolas.whalebayco.com', 503, 'ip_full.pem'
+HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
+# HOST, PORT, CERT = 'legolas.whalebayco.com', 503, 'ip_full.pem'
+
+responses = {"connection_established": {"header": {"Code": 210}, "body": {}}}
+
+users = {"hank": "thetank"}
 
 def handle(conn):
     print("connection established")
     print("host name:", str(conn.getpeername()), "peer cert:", str(conn.getpeercert()))
+    send_response(responses['connection_established'], conn)
+
     while True:
-        print(conn.recv(10).decode())
-        conn.write(b'this is a response from the server')
+        client_request = conn.recv().decode()
+        process_request(client_request, conn)
+
+def send_response(response, conn):
+    if isinstance(response, type(dict())):
+        request = json.dumps(response)
+
+    # make sure the request is a string, no need for handling of there objects types than dicts, because it would be
+    # an invalid request anyway
+    assert(isinstance(request, type(str())))
+
+    conn.send(response.encode())
+
+def process_request(request, conn):
+    print("calling the processing method")
+    try:
+        request = json.loads(request)
+
+        ## should do some validation shit
+        function_call = request['header']['FunctionCall']
+        if function_call is 'request_token':
+            credentials = {request['body']['Data']['username']: request['body']['Data']['password']}
+            token = create_token(credentials)
+            response = {'header': {'Code': 200, 'GoodResponse': True, 'FunctionCall': function_call}, 'body': {'Data': token}}
+            send_response(response, conn)
+
+    except ValueError:
+        print(":meth: process_request error: invalid request from client, cannot load json")
+        exit(1)
+
+def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
+    print("loading rsa keys")
+    with open(pub, 'r') as pub_key_file:
+        public_key = pub_key_file.read()
+
+    with open(priv, 'r') as priv_key_file:
+        private_key = priv_key_file.read()
+
+    return public_key, private_key
+
+def create_token(credentials):
+    print("generating token")
+    public_key, private_key = load_rsa_keys()
+
+    username = credentials.keys()[0]
+    password = credentials[username]
+    if username in users and password == users[username]:
+        payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
+        start = time.time()
+        token = jwt.encode(payload, private_key, algorithm="ES384")
+        print("{} | generated token: {}".format(time.time() - start, token))
+
+        return token
+
 
 def main():
     #  again look into sockstream
