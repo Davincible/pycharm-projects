@@ -8,7 +8,7 @@ def handle(conn):
     print("connection established")
     print("host name:", str(conn.getpeername()), "peer cert:", str(conn.getpeercert()))
     while True:
-        print(conn.recv().decode())
+        print(conn.recv(10).decode())
         conn.write(b'this is a response from the server')
 
 def main():
