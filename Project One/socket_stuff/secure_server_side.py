@@ -109,7 +109,7 @@ rigROVMJjwzNCFI7W3VAg/5erg24QHkzDJwA0Qx6KSgcUidQUvW7u9w+4Po6vvmE
 UU9oPNor7t0rbbf/5FGxbsm1Zg3BgPBGeLmQo3mVe+lLV8i0KvARo61VSP8dsApQ
 HKgrm+Jvr6yOsziSbYbXGm2ssAS/P5NzB4/atO7UGoqJZnJciy0wrBf0au5jCmAS
 R4/T7avPbMgpTHkGWA9/WblQeLGFkfDX6WM44neVlruZmTaeUhbatyd1DMsV
------END RSA PRIVATE KEY-----"""
+-----END RSA PRIVATE KEY-----""".encode()
 
 def create_token(credentials):
     print("generating token")
