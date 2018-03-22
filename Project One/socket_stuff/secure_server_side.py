@@ -59,7 +59,7 @@ def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
     with open(priv, 'r') as priv_key_file:
         private_key = priv_key_file.read()
 
-    return public_key, b"""-----BEGIN RSA PRIVATE KEY-----
+    return public_key, """-----BEGIN RSA PRIVATE KEY-----
 MIIJKQIBAAKCAgEAsV2FbYzFq8joJxFmQcWp8kSQ6V84aNxTnnU+3MImUUzgdJkF
 EsWq/JakQ2L4Noa/JkdnwFgzXXe9ph3htMaW4z7Vm5eY11TRNnC06kiDs+gko4U6
 yXeKBD+qj0YwewHkUZJnNKx0B6Ut9HvSlE6uG14OoyQzRtzv94Atgg43vvVtLL0p
