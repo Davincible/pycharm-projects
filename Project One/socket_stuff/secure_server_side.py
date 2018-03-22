@@ -53,7 +53,7 @@ def process_request(request, conn):
         print(":meth: process_request error: invalid request from client, cannot load json")
         exit(1)
 
-def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
+def load_rsa_keys(pub="publickey.pub", priv="second_full.pem"):
     print("loading rsa keys")
     with open(pub, 'r') as pub_key_file:
         public_key = pub_key_file.read()
