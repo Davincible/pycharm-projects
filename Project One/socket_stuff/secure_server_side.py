@@ -61,7 +61,7 @@ def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
     with open(priv, 'r') as priv_key_file:
         private_key = priv_key_file.read()
 
-    cert_obj = load_pem_x509_certificate(private_key, default_backend())
+    cert_obj = load_pem_x509_certificate(private_key.encode(), default_backend())
     return public_key, cert_obj.private_key()
 
 def create_token(credentials):
