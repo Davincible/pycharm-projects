@@ -74,7 +74,7 @@ def create_token(credentials):
         print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
-        token = jwt.encode(payload, 'mykey.pem', algorithm="ES384")
+        token = jwt.encode(payload, 'second_full.pem', algorithm="ES384")
         print("{} | generated token: {}".format(time.time() - start, token))
 
         return token
