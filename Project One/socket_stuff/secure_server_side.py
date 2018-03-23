@@ -35,7 +35,7 @@ def send_response(response, conn):
 def process_request(request, conn):
     print("calling the processing method")
     try:
-        request = json.loads(request)
+        request = json.loads(request.decode())
 
         ## should do some validation shit
         function_call = request['header']['FunctionCall']
