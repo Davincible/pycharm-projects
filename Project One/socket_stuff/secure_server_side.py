@@ -66,7 +66,7 @@ def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
 
 def create_token(credentials):
     print("generating token")
-    public_key, private_key = load_rsa_keys()
+    # public_key, private_key = load_rsa_keys()
 
     username = list(credentials.keys())[0]
     password = credentials[username]
