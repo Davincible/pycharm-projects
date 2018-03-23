@@ -51,7 +51,7 @@ def process_request(request, conn):
         print(":meth: process_request error: invalid request from client, cannot load json")
         exit(1)
 
-def load_rsa_keys(pub="publickey.pub", priv="first_full.pem"):
+def load_rsa_keys(pub="publickey.pub", priv="ec_key_01.pem"):
     print("loading rsa keys")
     with open(pub, 'r') as pub_key_file:
         public_key = pub_key_file.read()
@@ -72,7 +72,7 @@ def create_token(credentials):
         print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
-        token = jwt.encode(payload, "ec_key_01.pem", algorithm="ES512")
+        token = jwt.encode(payload, private_key, algorithm="ES512")
         print("{} | generated token: {}".format(time.time() - start, token))
 
         return token
