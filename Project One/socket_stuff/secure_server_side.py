@@ -1,8 +1,8 @@
 import socket, ssl
 from _thread import *
 import json
-from jwt import jwt
 import time
+import jwt
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
 
