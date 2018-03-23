@@ -3,8 +3,9 @@ from _thread import *
 import json
 import time
 import jwt
-from cryptography.x509 import load_pem_x509_certificate
-from cryptography.hazmat.backends import default_backend
+from jwt.contrib.algorithms.py_ecdsa import ECAlgorithm
+jwt.unregister_algorithm('ES512')
+jwt.register_algorithm('ES512', ECAlgorithm(ECAlgorithm.SHA512))
 
 HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
 # HOST, PORT, CERT = 'legolas.whalebayco.com', 503, 'ip_full.pem'
@@ -74,7 +75,7 @@ def create_token(credentials):
         print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
-        token = jwt.encode(payload, private_key, algorithm="ES384")
+        token = jwt.encode(payload, private_key, algorithm="ES512")
         print("{} | generated token: {}".format(time.time() - start, token))
 
         return token
