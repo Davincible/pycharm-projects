@@ -62,7 +62,7 @@ def load_rsa_keys(pub="publickey.pub", priv="first_key.key"):
         public_key = pub_key_file.read()
 
     with open(priv, 'r') as priv_key_file:
-        private_key = priv_key_file.read().encode()
+        private_key = priv_key_file.read()
 
     # cert_obj = load_pem_x509_certificate(private_key.encode(), default_backend())
     return public_key, private_key
