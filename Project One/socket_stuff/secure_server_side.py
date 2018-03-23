@@ -53,7 +53,7 @@ def process_request(request, conn):
         print(":meth: process_request error: invalid request from client, cannot load json")
         exit(1)
 
-def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
+def load_rsa_keys(pub="publickey.pub", priv="first_key.key"):
     print("loading rsa keys")
     with open(pub, 'r') as pub_key_file:
         public_key = pub_key_file.read()
@@ -61,12 +61,12 @@ def load_rsa_keys(pub="publickey.pub", priv="mykey.pem"):
     with open(priv, 'r') as priv_key_file:
         private_key = priv_key_file.read()
 
-    cert_obj = load_pem_x509_certificate(private_key.encode(), default_backend())
-    return public_key, cert_obj
+    # cert_obj = load_pem_x509_certificate(private_key.encode(), default_backend())
+    return public_key, private_key
 
 def create_token(credentials):
     print("generating token")
-    # public_key, private_key = load_rsa_keys()
+    public_key, private_key = load_rsa_keys()
 
     username = list(credentials.keys())[0]
     password = credentials[username]
@@ -74,7 +74,7 @@ def create_token(credentials):
         print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
-        token = jwt.encode(payload, 'first_key.key', algorithm="ES384")
+        token = jwt.encode(payload, private_key, algorithm="ES384")
         print("{} | generated token: {}".format(time.time() - start, token))
 
         return token
