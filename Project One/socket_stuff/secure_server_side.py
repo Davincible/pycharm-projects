@@ -50,6 +50,9 @@ def process_request(request, conn):
             token = create_token(credentials)
             response = {'header': {'Code': 200, 'GoodResponse': True, 'FunctionCall': function_call}, 'body': {'Data': token}}
             send_response(response, conn)
+        elif function_call == 'close_connection':
+            print("Closing connection to:", conn.getpeername())
+            conn.close()
 
     except ValueError:
         print(":meth: process_request error: invalid request from client, cannot load json\n    : ", request)

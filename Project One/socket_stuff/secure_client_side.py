@@ -4,7 +4,8 @@ import json
 HOST, PORT = "10.244.85.206", 503
 
 responses = {"invalid_json_string": {"header": {"Code": 401}, "body": {"Error_Description": "Error while loading string as json"}},
-             "invalid_json_format": {"header": {"Code": 402}, "body": {"Error_Description": "invalid json format"}}}
+             "invalid_json_format": {"header": {"Code": 402}, "body": {"Error_Description": "invalid json format"}},
+             "closing_connection": {"header": {"FunctionCall": "close_connection"}, "body": {}}}
 
 def handle(conn):
     print("successfully connected")
@@ -93,6 +94,7 @@ def main():
         exit(1)
     finally:
         print("closing connection\n")
+        make_request(responses['closing_connection'], conn)
         conn.close()
 
 if __name__ == '__main__':
