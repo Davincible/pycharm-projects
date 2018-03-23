@@ -3,11 +3,6 @@ from _thread import *
 import json
 import time
 import jwt
-from jwt.contrib.algorithms.py_ecdsa import ECAlgorithm
-jwt.unregister_algorithm('ES512')
-jwt.register_algorithm('ES512', ECAlgorithm(ECAlgorithm.SHA512))
-jwt.unregister_algorithm('ES384')
-jwt.register_algorithm('ES384', ECAlgorithm(ECAlgorithm.SHA384))
 
 HOST, PORT, CERT = '10.244.85.206', 503, 'ip_full.pem'
 # HOST, PORT, CERT = 'legolas.whalebayco.com', 503, 'ip_full.pem'
@@ -77,7 +72,7 @@ def create_token(credentials):
         print("username correct")
         payload = {"aud": username, "iss": "WB server", "jti": 636345, "did": "test_client"}
         start = time.time()
-        token = jwt.encode(payload, private_key, algorithm="ES384")
+        token = jwt.encode(payload, "ec_key_01.pem", algorithm="ES512")
         print("{} | generated token: {}".format(time.time() - start, token))
 
         return token
