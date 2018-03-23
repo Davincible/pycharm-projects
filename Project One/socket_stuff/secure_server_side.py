@@ -17,7 +17,7 @@ def handle(conn):
     send_response(responses['connection_established'], conn)
 
     while True:
-        client_request = conn.recv().decode()
+        client_request = conn.recv()
         process_request(client_request, conn)
 
 def send_response(response, conn):
