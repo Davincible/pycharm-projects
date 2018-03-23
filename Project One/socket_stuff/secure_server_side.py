@@ -18,7 +18,11 @@ def handle(conn):
 
     while True:
         client_request = conn.recv()
-        process_request(client_request, conn)
+
+        if client_request.strip():
+            process_request(client_request, conn)
+        else:
+            print("received empty request")
 
 def send_response(response, conn):
     if isinstance(response, type(dict())):
