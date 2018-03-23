@@ -67,7 +67,7 @@ def make_request(request, conn):
 def authenticate(conn, username="hank", password="thetank"):
     data = {"username": username, "password": password}
     request = {"header": {"FunctionCall": "request_token"}, "body": {"Data": data}}
-    resp = make_request(request, conn)
+    resp = validate(make_request(request, conn), conn)
 
     if not resp['header']['Code'] is 200:
         print("didn't receive code 200 while authenticating, exiting")

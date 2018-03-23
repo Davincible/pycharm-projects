@@ -48,7 +48,7 @@ def process_request(request, conn):
             send_response(response, conn)
 
     except ValueError:
-        print(":meth: process_request error: invalid request from client, cannot load json")
+        print(":meth: process_request error: invalid request from client, cannot load json\n    : ", request)
         exit(1)
 
 def load_rsa_keys(pub="publickey.pub", priv="ec_key_01.pem"):
