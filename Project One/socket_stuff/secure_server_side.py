@@ -53,6 +53,7 @@ def process_request(request, conn):
         elif function_call == 'close_connection':
             print("Closing connection to:", conn.getpeername())
             conn.close()
+            exit_thread()
 
     except ValueError:
         print(":meth: process_request error: invalid request from client, cannot load json\n    : ", request)
