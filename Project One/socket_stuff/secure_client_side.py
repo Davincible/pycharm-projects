@@ -94,7 +94,7 @@ def main():
         exit(1)
     finally:
         print("closing connection\n")
-        conn.send(json.dumps(responses['closing_connection']).encode(), conn)
+        conn.send(json.dumps(responses['closing_connection']).encode())
         conn.close()
 
 if __name__ == '__main__':
