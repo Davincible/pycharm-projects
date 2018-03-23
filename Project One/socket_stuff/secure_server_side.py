@@ -75,7 +75,7 @@ def create_token(credentials):
         token = jwt.encode(payload, private_key, algorithm="ES512")
         print("{} | generated token: {}".format(time.time() - start, token))
 
-        return token
+        return token.decode()
 
 
 def main():
