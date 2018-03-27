@@ -16,7 +16,7 @@ def slice(data, channels=2):
             channel_options.insert(bisect_left(channel_options, int(data_array.len / i)), int(data_array.len / i))
     print("channel options:", channel_options)
     channels = takeClosest(channel_options, channels)
-    print("Chanels:", channels)
+    print("Chanels:", channels )
     output = {}
     for channel in range(1, channels + 1):
         output[channel] = BitStream()

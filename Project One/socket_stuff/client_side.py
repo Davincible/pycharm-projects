@@ -20,7 +20,7 @@ print(confirmation_message)
 for i in range(5):
     s.send(message.encode())
     data = s.recv(2048)
-    #print("Recieved data:", type(BitArray(data).bin))
+    print("Recieved data:", data.decode())
     # time.sleep(2)
     message = input()
 

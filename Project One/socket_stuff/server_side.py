@@ -29,7 +29,7 @@ def client(conn):
             print("calling break")
             break
 
-        conn.send(str.encode(reply))
+        conn.send(reply.encode())
     print("closing connection")
     conn.close()
 
