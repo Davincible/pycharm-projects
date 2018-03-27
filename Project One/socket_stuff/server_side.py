@@ -18,7 +18,7 @@ s.listen(2)
 print("Server started, waiting for connections.")
 
 def client(conn):
-    conn.send(str.encode("Connection to server established, u want sum ?\n"))
+    conn.send(str.encode("Connection to server established, Would you like to send a message?\n"))
 
     while True:
         print("beginning of the while loop")

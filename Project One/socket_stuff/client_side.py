@@ -14,7 +14,7 @@ try:
 except socket.error as e:
     print("An error occured:", e)
 
-message = 'This is a test message man'
+message = 'This is a test message'
 confirmation_message = s.recv(2048).decode('utf-8')
 print(confirmation_message)
 for i in range(5):
