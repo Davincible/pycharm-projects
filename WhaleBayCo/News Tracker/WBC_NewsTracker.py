@@ -32,8 +32,10 @@ class article_scraper():
     articles = []
     interesting_articles = []
     header_threshold = 0
-    article_template = {"title": None,
+    article_template = {"ID": None,
+                        "title": None,
                         "date": None,
+                        "epoch": None,
                         "abstract": None,
                         "source_url": None,
                         "domain": None,
@@ -41,7 +43,9 @@ class article_scraper():
                         "category": None,
                         "author": None,
                         "thumbnail_url": None,
-                        "dt_format": None}
+                        "dt_format": None,
+                        "interests": [],
+                        "of_interest": False}
 
     def __init__(self, interests=None):
         self.useragent = UserAgent()
@@ -89,7 +93,7 @@ class article_scraper():
             return
 
     def scrape_articles(self, url):
-        title_matches, body_matches = [], []
+        title_matches = []
         self.switch_headers()
 
         if not url:
@@ -104,18 +108,14 @@ class article_scraper():
         articles, oldest_article = self.extract_articles(page, domain)
         if not articles:
             return "NoArticlesFound"
-        print("found {} articles".format(len(articles)))
+        logger.info(":cls: {} :meth: scrape articles Found {} articles on {}".format(self.__class__, len(articles), url))
 
         try:
-            title_matches, body_matches = self.check_interests(articles, url)
+            articles = self.check_interests(articles, url)
         except TypeError as e:
-            raise e
             return "CheckInterestError"
 
-        if body_matches:
-            logger.info("found {} extra matches by checking the body text".format(len(body_matches)))
-
-        return {"title_matches": title_matches, "body_matches": body_matches, "oldest_article": oldest_article, "all_articles": articles}
+        return {"articles": articles, "oldest_article": oldest_article}
 
     def extract_articles(self, page, domain):
         if 'fiercepharma' in domain or 'fiercebiotech' in domain:
@@ -186,6 +186,7 @@ class article_scraper():
 
                 # remember date of oldest article collected
                 article_date = datetime.strptime(article_data['date'], article_data['dt_format'])
+                article_data['epoch'] = int(article_date.timetuple())
                 if not oldest_article:
                     oldest_article = article_date
                 else:
@@ -232,8 +233,6 @@ class article_scraper():
     def check_interests(self, articles, url):
         """check if any of the articles pulled are of interest, if so append them to a list"""
         # get processed articles as param and only return the end result
-        interesting_articles = []
-        body_matches = []
         if not self.interests:
             logger.warning(":cls: {} :meth: check_interests, no interests specified, not checking for matches")
 
@@ -241,13 +240,16 @@ class article_scraper():
             found_atleast_one = False
             for article in articles:
                 for interest in self.interests:
+                    article['interests'].append(interest)
                     compiled_re = re.compile(r'(?i)(\b{}\b)'.format(interest))
-                    if compiled_re.findall(article['title']):
-                        interesting_articles.append(article)
+
+                    #  check if the keyword is present in the article
+                    if compiled_re.findall(article['title']) or compiled_re.findall(article['full_text']):
                         found_atleast_one = True
-                    if compiled_re.findall(article['full_text']) and article not in interesting_articles:
-                        body_matches.append(article)
-                        found_atleast_one = True
+                        article[interest] = True
+                        article['of_interest'] = True
+                    else:
+                        article[interest] = False
 
             if found_atleast_one:
                 logger.info(":meth: check_interests: Found {} interesting articles in url {}".format(len(self.interesting_articles), url))
@@ -256,15 +258,16 @@ class article_scraper():
         except Exception as e:
             logger.warning(":cls: {} :meth: check_interests, error while checking for interesting articles: {}".format(
                 self.__class__.__name__, e))
-        return interesting_articles, body_matches
+
+        return articles
 
 def scrape_process(url, interests=None):
     bot = article_scraper(interests=interests)
     try:
-        match_data = bot.scrape_articles(url)
+        articles = bot.scrape_articles(url)
     except TypeError as e:
         return None
-    return match_data
+    return articles
 
 if __name__ == '__main__':
     print(scrape_process('https://www.fiercepharma.com/pharma/m-a'))
