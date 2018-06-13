@@ -1,0 +1,37 @@
+##:import utils kivy.utils
+#
+#<main_layout>:
+#    BoxLayout:
+#        orientation: 'vertical'
+#        pos_hint: {'center_x': .5, 'center_y': .5}
+#
+#        EconomyClass_Seat:
+#
+#        BusinessClass_Seat:
+#
+#
+#
+#<SeatBase>:
+#    size_hint: None, None
+#    size: [45, 33] #root.seat_size
+#
+#    canvas:
+#        Color:
+#            rgba: root.seat_color
+#        Rectangle:
+#            size: self.size
+#            pos: self.pos
+#
+#        Color:
+#            rgba: [1, 1, 1, 1] if not root.disabled else [1, 1, 1, .5]
+#        Rectangle:
+#            size: self.size
+#            pos: self.pos
+#            texture: root.texture_
+#            tex_coords: root.texture_coords
+#
+#    Label:
+#        text: root.seat_number
+#        pos_hint: root.label_orientation
+#        font_name: root.font
+
