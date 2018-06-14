@@ -1,28 +1,42 @@
+"""
+    Made by: David Brouwer
+    Author email address: david.brouwer.99@gmail.com
+    Author GitHub: https://github.com/Davincible
+
+    A terminal emulator in Kivy. The first half I got from somewhere on the internet
+    (ashamed to say I don't know the source anymore), the other half I developed myself.
+
+    Date of first comment: 28th of November, 2017
+
+    This GUI is predicated on the Kivy framework, for installation instructions please see https://kivy.org
+
+    Used KivyMD fork: https://github.com/Davincible/custom_uix
+"""
+
+# kivy uix imports
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.textinput import TextInput
+
+# other kivy imports
 from kivy.base import runTouchApp
 from kivy.event import EventDispatcher
 from kivy.lang import Builder
-from kivy.properties import ObjectProperty, ListProperty, StringProperty, \
-    NumericProperty, Clock, partial, BooleanProperty
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.textinput import TextInput
+from kivy.properties import *
+from kivy.utils import get_color_from_hex
+from kivy.core.audio.audio_sdl2 import SoundSDL2
 from kivy.metrics import sp
+from kivy.clock import Clock
+
+# other imports
 import os
-import subprocess
 import threading
-from multiprocessing import Process
-import shlex
 import sys
 from random import randint
 from time import sleep
 from datetime import datetime
-from kivy.utils import get_color_from_hex
-from kivy.core.window import Window
-#import pygame
-from kivy.core.audio import SoundLoader
-from kivy.core.audio.audio_sdl2 import SoundSDL2
 from os.path import join
-from kivy.app import App
 
+# the kv file as string
 Builder.load_string('''
 <KivyConsole>:
     console_input: console_input
@@ -48,6 +62,7 @@ Builder.load_string('''
 
 
 def threaded(fn):
+    """decorator to tread a function"""
     def wrapper(*args, **kwargs):
         threading.Thread(target=fn, args=args, kwargs=kwargs).start()
     return wrapper
@@ -66,7 +81,7 @@ class Shell(EventDispatcher):
         consoleinput.busy = True
         skip_newline = False
 
-        #  code to really execute the command in the os
+        #  code to actually execute the command in the os
         """
         output = ''
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE)
@@ -121,10 +136,8 @@ class Shell(EventDispatcher):
         elif command == consoleinput.game_commands[4]:
             consoleinput.morse_code.play()
             self.dispatch('on_output', "Playing morse code")
-            # while pygame.mixer.get_busy():
-            #     continue
-            # self.dispatch('on_output', "Morse code finished")
 
+        # entered command not known
         else:
             print("Unknown command has been called")
             error_msg = "Error, unknown command: " + command
@@ -150,7 +163,7 @@ class ConsoleInput(TextInput):
     '''Instance of KivyConsole(parent) widget
     '''
 
-
+    # the commands for the terminal
     game_commands = ["sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --dbs",
                      "sqlmap -u http://stoomboot.sint/groteboek/admin/index.php?CatID=666 --user-agent --level=3 -GET hoofd_piet",
                      'VLSI_Circuit_Circuit_Breaker_2.0',
@@ -170,6 +183,7 @@ class ConsoleInput(TextInput):
                      "[color=C09916][time] [WARNING] reflective value(s) found and filtering out[/color]",
                      "[color=86CD34][time] [INFO] GET parameter 'CatID' is 'AND boolean-based blind - WHERE or HAVING clause' injectable[/color]"]
 
+    #  just some bullshit to emulate a real terminal
     sqlmap_output_01 = ["[time] [INFO] testing connection to the target URL",
                         "[time] [INFO] testing if the target URL is stable. This can take a couple of seconds",
                         "[time] [INFO] target URL is stable",
@@ -231,11 +245,6 @@ class ConsoleInput(TextInput):
         sound_path = join(os.getcwd(), sound_file)
         self.morse_code = SoundSDL2(source=sound_path)
 
-        # pygame.mixer.pre_init(frequency=11000, size=-8, channels=1, buffer=4096)
-        # pygame.mixer.init()
-        # pygame.init()
-        # self.morse_code = pygame.mixer.Sound('resources/morse.wav')
-
     def scroll(self, *args):
         try:
             self.scroll_view.scroll_y = 0
@@ -243,8 +252,7 @@ class ConsoleInput(TextInput):
             print("attribute error in scroll view")
 
     def __init_console(self, *args):
-        '''Create initial values for the prompt and shows it
-        '''
+        """Create initial values for the prompt and shows it."""
         self.cur_dir = os.getcwd()
         self._hostname = 'kivy'
         try:
@@ -261,8 +269,7 @@ class ConsoleInput(TextInput):
         self.prompt()
 
     def keyboard_on_key_down(self, window, keycode, text, modifiers):
-        '''Override of _keyboard_on_key_down.
-        '''
+        """Override of _keyboard_on_key_down."""
         #  prevent text manipulation while running command
         if self.busy:
             return False
@@ -371,8 +378,7 @@ class ConsoleInput(TextInput):
             print("Error in validate_cursor_pos fucntion")
 
     def prompt(self, second_call=False, *args):
-        '''Show the PS1 variable
-        '''
+        """Show the PS1 variable"""
         self.validate_length()
         if second_call:
             try:

@@ -1,16 +1,34 @@
+"""
+    Made by: David Brouwer
+    Author email address: david.brouwer.99@gmail.com
+    Author GitHub: https://github.com/Davincible
+
+    Main file of the game.
+
+    Date of first comment: 28th of November, 2017
+
+    This GUI is predicated on the Kivy framework, for installation instructions please see https://kivy.org
+
+    Used KivyMD fork: https://github.com/Davincible/custom_uix
+"""
+
 import kivy
 kivy.require('1.10.0')
 
+# kivy uix imports
 from kivy.uix.screenmanager import ScreenManager, Screen, RiseInTransition, FallOutTransition
 from kivy.uix.image import Image
 from kivy.uix.modalview import ModalView
 from kivy.uix.behaviors import FocusBehavior
 
+# kivymd imports
 from kivymd.theming import ThemeManager
 from kivymd.dialog import MDDialog
 
+# kivy console from other module in package
 from kivyconsole import KivyConsole
 
+# other kivy imports
 from kivy.clock import Clock
 from kivy.metrics import dp
 from kivy.core.window import Window
@@ -20,14 +38,16 @@ from kivy.base import Builder
 from kivy.app import App
 from kivy.config import Config
 
+# other imports
 import urllib3
 from os.path import join, exists
 from os import makedirs
-
 import time
 
-
+# load the kv file
 Builder.load_file('reddress_visuals.kv')
+
+# debugging
 if platform == 'win':
     print("DEV mode turned on")
     DEBUG = True
@@ -36,10 +56,13 @@ else:
 
 
 class MainScreenManagerClass(ScreenManager):
+    """the main screen manager class"""
     pass
 
 
 class MainScreenClass(Screen):
+    """login screen shown on startup"""
+
     #  properties for the background texture
     texture_ = Image(source="resources/RedDress_Texture.jpg").texture
     texture_.wrap = 'repeat'
@@ -59,11 +82,12 @@ class MainScreenClass(Screen):
         self.bind(size=self.update_texture_size)
 
     def update_texture_size(self, *args):
+        # update the texture coordinates, used for the repetition of the texture
         self.nx = float(self.width) / self.texture_.width
         self.ny = float(self.height) / self.texture_.height
 
-    #  get the points for the seperator lines of the table on the dashboard
     def set_line_points(self, *args):
+        #  get the points (coordinates) for the seperator lines of the table on the dashboard
         left_top = self.ids.left_top
         right_top = self.ids.right_top
         left_bottom = self.ids.left_bottom
@@ -73,6 +97,7 @@ class MainScreenClass(Screen):
         self.line_points_two = [left_top.right, left_bottom.y, left_top.right, left_top.top]
 
     def reveal_package(self):
+        """schedule or unschedule the blinking"""
         if not self.scheduled:
             Clock.schedule_interval(self.ping_leds, 2)
             self.scheduled = True
@@ -80,17 +105,25 @@ class MainScreenClass(Screen):
             self.unschedule = True
 
     def ping_leds(self, *args):
+        """call the blink server to send a request to the ESP12 microprocessor to blink the led ring"""
         if self.unschedule:
             self.unschedule = False
             self.scheduled = False
             return False
 
-        print("request made")
-        url = "http://blynk-cloud.com/bb330cc06dc1446e9c38395fb070b229/update/V1?value=1"
-        browser = urllib3.PoolManager()
-        request = browser.request('GET', url)
+        # the provided api key is out of date and no longer used
+        api_key = None
+        with open('blynk_api_key.txt') as file:
+            api_key = file.readline()
+
+        if api_key:
+            # on every api key the LED ring will go around once
+            url = "http://blynk-cloud.com/{}/update/V1?value=1".format(api_key)
+            browser = urllib3.PoolManager()
+            request = browser.request('GET', url)
 
     def goto_login(self):
+        """go back to the login screen"""
         App.get_running_app().root.current = 'LoginScreen'
 
 
@@ -241,7 +274,7 @@ class RedDressApp(App):
         #  tab = 9
 
         # esc on pc, back on android
-        if key == 27:
+        if key == 27:  # disable the app quiting on press of the return key
             return True
 
 

@@ -3,19 +3,25 @@
     Author email address: david.brouwer.99@gmail.com
     Author GitHub: https://github.com/Davincible
 
-    This is basis of a component for a bigger project I'm creating.
+    The game in this module was created for use in a bigger project, found in the same repository,
+    but can also be played as stand alone script.
 
-    Data of comment: 28th November, 2017
+    Date of first comment: 28th of November, 2017
+
+    This GUI is predicated on the Kivy framework, for installation instructions please see https://kivy.org
 """
 
 import kivy
 kivy.require('1.10.0')
 
+# kivy uix imports
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.image import Image
 
+
+# other kivy imports
 from kivy.core.window import Window
 from kivy.properties import NumericProperty, ListProperty, StringProperty, ObjectProperty, ReferenceListProperty, BooleanProperty
 from kivy.vector import Vector
@@ -26,6 +32,7 @@ from kivy.app import App
 from kivy.base import Builder
 from kivy.event import EventDispatcher
 
+# non-kivy imports
 from colorsys import rgb_to_hsv
 from time import time
 
@@ -34,6 +41,7 @@ Builder.load_file('VLSI_Circuit_Breaker_2.kv')
 
 
 class VLSI_Circuit_BreakerClass(FloatLayout, EventDispatcher):
+    """main class of the game"""
     wirehead = ObjectProperty(None)
     circuitbreakerbase = ObjectProperty(None)
     wire_color = get_color_from_hex('47f597')[:-1] + [.8]
@@ -70,6 +78,7 @@ class VLSI_Circuit_BreakerClass(FloatLayout, EventDispatcher):
         except AttributeError:
             pass
 
+    # methods to change the direction of the green dot
     def go_up(self, *args):
         standard_vel = self.circuitbreakerbase.standard_vel
         self.wirehead.velocity = 0, standard_vel
@@ -88,13 +97,14 @@ class VLSI_Circuit_BreakerClass(FloatLayout, EventDispatcher):
 
 
 class CircuitBreakerBaseClass(Image):
-    standard_vel = 2  # the standard velocity
+    """base class for the game, defining the background texture"""
+    standard_vel = 2  # the default velocity
     collided = BooleanProperty(False)  # another way to check if collision has occurred besides the return value of the collision function
     wirehead = ObjectProperty(None)
     base = ObjectProperty(None)  # reference to :class: VLSI_Circuit_BreakerClass
     levels = 6  # the number of levels the game has
     current_level = 1
-    current_level_source = StringProperty('')
+    current_level_source = StringProperty('')  # background source file
     game_size = ListProperty([0, 0])
 
     #  background source for each level
@@ -265,11 +275,11 @@ class CircuitBreakerBaseClass(Image):
         #  convert the color value to HSV
         pixel_hsv = rgb_to_hsv(*pixel_color[:-1])
 
-        #  if the V (value) is higher than the set threshold, collision occurred
+        #  if the V (stands for value in hsv) is higher than the set threshold, collision occurred
         if pixel_hsv[-1] > self.border_threshold or collided_with_wire or pixel_hsv == (0, 0, 0):
             self.collided = True
             #  check for collision with gray finish block
-            if pixel_hsv[1] < .24 and pixel_hsv[1] > 0:
+            if 0 > pixel_hsv[1] > .24:
                 return 2  # return 2 if collided with finish block, return 1 if collided with border
             return 1
         else:
