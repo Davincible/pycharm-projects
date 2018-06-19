@@ -1,0 +1,592 @@
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_13.py >>> stdlib.zip/encodings/iso8859_13.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_14.py >>> stdlib.zip/encodings/iso8859_14.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_15.py >>> stdlib.zip/encodings/iso8859_15.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_16.py >>> stdlib.zip/encodings/iso8859_16.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_2.py >>> stdlib.zip/encodings/iso8859_2.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_3.py >>> stdlib.zip/encodings/iso8859_3.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_4.py >>> stdlib.zip/encodings/iso8859_4.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_5.py >>> stdlib.zip/encodings/iso8859_5.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_6.py >>> stdlib.zip/encodings/iso8859_6.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_7.py >>> stdlib.zip/encodings/iso8859_7.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_8.py >>> stdlib.zip/encodings/iso8859_8.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/iso8859_9.py >>> stdlib.zip/encodings/iso8859_9.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/johab.py >>> stdlib.zip/encodings/johab.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/koi8_r.py >>> stdlib.zip/encodings/koi8_r.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/koi8_t.py >>> stdlib.zip/encodings/koi8_t.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/koi8_u.py >>> stdlib.zip/encodings/koi8_u.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/kz1048.py >>> stdlib.zip/encodings/kz1048.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/latin_1.py >>> stdlib.zip/encodings/latin_1.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_arabic.py >>> stdlib.zip/encodings/mac_arabic.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_centeuro.py >>> stdlib.zip/encodings/mac_centeuro.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_croatian.py >>> stdlib.zip/encodings/mac_croatian.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_cyrillic.py >>> stdlib.zip/encodings/mac_cyrillic.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_farsi.py >>> stdlib.zip/encodings/mac_farsi.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_greek.py >>> stdlib.zip/encodings/mac_greek.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_iceland.py >>> stdlib.zip/encodings/mac_iceland.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_latin2.py >>> stdlib.zip/encodings/mac_latin2.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_roman.py >>> stdlib.zip/encodings/mac_roman.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_romanian.py >>> stdlib.zip/encodings/mac_romanian.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mac_turkish.py >>> stdlib.zip/encodings/mac_turkish.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/mbcs.py >>> stdlib.zip/encodings/mbcs.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/oem.py >>> stdlib.zip/encodings/oem.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/palmos.py >>> stdlib.zip/encodings/palmos.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/ptcp154.py >>> stdlib.zip/encodings/ptcp154.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/punycode.py >>> stdlib.zip/encodings/punycode.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/quopri_codec.py >>> stdlib.zip/encodings/quopri_codec.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/raw_unicode_escape.py >>> stdlib.zip/encodings/raw_unicode_escape.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/rot_13.py >>> stdlib.zip/encodings/rot_13.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/shift_jis.py >>> stdlib.zip/encodings/shift_jis.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/shift_jis_2004.py >>> stdlib.zip/encodings/shift_jis_2004.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/shift_jisx0213.py >>> stdlib.zip/encodings/shift_jisx0213.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/tis_620.py >>> stdlib.zip/encodings/tis_620.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/undefined.py >>> stdlib.zip/encodings/undefined.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/unicode_escape.py >>> stdlib.zip/encodings/unicode_escape.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/unicode_internal.py >>> stdlib.zip/encodings/unicode_internal.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_16.py >>> stdlib.zip/encodings/utf_16.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_16_be.py >>> stdlib.zip/encodings/utf_16_be.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_16_le.py >>> stdlib.zip/encodings/utf_16_le.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_32.py >>> stdlib.zip/encodings/utf_32.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_32_be.py >>> stdlib.zip/encodings/utf_32_be.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_32_le.py >>> stdlib.zip/encodings/utf_32_le.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_7.py >>> stdlib.zip/encodings/utf_7.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_8.py >>> stdlib.zip/encodings/utf_8.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/utf_8_sig.py >>> stdlib.zip/encodings/utf_8_sig.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/uu_codec.py >>> stdlib.zip/encodings/uu_codec.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/encodings/zlib_codec.py >>> stdlib.zip/encodings/zlib_codec.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/html/__init__.py >>> stdlib.zip/html/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/html/entities.py >>> stdlib.zip/html/entities.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/html/parser.py >>> stdlib.zip/html/parser.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/http/__init__.py >>> stdlib.zip/http/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/http/client.py >>> stdlib.zip/http/client.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/http/cookiejar.py >>> stdlib.zip/http/cookiejar.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/http/cookies.py >>> stdlib.zip/http/cookies.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/http/server.py >>> stdlib.zip/http/server.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/__init__.py >>> stdlib.zip/importlib/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/_bootstrap.py >>> stdlib.zip/importlib/_bootstrap.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/_bootstrap_external.py >>> stdlib.zip/importlib/_bootstrap_external.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/abc.py >>> stdlib.zip/importlib/abc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/machinery.py >>> stdlib.zip/importlib/machinery.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/importlib/util.py >>> stdlib.zip/importlib/util.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/json/__init__.py >>> stdlib.zip/json/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/json/decoder.py >>> stdlib.zip/json/decoder.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/json/encoder.py >>> stdlib.zip/json/encoder.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/json/scanner.py >>> stdlib.zip/json/scanner.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/json/tool.py >>> stdlib.zip/json/tool.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/logging/__init__.py >>> stdlib.zip/logging/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/logging/config.py >>> stdlib.zip/logging/config.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/logging/handlers.py >>> stdlib.zip/logging/handlers.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/dummy/__init__.py >>> stdlib.zip/multiprocessing/dummy/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/dummy/connection.py >>> stdlib.zip/multiprocessing/dummy/connection.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/__init__.py >>> stdlib.zip/multiprocessing/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/connection.py >>> stdlib.zip/multiprocessing/connection.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/context.py >>> stdlib.zip/multiprocessing/context.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/forkserver.py >>> stdlib.zip/multiprocessing/forkserver.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/heap.py >>> stdlib.zip/multiprocessing/heap.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/managers.py >>> stdlib.zip/multiprocessing/managers.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/pool.py >>> stdlib.zip/multiprocessing/pool.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/popen_fork.py >>> stdlib.zip/multiprocessing/popen_fork.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/popen_forkserver.py >>> stdlib.zip/multiprocessing/popen_forkserver.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/popen_spawn_posix.py >>> stdlib.zip/multiprocessing/popen_spawn_posix.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/popen_spawn_win32.py >>> stdlib.zip/multiprocessing/popen_spawn_win32.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/process.py >>> stdlib.zip/multiprocessing/process.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/queues.py >>> stdlib.zip/multiprocessing/queues.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/reduction.py >>> stdlib.zip/multiprocessing/reduction.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/resource_sharer.py >>> stdlib.zip/multiprocessing/resource_sharer.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/semaphore_tracker.py >>> stdlib.zip/multiprocessing/semaphore_tracker.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/sharedctypes.py >>> stdlib.zip/multiprocessing/sharedctypes.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/spawn.py >>> stdlib.zip/multiprocessing/spawn.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/synchronize.py >>> stdlib.zip/multiprocessing/synchronize.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/multiprocessing/util.py >>> stdlib.zip/multiprocessing/util.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sqlite3/__init__.py >>> stdlib.zip/sqlite3/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sqlite3/dbapi2.py >>> stdlib.zip/sqlite3/dbapi2.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sqlite3/dump.py >>> stdlib.zip/sqlite3/dump.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/__init__.py >>> stdlib.zip/unittest/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/__main__.py >>> stdlib.zip/unittest/__main__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/case.py >>> stdlib.zip/unittest/case.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/loader.py >>> stdlib.zip/unittest/loader.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/main.py >>> stdlib.zip/unittest/main.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/mock.py >>> stdlib.zip/unittest/mock.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/result.py >>> stdlib.zip/unittest/result.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/runner.py >>> stdlib.zip/unittest/runner.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/signals.py >>> stdlib.zip/unittest/signals.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/suite.py >>> stdlib.zip/unittest/suite.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/unittest/util.py >>> stdlib.zip/unittest/util.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/__init__.py >>> stdlib.zip/urllib/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/error.py >>> stdlib.zip/urllib/error.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/parse.py >>> stdlib.zip/urllib/parse.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/request.py >>> stdlib.zip/urllib/request.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/response.py >>> stdlib.zip/urllib/response.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/urllib/robotparser.py >>> stdlib.zip/urllib/robotparser.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/__init__.py >>> stdlib.zip/wsgiref/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/handlers.py >>> stdlib.zip/wsgiref/handlers.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/headers.py >>> stdlib.zip/wsgiref/headers.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/simple_server.py >>> stdlib.zip/wsgiref/simple_server.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/util.py >>> stdlib.zip/wsgiref/util.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wsgiref/validate.py >>> stdlib.zip/wsgiref/validate.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/NodeFilter.py >>> stdlib.zip/xml/dom/NodeFilter.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/__init__.py >>> stdlib.zip/xml/dom/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/domreg.py >>> stdlib.zip/xml/dom/domreg.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/expatbuilder.py >>> stdlib.zip/xml/dom/expatbuilder.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/minicompat.py >>> stdlib.zip/xml/dom/minicompat.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/minidom.py >>> stdlib.zip/xml/dom/minidom.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/pulldom.py >>> stdlib.zip/xml/dom/pulldom.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/dom/xmlbuilder.py >>> stdlib.zip/xml/dom/xmlbuilder.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/etree/ElementInclude.py >>> stdlib.zip/xml/etree/ElementInclude.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/etree/ElementPath.py >>> stdlib.zip/xml/etree/ElementPath.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/etree/ElementTree.py >>> stdlib.zip/xml/etree/ElementTree.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/etree/__init__.py >>> stdlib.zip/xml/etree/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/etree/cElementTree.py >>> stdlib.zip/xml/etree/cElementTree.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/parsers/__init__.py >>> stdlib.zip/xml/parsers/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/parsers/expat.py >>> stdlib.zip/xml/parsers/expat.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/__init__.py >>> stdlib.zip/xml/sax/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/_exceptions.py >>> stdlib.zip/xml/sax/_exceptions.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/expatreader.py >>> stdlib.zip/xml/sax/expatreader.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/handler.py >>> stdlib.zip/xml/sax/handler.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/saxutils.py >>> stdlib.zip/xml/sax/saxutils.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/sax/xmlreader.py >>> stdlib.zip/xml/sax/xmlreader.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xml/__init__.py >>> stdlib.zip/xml/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xmlrpc/__init__.py >>> stdlib.zip/xmlrpc/__init__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xmlrpc/client.py >>> stdlib.zip/xmlrpc/client.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xmlrpc/server.py >>> stdlib.zip/xmlrpc/server.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/__future__.py >>> stdlib.zip/__future__.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_bootlocale.py >>> stdlib.zip/_bootlocale.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_collections_abc.py >>> stdlib.zip/_collections_abc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_compat_pickle.py >>> stdlib.zip/_compat_pickle.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_compression.py >>> stdlib.zip/_compression.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_dummy_thread.py >>> stdlib.zip/_dummy_thread.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_markupbase.py >>> stdlib.zip/_markupbase.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_pydecimal.py >>> stdlib.zip/_pydecimal.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_pyio.py >>> stdlib.zip/_pyio.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_sitebuiltins.py >>> stdlib.zip/_sitebuiltins.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_strptime.py >>> stdlib.zip/_strptime.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_threading_local.py >>> stdlib.zip/_threading_local.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/_weakrefset.py >>> stdlib.zip/_weakrefset.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/abc.py >>> stdlib.zip/abc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/aifc.py >>> stdlib.zip/aifc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/antigravity.py >>> stdlib.zip/antigravity.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/argparse.py >>> stdlib.zip/argparse.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/ast.py >>> stdlib.zip/ast.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/asynchat.py >>> stdlib.zip/asynchat.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/asyncore.py >>> stdlib.zip/asyncore.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/base64.py >>> stdlib.zip/base64.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/bdb.py >>> stdlib.zip/bdb.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/binhex.py >>> stdlib.zip/binhex.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/bisect.py >>> stdlib.zip/bisect.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/bz2.py >>> stdlib.zip/bz2.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/cProfile.py >>> stdlib.zip/cProfile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/calendar.py >>> stdlib.zip/calendar.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/cgi.py >>> stdlib.zip/cgi.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/cgitb.py >>> stdlib.zip/cgitb.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/chunk.py >>> stdlib.zip/chunk.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/cmd.py >>> stdlib.zip/cmd.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/code.py >>> stdlib.zip/code.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/codecs.py >>> stdlib.zip/codecs.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/codeop.py >>> stdlib.zip/codeop.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/colorsys.py >>> stdlib.zip/colorsys.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/compileall.py >>> stdlib.zip/compileall.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/configparser.py >>> stdlib.zip/configparser.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/contextlib.py >>> stdlib.zip/contextlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/copy.py >>> stdlib.zip/copy.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/copyreg.py >>> stdlib.zip/copyreg.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/crypt.py >>> stdlib.zip/crypt.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/csv.py >>> stdlib.zip/csv.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/datetime.py >>> stdlib.zip/datetime.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/decimal.py >>> stdlib.zip/decimal.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/difflib.py >>> stdlib.zip/difflib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/dis.py >>> stdlib.zip/dis.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/dummy_threading.py >>> stdlib.zip/dummy_threading.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/enum.py >>> stdlib.zip/enum.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/filecmp.py >>> stdlib.zip/filecmp.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/fileinput.py >>> stdlib.zip/fileinput.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/fnmatch.py >>> stdlib.zip/fnmatch.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/formatter.py >>> stdlib.zip/formatter.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/fractions.py >>> stdlib.zip/fractions.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/ftplib.py >>> stdlib.zip/ftplib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/functools.py >>> stdlib.zip/functools.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/genericpath.py >>> stdlib.zip/genericpath.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/getopt.py >>> stdlib.zip/getopt.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/getpass.py >>> stdlib.zip/getpass.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/gettext.py >>> stdlib.zip/gettext.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/glob.py >>> stdlib.zip/glob.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/gzip.py >>> stdlib.zip/gzip.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/hashlib.py >>> stdlib.zip/hashlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/heapq.py >>> stdlib.zip/heapq.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/hmac.py >>> stdlib.zip/hmac.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/imaplib.py >>> stdlib.zip/imaplib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/imghdr.py >>> stdlib.zip/imghdr.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/imp.py >>> stdlib.zip/imp.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/inspect.py >>> stdlib.zip/inspect.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/io.py >>> stdlib.zip/io.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/ipaddress.py >>> stdlib.zip/ipaddress.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/keyword.py >>> stdlib.zip/keyword.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/linecache.py >>> stdlib.zip/linecache.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/locale.py >>> stdlib.zip/locale.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/lzma.py >>> stdlib.zip/lzma.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/macpath.py >>> stdlib.zip/macpath.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/macurl2path.py >>> stdlib.zip/macurl2path.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/mailbox.py >>> stdlib.zip/mailbox.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/mailcap.py >>> stdlib.zip/mailcap.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/mimetypes.py >>> stdlib.zip/mimetypes.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/modulefinder.py >>> stdlib.zip/modulefinder.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/netrc.py >>> stdlib.zip/netrc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/nntplib.py >>> stdlib.zip/nntplib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/ntpath.py >>> stdlib.zip/ntpath.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/nturl2path.py >>> stdlib.zip/nturl2path.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/numbers.py >>> stdlib.zip/numbers.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/opcode.py >>> stdlib.zip/opcode.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/operator.py >>> stdlib.zip/operator.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/optparse.py >>> stdlib.zip/optparse.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/os.py >>> stdlib.zip/os.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pathlib.py >>> stdlib.zip/pathlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pdb.py >>> stdlib.zip/pdb.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pickle.py >>> stdlib.zip/pickle.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pickletools.py >>> stdlib.zip/pickletools.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pipes.py >>> stdlib.zip/pipes.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pkgutil.py >>> stdlib.zip/pkgutil.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/platform.py >>> stdlib.zip/platform.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/plistlib.py >>> stdlib.zip/plistlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/poplib.py >>> stdlib.zip/poplib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/posixpath.py >>> stdlib.zip/posixpath.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pprint.py >>> stdlib.zip/pprint.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/profile.py >>> stdlib.zip/profile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pstats.py >>> stdlib.zip/pstats.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pty.py >>> stdlib.zip/pty.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/py_compile.py >>> stdlib.zip/py_compile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pyclbr.py >>> stdlib.zip/pyclbr.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/pydoc.py >>> stdlib.zip/pydoc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/queue.py >>> stdlib.zip/queue.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/quopri.py >>> stdlib.zip/quopri.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/random.py >>> stdlib.zip/random.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/re.py >>> stdlib.zip/re.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/reprlib.py >>> stdlib.zip/reprlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/rlcompleter.py >>> stdlib.zip/rlcompleter.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/runpy.py >>> stdlib.zip/runpy.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sched.py >>> stdlib.zip/sched.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/secrets.py >>> stdlib.zip/secrets.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/selectors.py >>> stdlib.zip/selectors.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/shelve.py >>> stdlib.zip/shelve.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/shlex.py >>> stdlib.zip/shlex.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/shutil.py >>> stdlib.zip/shutil.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/signal.py >>> stdlib.zip/signal.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/smtpd.py >>> stdlib.zip/smtpd.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/smtplib.py >>> stdlib.zip/smtplib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sndhdr.py >>> stdlib.zip/sndhdr.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/socket.py >>> stdlib.zip/socket.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/socketserver.py >>> stdlib.zip/socketserver.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sre_compile.py >>> stdlib.zip/sre_compile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sre_constants.py >>> stdlib.zip/sre_constants.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sre_parse.py >>> stdlib.zip/sre_parse.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/ssl.py >>> stdlib.zip/ssl.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/stat.py >>> stdlib.zip/stat.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/statistics.py >>> stdlib.zip/statistics.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/string.py >>> stdlib.zip/string.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/stringprep.py >>> stdlib.zip/stringprep.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/struct.py >>> stdlib.zip/struct.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/subprocess.py >>> stdlib.zip/subprocess.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/sunau.py >>> stdlib.zip/sunau.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/symbol.py >>> stdlib.zip/symbol.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/symtable.py >>> stdlib.zip/symtable.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/tarfile.py >>> stdlib.zip/tarfile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/telnetlib.py >>> stdlib.zip/telnetlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/tempfile.py >>> stdlib.zip/tempfile.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/textwrap.py >>> stdlib.zip/textwrap.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/threading.py >>> stdlib.zip/threading.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/timeit.py >>> stdlib.zip/timeit.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/token.py >>> stdlib.zip/token.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/tokenize.py >>> stdlib.zip/tokenize.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/trace.py >>> stdlib.zip/trace.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/traceback.py >>> stdlib.zip/traceback.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/tracemalloc.py >>> stdlib.zip/tracemalloc.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/tty.py >>> stdlib.zip/tty.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/types.py >>> stdlib.zip/types.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/typing.py >>> stdlib.zip/typing.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/uu.py >>> stdlib.zip/uu.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/uuid.py >>> stdlib.zip/uuid.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/warnings.py >>> stdlib.zip/warnings.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/wave.py >>> stdlib.zip/wave.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/weakref.py >>> stdlib.zip/weakref.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/webbrowser.py >>> stdlib.zip/webbrowser.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/xdrlib.py >>> stdlib.zip/xdrlib.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/zipapp.py >>> stdlib.zip/zipapp.py
+::: /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Lib/zipfile.py >>> stdlib.zip/zipfile.py
+::: /home/kivy/Downloads/crystax-ndk-10.3.2/build/tools/build-target-python/site.py >>> stdlib.zip/site.py
+::: /home/kivy/Downloads/crystax-ndk-10.3.2/build/tools/build-target-python/sysconfig.py >>> stdlib.zip/sysconfig.py
+::: /home/kivy/Downloads/crystax-ndk-10.3.2/build/tools/build-target-python/_sysconfigdata.py >>> stdlib.zip/_sysconfigdata.py
+
+
+
+Install python3.6-armeabi-v7a site-packages
+## COMMAND: mkdir -p /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/site-packages
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config
+## COMMAND: /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config/configure.sh
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-unknown-linux-androideabi
+checking target system type... arm-unknown-linux-androideabi
+checking for gsed... sed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for arm-linux-androideabi-strip... arm-linux-androideabi-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for arm-linux-androideabi-gcc... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc accepts -g... yes
+checking for /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc... gcc3
+checking for arm-linux-androideabi-g++... arm-linux-androideabi-g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether arm-linux-androideabi-g++ accepts -g... yes
+checking dependency style of arm-linux-androideabi-g++... gcc3
+checking dependency style of /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc... gcc3
+checking whether /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc and cc understand -c and -o together... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld
+checking if the linker (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin//arm-linux-androideabi-nm -B
+checking the name lister (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin//arm-linux-androideabi-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to arm-unknown-linux-androideabi format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld option to reload object files... -r
+checking for arm-linux-androideabi-objdump... arm-linux-androideabi-objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-linux-androideabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-linux-androideabi-ar... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar
+checking for archiver @FILE support... @
+checking for arm-linux-androideabi-strip... (cached) arm-linux-androideabi-strip
+checking for arm-linux-androideabi-ranlib... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib
+checking command to parse /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin//arm-linux-androideabi-nm -B output from /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc object... ok
+checking for sysroot... no
+checking for arm-linux-androideabi-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb --sysroot=/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc supports -fno-rtti -fno-exceptions... no
+checking for /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc option to produce PIC... -fPIC -DPIC
+checking if /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc PIC flag -fPIC -DPIC works... yes
+checking if /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc static flag -static works... yes
+checking if /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc supports -c -o file.o... yes
+checking if /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc supports -c -o file.o... (cached) yes
+checking whether the /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc linker (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... Android linker
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... /lib/cpp
+checking for ld used by arm-linux-androideabi-g++... /home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld
+checking if the linker (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld) is GNU ld... yes
+checking whether the arm-linux-androideabi-g++ linker (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking for arm-linux-androideabi-g++ option to produce PIC... -fPIC -DPIC
+checking if arm-linux-androideabi-g++ PIC flag -fPIC -DPIC works... yes
+checking if arm-linux-androideabi-g++ static flag -static works... yes
+checking if arm-linux-androideabi-g++ supports -c -o file.o... yes
+checking if arm-linux-androideabi-g++ supports -c -o file.o... (cached) yes
+checking whether the arm-linux-androideabi-g++ linker (/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... Android linker
+checking how to hardcode library paths into programs... immediate
+checking size of size_t... 4
+checking for C compiler vendor... gnu
+checking CFLAGS for maximum warnings... -Wall
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking for mmap... yes
+checking for sys/mman.h... (cached) yes
+checking for mmap... (cached) yes
+checking whether read-only mmap of a plain file works... yes
+checking whether mmap from /dev/zero works... yes
+checking for MAP_ANON(YMOUS)... yes
+checking whether mmap with MAP_ANON(YMOUS) works... yes
+checking for ANSI C header files... (cached) yes
+checking for memcpy... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking size of double... 8
+checking size of long double... 8
+checking whether byte ordering is bigendian... no
+checking assembler .cfi pseudo-op support... yes
+checking for _ prefix in compiled symbols... no
+checking whether .eh_frame section should be read-only... no
+checking for __attribute__((visibility("hidden")))... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating include/Makefile
+config.status: creating include/ffi.h
+config.status: creating Makefile
+config.status: creating testsuite/Makefile
+config.status: creating man/Makefile
+config.status: creating libffi.pc
+config.status: creating fficonfig.py
+config.status: creating fficonfig.h
+config.status: linking /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/ffitarget.h to include/ffitarget.h
+config.status: linking /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/include/ffi_common.h to include/ffi_common.h
+config.status: executing buildir commands
+config.status: skipping top_srcdir/Makefile - not created
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing include commands
+config.status: executing src commands
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/jni
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/jni/include
+## COMMAND: cp -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config/fficonfig.h /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config/include/ffi.h /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config/include/ffi_common.h /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/config/include/ffitarget.h /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/jni/include
+## COMMAND: /home/kivy/Downloads/crystax-ndk-10.3.2/ndk-build -C /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes -j5 APP_ABI=armeabi-v7a V=1
+make: Entering directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes'
+rm -f ./libs/arm64-v8a/lib*.so ./libs/armeabi/lib*.so ./libs/armeabi-v7a/lib*.so ./libs/armeabi-v7a-hard/lib*.so ./libs/mips/lib*.so ./libs/mips64/lib*.so ./libs/x86/lib*.so ./libs/x86_64/lib*.so
+mkdir -p obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm
+mkdir -p obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src
+mkdir -p obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes
+mkdir -p obj/local/armeabi-v7a
+rm -f ./libs/arm64-v8a/gdbserver ./libs/armeabi/gdbserver ./libs/armeabi-v7a/gdbserver ./libs/armeabi-v7a-hard/gdbserver ./libs/mips/gdbserver ./libs/mips64/gdbserver ./libs/x86/gdbserver ./libs/x86_64/gdbserver
+mkdir -p libs/armeabi-v7a
+rm -f ./libs/arm64-v8a/gdb.setup ./libs/armeabi/gdb.setup ./libs/armeabi-v7a/gdb.setup ./libs/armeabi-v7a-hard/gdb.setup ./libs/mips/gdb.setup ./libs/mips64/gdb.setup ./libs/x86/gdb.setup ./libs/x86_64/gdb.setup
+[armeabi-v7a] Compile thumb  : _ctypes <= ffi.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/ffi.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/ffi.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/ffi.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= sysv.S
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.S -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= prep_cif.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/prep_cif.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/prep_cif.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/prep_cif.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= callbacks.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callbacks.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callbacks.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callbacks.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= callproc.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.o 
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.S: Assembler messages:
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.S:399: Warning: conditional infixes are deprecated in unified syntax
+[armeabi-v7a] Compile thumb  : _ctypes <= cfield.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/cfield.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/cfield.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/cfield.o 
+In file included from /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.c:64:0:
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.c: In function 'py_dl_open':
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/ctypes_dlfcn.h:15:24: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+ #define ctypes_dlerror dlerror
+                        ^
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.c:1332:24: note: in expansion of macro 'ctypes_dlerror'
+         char *errmsg = ctypes_dlerror();
+                        ^
+[armeabi-v7a] Compile thumb  : _ctypes <= malloc_closure.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/malloc_closure.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/malloc_closure.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/malloc_closure.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= stgdict.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/stgdict.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/stgdict.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/stgdict.o 
+[armeabi-v7a] Compile thumb  : _ctypes <= _ctypes.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/_ctypes.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Ijni/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/_ctypes.c -o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/_ctypes.o 
+[armeabi-v7a] Prebuilt       : libpython3.6m.so <= <NDK>/sources/python/3.6/libs/armeabi-v7a/
+cp -f /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/libpython3.6m.so obj/local/armeabi-v7a/libpython3.6m.so
+[armeabi-v7a] SharedLibrary  : lib_ctypes.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ -Wl,-soname,lib_ctypes.so -shared --sysroot=/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/ffi.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/arm/sysv.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/libffi/src/prep_cif.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callbacks.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/callproc.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/cfield.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/malloc_closure.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/stgdict.o ./obj/local/armeabi-v7a/objs/_ctypes//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ctypes/_ctypes.o -lgcc ./obj/local/armeabi-v7a/libpython3.6m.so -no-canonical-prefixes -march=armv7-a -Wl,--fix-cortex-a8  -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -mthumb  -L/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/empty /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so -lc -o ./obj/local/armeabi-v7a/lib_ctypes.so
+[armeabi-v7a] Install        : libcrystax.so => libs/armeabi-v7a/libcrystax.so
+install -p /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so libs/armeabi-v7a/libcrystax.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded libs/armeabi-v7a/libcrystax.so
+[armeabi-v7a] Install        : lib_ctypes.so => libs/armeabi-v7a/lib_ctypes.so
+install -p ./obj/local/armeabi-v7a/lib_ctypes.so ./libs/armeabi-v7a/lib_ctypes.so
+[armeabi-v7a] Install        : libpython3.6m.so => libs/armeabi-v7a/libpython3.6m.so
+install -p ./obj/local/armeabi-v7a/libpython3.6m.so ./libs/armeabi-v7a/libpython3.6m.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/lib_ctypes.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/libpython3.6m.so
+make: Leaving directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes'
+Install python3.6-armeabi-v7a module '_ctypes' in /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules
+## COMMAND: cp -p -T /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ctypes/obj/local/armeabi-v7a/lib_ctypes.so /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules/_ctypes.so
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/multiprocessing/jni
+## COMMAND: /home/kivy/Downloads/crystax-ndk-10.3.2/ndk-build -C /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/multiprocessing -j5 APP_ABI=armeabi-v7a V=1
+make: Entering directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/multiprocessing'
+rm -f ./libs/arm64-v8a/lib*.so ./libs/armeabi/lib*.so ./libs/armeabi-v7a/lib*.so ./libs/armeabi-v7a-hard/lib*.so ./libs/mips/lib*.so ./libs/mips64/lib*.so ./libs/x86/lib*.so ./libs/x86_64/lib*.so
+mkdir -p obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing
+mkdir -p obj/local/armeabi-v7a
+mkdir -p libs/armeabi-v7a
+rm -f ./libs/arm64-v8a/gdbserver ./libs/armeabi/gdbserver ./libs/armeabi-v7a/gdbserver ./libs/armeabi-v7a-hard/gdbserver ./libs/mips/gdbserver ./libs/mips64/gdbserver ./libs/x86/gdbserver ./libs/x86_64/gdbserver
+rm -f ./libs/arm64-v8a/gdb.setup ./libs/armeabi/gdb.setup ./libs/armeabi-v7a/gdb.setup ./libs/armeabi-v7a-hard/gdb.setup ./libs/mips/gdb.setup ./libs/mips64/gdb.setup ./libs/x86/gdb.setup ./libs/x86_64/gdb.setup
+[armeabi-v7a] Compile thumb  : _multiprocessing <= multiprocessing.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/multiprocessing.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/multiprocessing.c -o ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/multiprocessing.o 
+[armeabi-v7a] Compile thumb  : _multiprocessing <= semaphore.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/semaphore.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/semaphore.c -o ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/semaphore.o 
+[armeabi-v7a] Prebuilt       : libpython3.6m.so <= <NDK>/sources/python/3.6/libs/armeabi-v7a/
+cp -f /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/libpython3.6m.so obj/local/armeabi-v7a/libpython3.6m.so
+[armeabi-v7a] SharedLibrary  : lib_multiprocessing.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ -Wl,-soname,lib_multiprocessing.so -shared --sysroot=/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/multiprocessing.o ./obj/local/armeabi-v7a/objs/_multiprocessing//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_multiprocessing/semaphore.o -lgcc ./obj/local/armeabi-v7a/libpython3.6m.so -no-canonical-prefixes -march=armv7-a -Wl,--fix-cortex-a8  -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -mthumb  -L/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/empty /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so -lc -o ./obj/local/armeabi-v7a/lib_multiprocessing.so
+[armeabi-v7a] Install        : libcrystax.so => libs/armeabi-v7a/libcrystax.so
+install -p /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so libs/armeabi-v7a/libcrystax.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded libs/armeabi-v7a/libcrystax.so
+[armeabi-v7a] Install        : libpython3.6m.so => libs/armeabi-v7a/libpython3.6m.so
+[armeabi-v7a] Install        : lib_multiprocessing.so => libs/armeabi-v7a/lib_multiprocessing.so
+install -p ./obj/local/armeabi-v7a/lib_multiprocessing.so ./libs/armeabi-v7a/lib_multiprocessing.so
+install -p ./obj/local/armeabi-v7a/libpython3.6m.so ./libs/armeabi-v7a/libpython3.6m.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/lib_multiprocessing.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/libpython3.6m.so
+make: Leaving directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/multiprocessing'
+Install python3.6-armeabi-v7a module '_multiprocessing' in /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules
+## COMMAND: cp -p -T /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/multiprocessing/obj/local/armeabi-v7a/lib_multiprocessing.so /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules/_multiprocessing.so
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/socket/jni
+## COMMAND: /home/kivy/Downloads/crystax-ndk-10.3.2/ndk-build -C /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/socket -j5 APP_ABI=armeabi-v7a V=1
+make: Entering directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/socket'
+rm -f ./libs/arm64-v8a/lib*.so ./libs/armeabi/lib*.so ./libs/armeabi-v7a/lib*.so ./libs/armeabi-v7a-hard/lib*.so ./libs/mips/lib*.so ./libs/mips64/lib*.so ./libs/x86/lib*.so ./libs/x86_64/lib*.so
+mkdir -p obj/local/armeabi-v7a/objs/_socket//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules
+mkdir -p obj/local/armeabi-v7a
+mkdir -p libs/armeabi-v7a
+rm -f ./libs/arm64-v8a/gdbserver ./libs/armeabi/gdbserver ./libs/armeabi-v7a/gdbserver ./libs/armeabi-v7a-hard/gdbserver ./libs/mips/gdbserver ./libs/mips64/gdbserver ./libs/x86/gdbserver ./libs/x86_64/gdbserver
+[armeabi-v7a] Compile thumb  : _socket <= socketmodule.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_socket//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/socketmodule.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/socketmodule.c -o ./obj/local/armeabi-v7a/objs/_socket//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/socketmodule.o 
+rm -f ./libs/arm64-v8a/gdb.setup ./libs/armeabi/gdb.setup ./libs/armeabi-v7a/gdb.setup ./libs/armeabi-v7a-hard/gdb.setup ./libs/mips/gdb.setup ./libs/mips64/gdb.setup ./libs/x86/gdb.setup ./libs/x86_64/gdb.setup
+[armeabi-v7a] Prebuilt       : libpython3.6m.so <= <NDK>/sources/python/3.6/libs/armeabi-v7a/
+cp -f /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/libpython3.6m.so obj/local/armeabi-v7a/libpython3.6m.so
+[armeabi-v7a] SharedLibrary  : lib_socket.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ -Wl,-soname,lib_socket.so -shared --sysroot=/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm ./obj/local/armeabi-v7a/objs/_socket//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/socketmodule.o -lgcc ./obj/local/armeabi-v7a/libpython3.6m.so -no-canonical-prefixes -march=armv7-a -Wl,--fix-cortex-a8  -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -mthumb  -L/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/empty /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so -lc -o ./obj/local/armeabi-v7a/lib_socket.so
+[armeabi-v7a] Install        : libcrystax.so => libs/armeabi-v7a/libcrystax.so
+install -p /home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/libs/armeabi-v7a/thumb/libcrystax.so libs/armeabi-v7a/libcrystax.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded libs/armeabi-v7a/libcrystax.so
+[armeabi-v7a] Install        : libpython3.6m.so => libs/armeabi-v7a/libpython3.6m.so
+[armeabi-v7a] Install        : lib_socket.so => libs/armeabi-v7a/lib_socket.so
+install -p ./obj/local/armeabi-v7a/libpython3.6m.so ./libs/armeabi-v7a/libpython3.6m.so
+install -p ./obj/local/armeabi-v7a/lib_socket.so ./libs/armeabi-v7a/lib_socket.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/lib_socket.so
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi-v7a/libpython3.6m.so
+make: Leaving directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/socket'
+Install python3.6-armeabi-v7a module '_socket' in /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules
+## COMMAND: cp -p -T /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/socket/obj/local/armeabi-v7a/lib_socket.so /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/modules/_socket.so
+## COMMAND: mkdir -p /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ssl/jni
+## COMMAND: /home/kivy/Downloads/crystax-ndk-10.3.2/ndk-build -C /tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ssl -j5 APP_ABI=armeabi-v7a V=1
+make: Entering directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ssl'
+rm -f ./libs/arm64-v8a/lib*.so ./libs/armeabi/lib*.so ./libs/armeabi-v7a/lib*.so ./libs/armeabi-v7a-hard/lib*.so ./libs/mips/lib*.so ./libs/mips64/lib*.so ./libs/x86/lib*.so ./libs/x86_64/lib*.so
+mkdir -p obj/local/armeabi-v7a/objs/_ssl//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules
+mkdir -p obj/local/armeabi-v7a
+mkdir -p libs/armeabi-v7a
+[armeabi-v7a] Prebuilt       : libpython3.6m.so <= <NDK>/sources/python/3.6/libs/armeabi-v7a/
+cp -f /home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/libs/armeabi-v7a/libpython3.6m.so obj/local/armeabi-v7a/libpython3.6m.so
+rm -f ./libs/arm64-v8a/gdbserver ./libs/armeabi/gdbserver ./libs/armeabi-v7a/gdbserver ./libs/armeabi-v7a-hard/gdbserver ./libs/mips/gdbserver ./libs/mips64/gdbserver ./libs/x86/gdbserver ./libs/x86_64/gdbserver
+[armeabi-v7a] Compile thumb  : _ssl <= _ssl.c
+/home/kivy/Downloads/crystax-ndk-10.3.2/toolchains/arm-linux-androideabi-5/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF ./obj/local/armeabi-v7a/objs/_ssl//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ssl.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/python/3.6/include/python -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/openssl/1.0.2h/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/openssl/1.0.2h/include -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -c -I/home/kivy/Downloads/crystax-ndk-10.3.2/sources/crystax/include -I/home/kivy/Downloads/crystax-ndk-10.3.2/platforms/android-9/arch-arm/usr/include /home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ssl.c -o ./obj/local/armeabi-v7a/objs/_ssl//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ssl.o 
+rm -f ./libs/arm64-v8a/gdb.setup ./libs/armeabi/gdb.setup ./libs/armeabi-v7a/gdb.setup ./libs/armeabi-v7a-hard/gdb.setup ./libs/mips/gdb.setup ./libs/mips64/gdb.setup ./libs/x86/gdb.setup ./libs/x86_64/gdb.setup
+/home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ssl.c:67:25: fatal error: openssl/rsa.h: No such file or directory
+compilation terminated.
+make: *** [obj/local/armeabi-v7a/objs/_ssl//home/kivy/Development/SampleBuild/eight_draw/.buildozer/android/platform/build/build/other_builds/python3crystax-version3.6/armeabi-v7a/python3crystax/Modules/_ssl.o] Error 1
+make: Leaving directory `/tmp/ndk-root/tmp/build-100310/build-python/armeabi-v7a/ssl'
+ERROR: Can't build python3.6-armeabi-v7a module '_ssl'
