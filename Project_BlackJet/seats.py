@@ -25,24 +25,50 @@ Builder.load_string("""
 <SeatsLayout>:
     BoxLayout:
         orientation: 'vertical'
+        # size_hint: None, None
+        # size: 500, 500
         pos_hint: {'center_x': .5, 'center_y': .5}
 
         EconomyClass_Seat:
 
         BusinessClass_Seat:
+        
+        ExtraLegRoom_Seat:
+
 
 <BusinessClass_Seat>:
     seat_source: 'resources/KL_BUSINESS--EBC.png'
     seat_color_hex: '#001825'
+
     
 <EconomyClass_Seat>
     seat_source: 'resources/seatmap-seat.png'
     seat_color_hex: '#00a1de'
 
+
+<EmtpySpace>:
+    size: [15, 33]
+
+
+<ExtraLegRoom_Seat>:
+    size_hint: None, None
+    size: [60, 33]
+       
+    SeatBase:
+        id: seating
+        pos_hint: {'center_y': .5, 'right': 1}
+        seat_number: root.seat_number
+        seat_color_hex: '#d6b400'
+        orientation: root.orientation
+        small: root.small
+        disabled: root.disabled
+        on_size: print("seat:", args[1])
+
+
 <SeatBase>:
     size_hint: None, None
     size: [45, 33]
-    on_release: print(self.seat_number)
+    on_release: print(self.seat_number, self.size)
 
     canvas:
         Color:
@@ -89,7 +115,11 @@ class SeatBase(ButtonBehavior, FloatLayout):
         self.bind(orientation=self.sched_text)
         self.bind(small=self.sched_text)
         self.register_event_type('on_seat_color_hex')
+        self.register_event_type('on_seat_source')
         self.on_seat_color_hex()
+
+    def on_seat_source(self, *args):
+        self.texture_ = Image(source=self.seat_source).texture
 
     def on_seat_color_hex(self, obj=None, hex_color=None):
         # if a hex color is set, convert it to the rgba space
@@ -127,6 +157,43 @@ class BusinessClass_Seat(SeatBase):
     """the business class seat"""
     pass
 
+class ExtraLegRoom_Seat(FloatLayout):
+    """the seat with extra legroom"""
+    default_size = ListProperty([60, 33])
+    default_seat_size = ListProperty([45, 33])
+    seat_number = StringProperty('2B')
+    orientation = OptionProperty('horizontal', options=['horizontal', 'vertical'])
+    small = BooleanProperty(False)
+    disabled = BooleanProperty(False)
+
+    def __init__(self, **kwargs):
+        super(ExtraLegRoom_Seat, self).__init__(**kwargs)
+        self.bind(size=self.update_seating_size)
+        self.register_event_type('on_orientation')
+        self.bind(size=self.on_orientation)
+        self.bind(size=lambda x, y: print(y))
+
+    @mainthread
+    def on_orientation(self, *args):
+        if (self.orientation == 'horizontal' and self.width < self.height) or \
+                (self.orientation == 'vertical' and self.width > self.height):
+            self.width, self.height = self.height, self.width
+
+    # def on_small(self, *args):
+    #     if self.orientation == 'horizontal';
+    #         self.height =
+
+    def update_seating_size(self, *args):
+        if self.orientation == 'horizontal':
+            x = (self.default_seat_size[0] / self.default_size[0]) * self.size[0]
+            y = (self.default_seat_size[1] / self.default_size[1] * self.size[1])
+        else:
+            x = (self.default_seat_size[0] / self.default_size[0]) * self.size[1]
+            y = (self.default_seat_size[1] / self.default_size[1] * self.size[0])
+
+        print("x", x, "y", y)
+        self.ids.seating.size = [x, y]
+
 
 class SeatsLayout(FloatLayout):
     """the main layout used for testing purposed, not meant to be used in other modules"""
@@ -142,7 +209,7 @@ class SeatsLayout(FloatLayout):
 
 class SeatsApp(App):
     def build(self):
-        return BusinessClass_Seat()
+        return SeatsLayout()
 
 
 if __name__ == '__main__':

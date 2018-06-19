@@ -17,14 +17,17 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
 from kivy.uix.image import Image
 from kivy.properties import *
-from seats import BusinessClass_Seat, EconomyClass_Seat
+from seats import BusinessClass_Seat, EconomyClass_Seat, ExtraLegRoom_Seat
 from kivy.clock import mainthread, Clock
 
 
 class PlaneLayoutBasis(ScrollView):
     plane_layout_source = StringProperty('')
     plane_layout = Image().texture
-    seat_layout = ListProperty([{"seat-type": 'BusinessClass', 'columns': 7}, {"seat-type": 'EconomyClass', 'columns': 7}])
+    seat_layout = ListProperty([{"seat-type": 'BusinessClass', 'columns': 7},
+                                {"seat-type": 'EconomyClass', 'columns': 7},
+                                {"seat-type": 'ExtraLegRoom', 'columns': 2},
+                                {"seat-type": 'EconomyClass', 'columns': 16}])
     orientation = OptionProperty('vertical', options=['horizontal', 'vertical'])
     padding_amounts = ListProperty([0, 0, 0, 0])
     padding_ = ListProperty([0, 0, 0, 0])
@@ -34,6 +37,8 @@ class PlaneLayoutBasis(ScrollView):
     parent_grid = ObjectProperty(None)
     seat_layout_one_pos = ListProperty([0, 0])
     seat_layout_two_pos = ListProperty([0, 0])
+    layout_width = NumericProperty(0)
+    layout_height = NumericProperty(0)
 
     def __init__(self, **kwargs):
         super(PlaneLayoutBasis, self).__init__(**kwargs)
@@ -101,6 +106,21 @@ class PlaneLayoutBasis(ScrollView):
         else:
             func(*args, **kwargs)
 
+    def create_seat_widget(self, seat_data):
+        if seat_data['seat-type'] == 'BusinessClass':
+            seat = BusinessClass_Seat()
+            seat_length = (45 / self.plane_layout.width) * self.layout_width
+            seat_width = (33 / self.plane_layout.height) * self.layout_height
+        elif seat_data['seat-type'] == 'EconomyClass':
+            seat = EconomyClass_Seat()
+            seat_length = (45 / self.plane_layout.width) * self.layout_width
+            seat_width = (33 / self.plane_layout.height) * self.layout_height
+        elif seat_data['seat-type'] == 'ExtraLegRoom':
+            seat = ExtraLegRoom_Seat()
+            seat_length = (60 / self.plane_layout.width) * self.layout_width
+            seat_width = (33 / self.plane_layout.height) * self.layout_height
+        return seat, seat_width, seat_length
+
     @mainthread
     def place_seats(self, *args):
         top = self.ids.top_seats
@@ -108,78 +128,82 @@ class PlaneLayoutBasis(ScrollView):
         column_number = 1
         top.clear_widgets()
         bottom.clear_widgets()
+        x_offset = 0
+
+        self.layout_width = self.parent_grid.width if self.orientation == 'horizontal' else self.parent_grid.height
+        self.layout_height = self.parent_grid.height if self.orientation == 'horizontal' else self.parent_grid.width
+        first_seat_length = 0
 
         for seat_data in self.seat_layout:
             for column in range(column_number, seat_data['columns'] + column_number):
-                layout_width = self.parent_grid.width if self.orientation == 'horizontal' else self.parent_grid.height
-                layout_height = self.parent_grid.height if self.orientation == 'horizontal' else self.parent_grid.width
-                seat_length = (45 / self.plane_layout.width) * layout_width
-                seat_width = (33 / self.plane_layout.height) * layout_height
-                x_offset = seat_length * (column - 1)
+
 
                 for row in "ABC":
-                    if seat_data['seat-type'] == 'BusinessClass':
-                        seat = BusinessClass_Seat()
-                    elif seat_data['seat-type'] == 'EconomyClass':
-                        seat = EconomyClass_Seat()
+                    seat, seat_width, seat_length = self.create_seat_widget(seat_data)
+
+                    if column_number is 1:
+                        first_seat_length = seat_length
 
                     seat.seat_number = "{}{}".format(column, row)
                     seat.orientation = self.orientation
-                    size = [seat_length, seat_width]
+
                     if row == 'A':
-                        seat_width = (31 / self.plane_layout.height) * layout_height
-                        size = [seat_length, seat_width]
+                        seat_width = (31 / self.plane_layout.height) * self.layout_height
+                        # size = [seat_length, seat_width]
                         seat.small = True
                         if self.orientation == 'horizontal':
                             seat.pos = [bottom.x + x_offset, bottom.y]
                         else:
-                            seat.pos = [bottom.x, bottom.top - (seat_length * column)]
+                            seat.pos = [bottom.x, bottom.top - x_offset - seat_length]
                     if row == 'B':
-                        seat_width = (33 / self.plane_layout.height) * layout_height
+                        seat_width = (33 / self.plane_layout.height) * self.layout_height
                         if self.orientation == 'horizontal':
                             seat.pos = [bottom.x + x_offset, bottom.y + (0.311 * bottom.height)]
                         else:
-                            seat.pos = [bottom.x + (0.311 * bottom.width), bottom.top - (seat_length * column)]
+                            seat.pos = [bottom.x + (0.311 * bottom.width), bottom.top - x_offset - seat_length]
                     elif row == 'C':
-                        seat_width = (33 / self.plane_layout.height) * layout_height
+                        seat_width = (33 / self.plane_layout.height) * self.layout_height
                         if self.orientation == 'horizontal':
                             seat.pos = [bottom.x + x_offset, bottom.y + (0.311 * bottom.height) + (0.322 * bottom.height)]
                         else:
-                            seat.pos = [bottom.x + (0.311 * bottom.width) + (0.322 * bottom.width), bottom.top - (seat_length * column)]
+                            seat.pos = [bottom.x + (0.311 * bottom.width) + (0.322 * bottom.width), bottom.top - x_offset -seat_length]
+                    size = [seat_length, seat_width]
 
                     seat.size = size
                     bottom.add_widget(seat)
 
                 for row in "DEF":
-                    if seat_data['seat-type'] == 'BusinessClass':
-                        seat = BusinessClass_Seat()
-                    elif seat_data['seat-type'] == 'EconomyClass':
-                        seat = EconomyClass_Seat()
+                    seat, seat_width, seat_length = self.create_seat_widget(seat_data)
+
+                    if column_number is 1:
+                        first_seat_length = seat_length
 
                     seat.seat_number = "{}{}".format(column, row)
                     seat.orientation = self.orientation
                     if row == 'D':
-                        seat_width = (33 / self.plane_layout.height) * layout_height
+                        seat_width = (33 / self.plane_layout.height) * self.layout_height
                         if self.orientation == 'horizontal':
                             seat.pos = [top.x + x_offset, top.y]
                         else:
-                            seat.pos = [top.x, top.top - (seat_length * column)]
+                            seat.pos = [top.x, top.top - x_offset - seat_length]
                     if row == 'E':
-                        seat_width = (33 / self.plane_layout.height) * layout_height
+                        seat_width = (33 / self.plane_layout.height) * self.layout_height
                         if self.orientation == 'horizontal':
                             seat.pos = [top.x + x_offset, top.y + (0.311 * top.height)]
                         else:
-                            seat.pos = [top.x + (0.311 * top.width), top.top - (seat_length * column)]
+                            seat.pos = [top.x + (0.311 * top.width), top.top - x_offset - seat_length]
                     elif row == 'F':
-                        seat_width = (31 / self.plane_layout.height) * layout_height
+                        seat_width = (31 / self.plane_layout.height) * self.layout_height
                         seat.small = True
                         if self.orientation == 'horizontal':
                             seat.pos = [top.x + x_offset, top.y + (0.311 * top.height) + (0.322 * top.height)]
                         else:
-                            seat.pos = [top.x + (0.311 * top.width) + (0.322 * top.width), top.top - (seat_length * column)]
+                            seat.pos = [top.x + (0.311 * top.width) + (0.322 * top.width), top.top - x_offset - seat_length]
 
                     seat.size = [seat_length, seat_width]
                     top.add_widget(seat)
+
+                x_offset += seat_length
             column_number += seat_data['columns']
 
 

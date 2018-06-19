@@ -1,4 +1,5 @@
 #:import BusinessClass_Seat seats.BusinessClass_Seat
+#:import ScrollEffect kivy.effects.scroll.ScrollEffect
 
 <SeatingPlansMainLayout>:
     KL739:
@@ -10,13 +11,15 @@
     size_hint_y: None
     height: 344 #parent_grid.height
     parent_grid: parent_grid
+    effect_cls: ScrollEffect
+    bar_width: dp(10)
 
     GridLayout:
         id: parent_grid
         cols: 1
         size_hint: None, None
         size: root.plane_layout.width, root.plane_layout.height
-        padding: root.padding_ #[0.208*self.width, 0.189*self.height, 0.184*self.width, 0.189*self.height]
+        padding: root.padding_
 
         canvas:
             Color:
@@ -31,62 +34,14 @@
             size_hint: 1, 1
             id: center_layout
 
-#            canvas.after:
-#                Color:
-#                    rgba: 0, 1, 0, .3
-#                Rectangle:
-#                    size: self.size
-#                    pos: self.pos
-
             FloatLayout:
                 id: top_seats
                 size_hint: root.seat_layout_size_hint
                 size: root.seat_layout_size
-#                size_hint_y: None
-#                height: root.seat_layout_height
                 pos: root.seat_layout_two_pos #self.parent.x, self.parent.y + 0.578 * self.parent.height
-
-                canvas:
-                    Color:
-                        rgba: 1, 0, 0, .3
-                    Rectangle:
-                        size: self.size
-                        pos: self.pos
 
             FloatLayout:
                 id: bottom_seats
                 size_hint: root.seat_layout_size_hint
                 size: root.seat_layout_size
-#                size_hint_y: None
-#                height: root.seat_layout_height
                 pos: root.seat_layout_one_pos
-
-                canvas:
-                    Color:
-                        rgba: 1, 0, 0, .3
-                    Rectangle:
-                        size: self.size
-                        pos: self.pos
-
-#                BusinessClass_Seat:
-#                    seat_size: [45, 31]
-#                    pos: self.parent.pos
-#
-#                BusinessClass_Seat:
-#                    seat_size: [45, 33]
-#                    pos: self.parent.x, self.parent.y + 28
-#
-#                BusinessClass_Seat:
-#                    seat_size: [45, 33]
-#                    pos: self.parent.x, self.parent.y + (29 * 2)
-
-
-
-
-
-
-
-
-
-
-
