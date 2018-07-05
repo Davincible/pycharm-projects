@@ -69,6 +69,7 @@ class PlaneLayoutBasis(ScrollView):
             self.padding_ = [left, top, right, bottom] if self.orientation == 'horizontal' else [top, left, bottom, right]
             self.place_seats()
 
+
     @mainthread
     def set_pos(self, *args):
         self.seat_layout_one_pos = self.ids.center_layout.pos
@@ -94,7 +95,6 @@ class PlaneLayoutBasis(ScrollView):
             self.seat_layout_size = [0.422 * self.ids.center_layout.width, 100]
             self.seat_layout_size_hint = [None, 1]
 
-
     def on_plane_layout_source(self, *args):
         self.plane_layout = Image(source=self.plane_layout_source).texture
 
@@ -118,6 +118,7 @@ class PlaneLayoutBasis(ScrollView):
         elif seat_data['seat-type'] == 'ExtraLegRoom':
             seat = ExtraLegRoom_Seat()
             seat_length = (60 / self.plane_layout.width) * self.layout_width
+            print("length of long seat", seat_length)
             seat_width = (33 / self.plane_layout.height) * self.layout_height
         return seat, seat_width, seat_length
 
@@ -136,8 +137,6 @@ class PlaneLayoutBasis(ScrollView):
 
         for seat_data in self.seat_layout:
             for column in range(column_number, seat_data['columns'] + column_number):
-
-
                 for row in "ABC":
                     seat, seat_width, seat_length = self.create_seat_widget(seat_data)
 
@@ -146,10 +145,8 @@ class PlaneLayoutBasis(ScrollView):
 
                     seat.seat_number = "{}{}".format(column, row)
                     seat.orientation = self.orientation
-
                     if row == 'A':
                         seat_width = (31 / self.plane_layout.height) * self.layout_height
-                        # size = [seat_length, seat_width]
                         seat.small = True
                         if self.orientation == 'horizontal':
                             seat.pos = [bottom.x + x_offset, bottom.y]
@@ -166,7 +163,7 @@ class PlaneLayoutBasis(ScrollView):
                         if self.orientation == 'horizontal':
                             seat.pos = [bottom.x + x_offset, bottom.y + (0.311 * bottom.height) + (0.322 * bottom.height)]
                         else:
-                            seat.pos = [bottom.x + (0.311 * bottom.width) + (0.322 * bottom.width), bottom.top - x_offset -seat_length]
+                            seat.pos = [bottom.x + (0.311 * bottom.width) + (0.322 * bottom.width), bottom.top - x_offset - seat_length]
                     size = [seat_length, seat_width]
 
                     seat.size = size
