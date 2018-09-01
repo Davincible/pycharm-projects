@@ -1,3 +1,13 @@
+"""
+#
+# A bot to download info product content behind a WordPress login page
+# Every website is a little different so might need to be optimized for your specific use
+#
+# Created by David a.k.a. @Davincible_
+# david.brouwer.99@gmail.com -- https://github.com/Davincible
+#
+"""
+
 import requests
 from requests.cookies import cookiejar_from_dict
 from os.path import exists, join
@@ -13,6 +23,7 @@ import time
 if not os.path.exists('logs'):
     os.mkdir('logs')
 
+# configure the logger
 Logger = logging.getLogger("RatioLogger")
 Logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('logs/ratio-logger-{}.log'.format(datetime.now().isoformat('_')[:-7].replace(':', '.')).replace(' ', '_'))
@@ -27,6 +38,7 @@ Logger.addHandler(ch)
 
 
 class RatioBot:
+    """ main class """
     def __init__(self, creds_file):
         self.creds_file = creds_file
         self.sesh = requests.session()
@@ -47,12 +59,14 @@ class RatioBot:
             self.sesh.close()
 
     def setup(self):
+        """ setup the browser session"""
         self.sesh.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"})
         self.load_credentials()
         self.load_domain_data()
         self.load_cookies()
 
     def extract_content(self):
+        """ method to be called by user to extract the content links """
         try:
             self.extract_menu_items()
         except:
@@ -61,20 +75,28 @@ class RatioBot:
         self.extract_links()
 
     def download(self, BaseFolder="F:\\RatioBot\\TheSystem"):
-        Logger.info("DOWNLOADING   : staring download process")
+        """ method to be called by user to download the collected content """
         time.sleep(.5)
-        weird_chars = "â€¬¢ƒÂ¢"
+        weird_chars = "â€¬¢ƒÂ¢"  # for some reason this shit appears in some files, these should be ignored
         if not exists(BaseFolder):
-            os.mkdir(BaseFolder)
+            choice = input("The specified folder ('{}') does not exist, attempt to create it? Y/N".format(BaseFolder))
+            if choice.lower() in ["y", "yes"]:
+                os.mkdir(BaseFolder)
+            elif choice.lower() in ["n", "no"]:
+                Logger.info("exiting")
+            else:
+                Logger.info("'{}' not known".format(choice))
 
+        Logger.info("DOWNLOADING   : staring download process")
+        # parent iterator used to iterate over the main menu items
         main_counter = 0
         for menu_item in self.domain_data['menu_items']:
-            # print("*", end='', flush=True)
             file_path = join(BaseFolder, "{0:0=2d} - {1}".format(main_counter, menu_item))
             if not exists(file_path):
                 os.mkdir(file_path)
             referer = self.domain_data['menu_items'][menu_item]['item_url']
 
+            # iterate over the collected content links
             mark_for_removal = []
             for article in self.domain_data['menu_items'][menu_item]['content']:
                 # check for those weird-ass characters
@@ -83,6 +105,7 @@ class RatioBot:
                         mark_for_removal.append(article)
                         continue
 
+                # download the content
                 if not article.get('downloaded', None):
                     if article['video_url'] or article['content_url']:
                         url = self.download_data(article, file_path, referer)
@@ -98,19 +121,22 @@ class RatioBot:
                 else:
                     Logger.info("SKIPPING DOWNLOAD   : item already downloaded: '{}'".format(article['video_title']))
 
+            # remove the bugged files (with those strange chars in their title)
             for to_be_removed in mark_for_removal:
                 try:
                     self.domain_data['menu_items'][menu_item]['content'].remove(to_be_removed)
                 except ValueError:
                     pass
+
+            # child iterator used to iterate over the sub-menu items
             sub_counter = 0
             for sub_menu_item in self.domain_data['menu_items'][menu_item]['sub_menu_items']:
-                # print("*", end='', flush=True)
                 child_path = join(file_path, "{0:0=2d} - {1}".format(sub_counter, sub_menu_item))
                 if not exists(child_path):
                     os.mkdir(child_path)
                 referer = self.domain_data['menu_items'][menu_item]['sub_menu_items'][sub_menu_item]['item_url']
 
+                # iterate over the collected content links
                 mark_for_removal = []
                 for article in self.domain_data['menu_items'][menu_item]['sub_menu_items'][sub_menu_item]['content']:
                     # check for those weird-ass characters
@@ -119,6 +145,7 @@ class RatioBot:
                             mark_for_removal.append(article)
                             continue
 
+                    # download the content
                     if not article.get('downloaded', None):
                         if article['video_url'] or article['content_url']:
                             url = self.download_data(article, child_path, referer)
@@ -135,6 +162,7 @@ class RatioBot:
                     else:
                         Logger.info("SKIPPING DOWNLOAD   : item already downloaded: '{}'".format(article['video_title']))
 
+                # remove the bugged files (with those strange chars in their title)
                 for to_be_removed in mark_for_removal:
                     try:
                         self.domain_data['menu_items'][menu_item]['sub_menu_items'][sub_menu_item]['content'].remove(to_be_removed)
@@ -142,35 +170,42 @@ class RatioBot:
                         pass
                 sub_counter += 1
             main_counter += 1
-        # print()
+
         self.save_domain_data()
 
     def download_data(self, article, file_path, referer):
+        """ internal parent method which orchestrates the download process of a link """
         video_title = article['video_title']
         video_url = article['video_url']
         content_url = article['content_url']
 
-        if video_url:
-            real_url = self.get_real_video_url(video_url, referer)
-            return_code = self.download_content(file_path, real_url, video_title, type_="video")
-            if return_code == 0:
-                return real_url
-            else:
-                return 1
-        elif content_url:
-            return_code = self.download_content(file_path, content_url, video_title, type_="other")
-            if return_code == 0:
-                return "Not_A_Video"
-            else:
-                print("retuning 1")
-                return 1
+        try:
+            if video_url:
+                real_url = self.get_real_video_url(video_url, referer)
+                return_code = self.download_content(file_path, real_url, video_title, type_="video")
+                if return_code == 0:
+                    return real_url
+                else:
+                    return 1
+            elif content_url:
+                return_code = self.download_content(file_path, content_url, video_title, type_="other")
+                if return_code == 0:
+                    return "Not_A_Video"
+                else:
+                    print("retuning 1")
+                    return 1
+        except Exception as e:
+            Logger.warning("ERROR   : downloading content: '{}' '{}'".format(article['video_title'], article['video_url']))
+            raise e
 
     def get_real_video_url(self, url, referer):
+        """ internal method used to extract token link for Vimeo videos """
         headers = self.sesh.headers.copy()
         headers['Referer'] = referer
         root_page = self.sesh.get(url, headers=headers)
         soup = bs.BeautifulSoup(root_page.text, 'lxml')
 
+        # find json string in html page with video information
         regex = r'var r={[^;]*'
         compiled = re.compile(regex)
         for script in soup.findAll('script'):
@@ -178,32 +213,42 @@ class RatioBot:
             if regex_results:
                 break
 
+        # extract the video link from the json dict
         json_data = regex_results[0].strip('var r=').strip(';')
         video_data = json.loads(json_data)
-        usefull_data = video_data['request']['files']['progressive']
-        element = list(filter(lambda x: str(x['width']) == '1920', usefull_data))[0]
+        useful_data = video_data['request']['files']['progressive']
+        video_sizes = [x['width'] for x in useful_data]
+        video_sizes.sort()
+        use_size = None
+        index = len(video_sizes) - 1
+        while not use_size:
+            if video_sizes[index] <= 1920:
+                use_size = video_sizes[index]
+            index -= 1
+
+        element = list(filter(lambda x: str(x['width']) == str(use_size), useful_data))[0]
         video_url = element['url']
 
         return video_url
 
     def download_content(self, filepath, url, video_tile, type_):
-        # download the actual content to disk
-
+        """ internal method which actually downloads the content to disk"""
         # check if the provided url is actually a url
         if not ('http' in url or 'www' in url):
             Logger.warning("WARNING   : provided an invalid url, unable to download: '{}'".format(url))
             return 1
-        elif 'mailto' in url:
+        elif 'mailto' in url:  # filter out mailing links and continue without error
             return 0
-        elif "â€¬¢" in video_tile:
+        elif "â€¬¢" in video_tile:  # filter out titles with weird characters and continue without error
             print("whathefuck is this even", video_tile)
             return 0
 
         # compose file name
         has_valid_file_name = False
         version_counter = 0
-        for ch in '<>:"\|?*':
+        for ch in '<>:"\|?*':  # remove illegal characters in the windows file namespace
             video_tile = video_tile.replace(ch, '')
+
         while not has_valid_file_name:
             if not version_counter:
                 if type_ == "video":
@@ -235,6 +280,7 @@ class RatioBot:
         file_size = 0
         download = True
 
+        # download the file to disk
         while download:
             try:
                 content_requets = self.sesh.get(url, stream=True)
@@ -264,11 +310,14 @@ class RatioBot:
         return 0
 
     def extract_menu_items(self):
-        Logger.info("EXTRACTING   : extracting menu")
+        """ internal method to extract the links from menu items """
         if not self.domain_data.get('menu_items', None):
             self.domain_data['menu_items'] = {}
         if not self.landing_page:
             self.landing_page = self.sesh.get(self.landing_page_url)
+
+        # iterate over menu items
+        Logger.info("EXTRACTING   : extracting menu")
 
         soup = bs.BeautifulSoup(self.landing_page.text, 'lxml')
         nav_element = soup.find('nav', class_="desktop")
@@ -299,11 +348,12 @@ class RatioBot:
                 self.domain_data['menu_items'][item_title].update({'item_url': item_url, 'sub_menu_items': sub_menu_items})
 
         print()
-        time.sleep(.5)
+        time.sleep(.5)  # sleep statement to let the logger properly print everything out before moving on
         self.save_domain_data()
         Logger.info("EXTRACTED   : extracted all menu items")
 
     def extract_links(self):
+        """ internal method to extract links from content page """
         Logger.info("EXTRACTING   : extracting links")
         time.sleep(.5)
         self.domain_data['added_items'] = None
@@ -313,13 +363,14 @@ class RatioBot:
             self.domain_data['updated_items'] = {}
         old_article_counter = 0
 
+        # iterate over content pages (aka menu entries)
         for menu_item in self.domain_data['menu_items']:
             print("*", end='', flush=True)
             # get the main menu item pages and scan for content
-            # print("content is:", self.domain_data['menu_items'][menu_item]['content'])
             if not self.domain_data['menu_items'][menu_item].get('content', None):
                 self.domain_data['menu_items'][menu_item]['content'] = []
 
+            # iterate over content items
             page = self.sesh.get(self.domain_data['menu_items'][menu_item]['item_url'])
             soup = bs.BeautifulSoup(page.text, 'lxml')
             for article in soup.find_all('article'):
@@ -353,6 +404,7 @@ class RatioBot:
                 else:
                     old_article_counter += 1
 
+            # do the same thing for sub-menu entries
             for sub_menu_item in self.domain_data['menu_items'][menu_item]['sub_menu_items']:
                 print("*", end='', flush=True)
                 # get the sub menu item pages and scan for content
@@ -403,7 +455,7 @@ class RatioBot:
         self.save_domain_data()
 
     def log_changes(self, old=None):
-        # give all the changes that have been made back to the user
+        """ give all the changes that have been made back to the user """
         additions = self.domain_data['added_items']
         changes = self.domain_data['updated_items']
         if additions:
@@ -436,12 +488,12 @@ class RatioBot:
 
     @staticmethod
     def get_article_data(article):
-        # extract the content data from an article
+        """ method to extract the content data from an article item """
         # get the title
         video_title = article.find('header').get_text().strip()
         video_url, content_url = None, None
 
-        # get the urls if any
+        # get the url if any
         content_element = article.find('div', class_="entry-content")
         if content_element.find('iframe'):
             video_url = content_element.find('iframe')['src']
@@ -451,8 +503,10 @@ class RatioBot:
         return {"video_url": video_url, "content_url": content_url, "video_title": video_title}
 
     def load_cookies(self, force_login=False):
-        #  load the cookie
+        """ load the cookie """
         loaded_cookies = False
+
+        # load cookie if cookie file exists
         if exists(self.cookie_storage):
             try:
                 with open(self.cookie_storage, 'rb') as cookies_file:
@@ -472,8 +526,9 @@ class RatioBot:
 
             except Exception as e:
                 Logger.error("ERROR   : failed to load cookies from storage file '{}' with error '{}'".format(self.cookie_storage, e))
+
+        # perform a login if no cookie was found or re-login forced (due to an expired cookie)
         if not loaded_cookies or not self.landing_page_url or force_login:
-            # re-login to get a new cookie
             if not self.landing_page_url:
                 Logger.info("Landing page url not found, doing a re-login")
             elif not loaded_cookies:
@@ -491,12 +546,14 @@ class RatioBot:
         self.sesh.headers['Cookie'] = cookies_.strip()
 
     def save_cookies(self):
+        """ save cookie back to disk """
         with open(self.cookie_storage, 'wb') as cookies_file:
             cookies_file.truncate()
             pickle.dump(self.sesh.cookies._cookies, cookies_file)
             Logger.info("SAVED   : saved cookies to file {}".format(self.cookie_storage))
 
     def save_domain_data(self, silent=False):
+        """ save domain data back to disk """
         with open(self.domain_data_file, 'w') as file:
             file.truncate()
             json.dump(self.domain_data, file, indent=4)
@@ -505,6 +562,7 @@ class RatioBot:
             time.sleep(.5)
 
     def load_domain_data(self):
+        """ load domain data from disk """
         if exists(self.domain_data_file):
             with open(self.domain_data_file, 'r') as file:
                 self.domain_data = json.load(file, encoding='utf-8')
@@ -513,6 +571,7 @@ class RatioBot:
                 time.sleep(.5)
 
     def login(self):
+        """ perform a login """
         Logger.info("Logging in again on url: '{}'".format(self.login_url))
         self.landing_page = self.sesh.post(self.login_url, data=self.credentials)
         self.landing_page_url = self.landing_page.url
@@ -521,6 +580,7 @@ class RatioBot:
         self.save_domain_data()
 
     def load_credentials(self):
+        """ load login credentials from disk """
         with open(self.creds_file, 'r') as file:
             self.login_url = file.readline().strip()
             parser = requests.utils.urlparse(self.login_url)
@@ -536,4 +596,3 @@ if __name__ == '__main__':
     bot = RatioBot('1XD.txt')
     bot.extract_content()
     bot.download()
-
