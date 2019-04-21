@@ -87,5 +87,6 @@ class ROTCodec:
                     rotted += ' '
             self.output[count] = {'output': rotted}
 
+
 if __name__ == '__main__':
     ROTCodec().encode()
