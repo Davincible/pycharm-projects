@@ -2,7 +2,7 @@ from alpha_vantage.timeseries import TimeSeries
 from time import time
 
 api_key = '1R4FFRPW6IJZZPL8'
-ticker = 'mnkd'
+ticker = 'farn'
 interval = '1min'
 total_list = []
 ts = TimeSeries(key=api_key, output_format='pandas')
