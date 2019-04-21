@@ -8,6 +8,7 @@ from kivymd.dialog import MDDialog
 from kivymd.theming import ThemeManager
 from kivy.properties import ObjectProperty, ListProperty
 from kivy.base import Builder
+import webbrowser
 
 kv_file = """
 
@@ -37,7 +38,7 @@ ScrollView:
                     size: self.size
                     pos: self.pos
                     
-            on_release: app.dialogg.open()
+            on_release: app.action()
         
         Label:
             size_hint_y: None
@@ -69,6 +70,9 @@ class dialogthing(MDDialog):
 class MainApp(App):
     dialogg = dialogthing()
     theme_cls = ThemeManager()
+
+    def action(self):
+        webbrowser.Chrome().open(url="google.com")
 
     def build(self):
         window = Builder.load_string(kv_file)
