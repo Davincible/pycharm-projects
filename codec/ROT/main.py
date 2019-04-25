@@ -1,5 +1,6 @@
 from os.path import isfile
 import random
+import re
 
 
 class ROTCodec:
@@ -63,6 +64,11 @@ class ROTCodec:
         else:
             self.msg = input("What message do you want to ROT brute force? ").lower()
 
+        # filter out any non-alphabetic characters
+        regex = r'[^a-z]'.format(self.alphabet)
+        regex = re.compile(regex)
+        self.msg = regex.sub('', self.msg)
+
     def _rotate(self, cipher=None):
         """ Rotate the characters, aka apply rot cipher(s) """
         # set ciphers to rot
@@ -79,7 +85,10 @@ class ROTCodec:
             rotted = "ROT {}: ".format(count)
             for char in self.msg:
                 if char is not ' ':
-                    old_index = self.alphabet.index(char)
+                    try:
+                        old_index = self.alphabet.index(char)
+                    except IndexError:
+                        print("Char not found:", char)
                     new_index = ((old_index + count) % len(self.alphabet))
                     new_char = self.alphabet[new_index]
                     rotted += new_char
