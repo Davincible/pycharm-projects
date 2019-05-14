@@ -1,3 +1,8 @@
+""""
+    Created by David Brouwer - github.com/Davincible
+    April 21st, 2019
+
+"""
 from os.path import isfile
 import random
 import re
@@ -11,7 +16,7 @@ class ROTCodec:
     alphabet = "abcdefghijklmnopqrstuvwxyz"
 
     def encode(self, cipher=None, msg=''):
-        """ Rot encode, if no cipher specified by all 25 ciphers possible """
+        """ Rot encode, if no cipher specified encode by all 25 ciphers possible """
         self._load_dictionary()
         self._get_input(msg=msg)
         self._rotate(cipher)
@@ -41,7 +46,7 @@ class ROTCodec:
                 for i in range(1, 100):
                     to_check.append(words[random.randrange(0, len(words) - 1)])
 
-            # validate
+            # Check words against dictionary to validate
             match_count = 0
             for word in to_check:
                 if word.upper() in self.dictionary:
